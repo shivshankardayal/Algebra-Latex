@@ -1,4 +1,7 @@
 # Algebra-Latex
+It is a book on class 12 Algebra for self-study so solutions of most problems
+have been given.
+
 To produce pdf you will need texlive with xetex along with tikz, asynptote and make.
 You will also need Roboto and Latin Modern fonts installed to produce the PDF.
 Simply run make in the home directory and pdf will be output in build folder.
