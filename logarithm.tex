@@ -118,11 +118,10 @@ $$\log(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \ldots$$
 \begin{figure}[H]
 \begin{center}
   \begin{tikzpicture}
-    \draw [help lines] (0,-4) grid [step=1] (10,7);
+    \draw [help lines] (0,-4) grid [step=1] (10,4);
     \draw (0,0) -- (10,0);
     \draw[->] (0, 0) -- (11, 0) node[right] {$x$};
-    \draw[->] (0, -3) -- (0, 8) node[above] {$\log x$};
-    \draw plot [domain=0.1:10,samples=1000] (\x,{log2(\x)});
+    \draw[->] (0, -3) -- (0, 5) node[above] {$\log x$};
     \draw plot [domain=0.1:10,samples=1000] (\x,{log2(\x)});
   \end{tikzpicture}
   \caption{Graph of $\log 2$}
