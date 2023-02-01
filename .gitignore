@@ -2,6 +2,7 @@
 !*.tex
 !images/
 !images/*.tex
+!images/*.asy
 !images/*.png
 !images/*.eps
 !images/*.pdf
