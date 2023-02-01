@@ -1,10 +1,10 @@
 *
 !*.tex
-!figs/
-!figs/*.tex
-!figs/*.png
-!figs/*.eps
-!figs/*.pdf
-!figs/Makefile
+!images/
+!images/*.tex
+!images/*.png
+!images/*.eps
+!images/*.pdf
+!images/Makefile
 !"GNU FDL"
 !Makefile

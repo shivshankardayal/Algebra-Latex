@@ -1,0 +1,301 @@
+\chapter{Complex Numbers}
+By definition a complex number has two parts: a real part and an imaginary part. You already know about real numbers and know about
+them. However, imaginary numbers is something different.
+\section{Imaginary Numbers}
+Imaginary numbers are called so because there cannot be physical representation of these quantities. Like we use real numbers for
+counting physical objects we cannot do that with imaginary numbers. In real world, they do not exist. Square root of negative
+numbers are called imaginary numbers. For example, $\sqrt{-1}, \sqrt{-2}. \sqrt{-3}, \ldots$ and so on.
+
+We denote $\sqrt{-1}$ with the Greek symbol $\iota$, which stands for \textit{iota}. We also use English letters \textit{i} or
+\textit{j} to represent this imaginary number. Clearly, $i^2 = -1, i^3 = -i, i^4 = 1$. If you examine carefully, you will find that
+following holds true:
+
+$$i^{4m} = 1, i^{4m + 1} = i, i^{4m + 2} = -1 \text{~and~} i^{4m +3} = -1, \forall m\in P$$
+
+\dangersign \textbf{Gotcha:}
+
+Consider the following:
+
+$$1 = \sqrt{1} = \sqrt{-1*-1} = \sqrt{-1}*\sqrt{-1} = i*i = -1$$
+
+However, the above result is wrong. The reason being is that for any two real numbers $a$ and $b, \sqrt{a}*\sqrt{b} = \sqrt{ab}$
+holds good if and only if two numbers are either zero or positive. Also, $\sqrt{1}\neq \sqrt{-1*-1}$ because power of $-$ is
+$\frac{1}{2}$ which results in $-1$.
+
+\section{Definitions Related to Complex Numbers}
+A complex number is written as $a + ib$ or $x + iy$ or $a + jb$ or $x + jb$. Here, $a, b, x, y$ are all real numbers. The complex
+numbers itself is denoted by $z$. Therefore, we have $z = x + iy$. Here, $x$ is called the real part and is also denoted by $Re(z)$
+and $y$ is called the imaginary part and is also denoted by $Im(z)$.
+
+A complex number is purely real if its imaginary part or $y$ or $Im(z)$ is zero. Similarly, a complex number is purely imaginary if
+its real part or $x$ or $Re(z)$ is zero. Clearly, as you can imagine that there can exist only one number which has both the parts
+as zero and certainly that is $0$. That is, $0=0+i0$.
+
+The set of all complex number is typically denoted by $C$. Two complex numbers $z_1$ and $z_2$ are said to be true if there real
+parts are equal and imaginary parts are equal. That is if $z_1=x_1+iy_1$ and $z_2=x_2+iy_2$ then $x_1$ must be equal to $x_2$ and
+similarly for imaginary part for two complex numbers to be equal.
+
+\section{Simple Arithmetic Operations}
+\subsection{Addition}
+$(a + ib) + (c + id) = (a + c) + i(b + d)$
+\subsection{Subtraction}
+$(a + ib) - (c + id) = (a - c) + i(b - d)$
+\subsection{Multiplication}
+$(a + ib) * (c + id) = ac + ibc + iad + bdi^2 = (ac - bd) +i(bc + ad)$
+\subsection{Division}
+The complex number in denominator must not have both parts as zero. At least one part must be non-zero.
+
+$$\frac{a + ib}{c + id} = \frac{(a + ib)(c - id)}{(c + id)(c -id)} = \frac{(ac + bd) + i(bc -ad)}{c^2+d^2}$$
+
+\section{Conjugate of a Complex Number}
+Let $z = x + iy$ be a complex number then its complex conjugate is a number with imaginary part made negative. It is written as
+$\overline{z} = x - iy. \overline{z}$ is the typical representation for conjugate of a complex number $z$.
+
+\subsection{Properties of Conjugates}
+\begin{enumerate}
+\item $z_1 = z_2 \Leftrightarrow \overline{z_1} = \overline{z_2}$
+
+  Clearly as we know for two complex numbers to be equal, both parts must be equal. So this is very easy to understand that if $x_1
+  = x_2$ and $y_1 = y_2$ then this bidirectional condition is always satisfied.
+\item $\overline{\left(\overline{z}\right)} = z$
+
+  $z = x + iy$, hence, $\overline{z} = x - iy$. Hence, $\overline{\left(\overline{z}\right)} = x - (-iy) = x + iy = z$
+\item $z + \overline{z} = 2Re(z)$
+
+  $z + \overline{z} = x + iy + x - iy = 2x = 2Re(z)$.
+\item $z - \overline{z} = 2iIm(z)$
+
+  $z - \overline{z} = x + iy - (x - iy) = 2iy = 2iIm(z)$
+\item $z = \overline{z} \Leftrightarrow z$ is purely real.
+
+  Clearly, $x + iy = x - iy \Rightarrow 2iy = 0 \Rightarrow y = 0$. Therefore, $z$ is purely real. Conversely, if $z$ is purely
+  real then $z = x$, and thus $z = \overline{z}$.
+\item $z + \overline{z} = 0 \Leftrightarrow z$ is purely imaginary.
+
+  Clearly, $x + iy + x - iy = 0 \Rightarrow 2x = 0$. Therefore, $z$ is purely imaginary. Conversely, if $z$ is purely imaginary
+  then $z = iy$, and thus $z + \overline{z} = 0$.
+\item $z\overline{z} = [Re(z)]^2 + [Im(z)]^2$
+
+  Clearly, $z\overline{z} = (x + iy)(x - iy) = x^2 + y^2 = [Re(z)]^2 + [Im(z)]^2$
+\item $\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$
+
+  $\overline{z_1 + z_2} = \overline{(x_1 + iy_1) + (x_2 + iy_2)} = \overline{(x_1 + x_2) + i(y_1 + y_2)} = (x_1 + x_2) - i(y_1 +
+  y_2) = (x_1 - iy_1) + (x_2 - iy_2) = \overline{z_1} + \overline{z_2}$
+\item $\overline{z_1 - z_2} = \overline{z_1} - \overline{z_2}$
+
+  This can be proven like previous item.
+\item $\overline{z_1z_2} = \overline{z_1}\overline{z_2}$
+
+  This can be proven like previous item.
+\item $\overline{\left(\frac{z_1}{z_2}\right)} = \frac{\overline{z_1}}{\overline{z_2}}$ if $z_2\neq 0$
+
+  It can be proven by multiplying and dividing by conjugate of denominator and then applying division formula given above.
+\item If $P(z) = a_0 + a_1z + a_2z^2 + \ldots + a_nz^n$, where $a_0, a_1, \ldots, a_n$ and $z$ are complex numbers, then
+
+  $$\overline{P(z)} = \overline{a_0} + \overline{a_1}(\overline{z}) + \overline{a_2}(\overline{z})^2 +
+  \overline{a_n}(\overline{z})^n = \overline{P}(\overline{z})$$
+
+  where
+
+  $$\overline{P}(z) = \overline{a_0} + \overline{a_1}z + \overline{a_2}z^2 + \ldots + \overline{a_n}z^n$$
+\item If $R(z) = \frac{P(z)}{Q(z)}$, where $P(z)$ and $Q(z)$ are polynomials in $z$, and$Q(z) \neq 0$, then
+
+  $$\overline{R(z)} = \frac{\overline{P}(\overline{z})}{\overline{Q}(\overline{z})}$$
+\item If $$z = \begin{vmatrix}a_1 & a_2 & a_3\\ b_1 & b_2 & b_3 \\ c_1 & c_2 & c_3\end{vmatrix}, \text{~then~}\overline{z}
+  = \begin{vmatrix}\overline{a_1} & \overline{a_2} & \overline{a_3}\\ \overline{b_1} & \overline{b_2} & \overline{b_3}
+    \\ \overline{c_1} & \overline{c_2} & \overline{c_3}\end{vmatrix},$$
+  where $a_i, b_i, c_i(i = 1,2,3)$ are complex numbers.
+\end{enumerate}
+
+\section{Modulus of a Complex Number}
+Modulus of a complex number $z$ is denoted by $|z|$ and is equal to the real number $\sqrt{x^2 + y^2}$. Note that $|z| \geq
+0~\forall z \in C$.
+\subsection{Properties of Modulus}
+\begin{enumerate}
+\item $|z| = 0 \Leftrightarrow z = 0$
+
+  Clearly, this means $x^2 + y^2 = 0 \Rightarrow x = 0$ and $y = 0 \Rightarrow z = 0$.
+\item $|z| = |\overline{z}| = |-z| = |-\overline{z}|$
+
+  Clearly, all result in $\sqrt{x^2 + y^2}$.
+\item $-|z| \leq Re(z) \leq |z|$.
+
+  Clearly, $-\sqrt{x^2 + y^2}\leq x\leq \sqrt{x^2 + y^2}$.
+\item $-|z| \leq Im(z) \leq |z|$.
+
+  Clearly, $-\sqrt{x^2 + y^2}\leq y\leq \sqrt{x^2 + y^2}$.
+\item $z\overline{z} = |z|^2$
+
+  Clearly, $(x + iy)(x - iy) = x^2 + y^2 = |z|^2.$
+\end{enumerate}
+
+\noindent Following relations are very easy and can be proved by the student. If $z_1$ and $z_2$ are two complex numbers then,
+
+\begin{enumerate}[resume]
+\item $|z_1z_2| = |z_1||z_2|$
+
+  $|z_1z_2| = |x_1x_2 - y_1y_2 + i(x_1y_2 + x_2y_1)| = \sqrt{(x_1x_2 - y_1y_2)^2 + (x_1y_2 + x_2y_1)^2} = \sqrt{(x_1 + y_1)^2(x_2 +
+  y_2)^2} = |z_1||z_2|$
+\item $\left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}$ if $z_2\neq = 0$
+\item $|z_1 + z_2|^2 = |z_1|^2 + |z_2|^2 + \overline{z_1}z_2 + z_2\overline{z_2} = |z_1|^2 + |z_2|^2 + 2Re(z_1\overline{z_2})$.
+\item $|z_1 - z_2|^2 = |z_1|^2 + |z_2|^2 - \overline{z_1}z_2 - z_1\overline{z_2} = |z_1|^2 + |z_2|^2 + 2Re(z_1\overline{z_2})$.
+\item $|z_1 + z_2|^2 + |z_1 - z_2|^2 = 2\left(|z_1|^2 + |z_2|^2\right)$.
+\item If $a$ and $b$ are real numbers, and $z_1$ and $z_2$ are complex numbers, then
+
+  $|az_1 + bz_2|^2 + |bz_1 - az_2|^2 = (a^2 + b^2)\left(|z_1|^2 + |z_2|^2\right)$.
+\item If $z_1, z_2\neq = 0$, then $|z_1 + z_2|^2 = |z_1|^2 + |z_2|^2 \Leftrightarrow \frac{z_1}{z_2}$ is purely imaginary.
+\item If $z_1$ and $z_2$ are complex numbers then $|z_1 + z_2| \leq |z_1| + |z_2|$. This inequality can be generalized to more
+  terms as well.
+\item $|z_1 - z_2| \leq |z_1| + |z_2|, ||z_1| - |z_2||\leq |z_1| + |z_2|$ and $|z_1 - z_2|\geq ||z_1| - |z_2||$. These are trivial
+  to prove.
+\end{enumerate}
+
+\section{Geometrical Representation}
+A complex number $z$ which we have considered to be equal to $x+iy$ in our previous representations can be represented by a point
+$P$ whose Cartesian coordinates are $(x,y)$ referred to rectangular axes $Ox$ and $Oy$ where $O$ is origin i.e. $(0, 0)$ and are
+called \textit{real} and \textit{imaginary} axes respectively. The $xy$ two-dimensional plane is also called \textit{Argand plane,
+complex plane} or \textit{Gaussian plane}. The point $P$ is also called the image of the complex number and $z$ is also called
+the \textit{affix} or \textit{complex coordinate} of point $P$.
+
+Now as you can easily figure out that all real numbers will lie on real axis and all imaginary numbers will lie on imaginary axis
+as their counterparts will be zero.
+
+The modulus is given by the length of segment $OP$ which is equal to $OP=\sqrt{x^2+y^2}=|z|$. This, $|z|$ si the length of the
+$OP$. Given below is the graphical representation of the complex number.
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[->] (-.5,0) -- (3,0);
+      \draw[->] (0,-.5) -- (0,3);
+      \draw (0, 3.5) node {$Y$};
+      \draw (3.5, 0) node {$X$};
+      \draw (2.5,0) -- (2.5,2.5);
+      \draw (0,0) -- (2.5, 2.5);
+      \draw (.5,0) arc(0:45:.5);
+      \draw (.7,.3) node{$\theta$};
+      \draw (1.5, 0.2) node {$x$};
+      \draw (2.7, 1.5) node {$y$};
+      \draw (3.4, 1.1) node {$OP=|z|$};
+      \draw (3.5, 0.7) node {$arg(z)=\theta$};
+      \draw (2.5, 2.7) node{$P=x+iy$};
+    \end{tikzpicture}
+    \caption{Complex number in argand plane or complex plane}
+  \end{center}
+\end{figure}
+
+In the diagram, $\theta$ is known as the \textit{argument} of $z$. This is nothing but angle made with positive direction
+(i.e. counter-clockwise) of real axis. Now, this argument is not unique. If $\theta$ is an argument of a complex number $z$ then,
+$2n\pi + theta$, where $n\in I$, where I is the set of integers. The value of argument for which $-\pi<\theta\leq \pi$ is called
+the \textit{principal value} of \textit{argument} or \textit{principal argument}.
+
+\subsection{Different Arguments of a Complex Number}
+In the diagram, the argument is given as $\arg(z) = \tan^{-1}\left(\frac{y}{x}\right)$, this value is for when $z$ in first
+quadrant. When $z$ will lie in second, third and fourth quadrants the arguments will be
+$$\arg(z) = \pi - \tan^{-1}\left(\frac{y}{|z|}\right), arg(z)= -\pi + \tan^{-1}\left(\frac{|y|}{|z|}\right)\text{~and~} arg(z) =
+-\tan^P{-1}\left(\frac{|y|}{x}\right)$$
+respecticely.
+
+\subsection{Polar Form of a Complex Number}
+If $z$ is a non-zero complex number, then we can write $z = r(\cos\theta + i\sin\theta)$, where $r = |z|$ and $\theta = arg(z)$.
+
+In this case, $z$ is also given by $z = r[\cos(2n\pi  \theta) + i\sin(2n\pi + \theta)]$, where $n\in I$.
+
+\subsubsection{Euler's Formula}
+The complex number $\cos\theta + i\sin\theta$ is denoted by $e^{i\theta}$ or $c$ is $\theta$, where $c$ is the complex number.
+
+\subsection{Important Results Involving Arguments}
+If $z, z_1$ and $z_2$ are complex numbers, then
+
+\begin{enumerate}
+\item $arg(\overline{(z)}) = -arg(z)$. This can be easily proven as if $z = x + iy$, then $\overline{z} = x - iy$ i.e. sign of
+  argument will get a -ve sign as $y$ gets one.
+\item $arg(z_1z_2) = arg(z_1)  + arg(z_2) + 2n\pi$, where
+  $$n = \begin{cases}
+   0 \text{~if~} & -\pi<arg(z_1)+arg(z_2)\leq-\pi\\
+   1 \text{~if~} & -2\pi<arg(z_1)+arg(z_2)\leq-\pi\\
+   -1 \text{~if~} & -\pi<arg(z_1)+arg(z_2)\leq2\pi\end{cases}$$
+ \item Similarly, $arg(z_1\overline{z_2}) = arg(z_1) - arg(z_2)$.
+ \item $|z_1 + z_2| = |z_2 - z_2| \Leftrightarrow arg(z_1) - arg(z_2) = \pi/2$.
+ \item $|z_1 + z_2| = |z_1| + |z_2| \Leftrightarrow arg(z_1) = arg(z_2)$.
+ \item $|z_1 + z_2|^2 = r_1^2 + r_2^2 + 2r_1r_2\cos(\theta_1 - \theta_2)$.
+ \item $|z_1 - z_2|^2 = r_1^2 +r_2^2 + 2r_1r_2\cos(\theta_1 + \theta_2)$.
+\end{enumerate}
+
+\section{Vector Representation}
+Complex numbers can also be represented as vectors. Length of the vector is nothing but modulus of complex number and argument is
+the angle which the vector makes with read axis. It is denoted as $\overrightarrow{OP}$, where $OP$ represents the vector of the
+complex number $z$.
+
+\section{Algebraic Operation's Representation}
+Let $z_1 = x_1 + iy_1$ and $z_2 = x_2 + iy_2$ be two complex numbers, which are represented by two point $P_1$ and $P_2$ in the
+following diagrams.
+
+\subsection{Addition}
+Now, as we know that $z_1 + z_2 = (x_1 + x_2) + i(y_1 + y_2)$. Let us see how it looks using geometrically:
+\begin{figure}[h]
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[->, >=stealth] (-.5,0) -- (5.5,0);
+      \draw[->, >=stealth] (0,-.5) -- (0,5.5);
+      \draw (5.7, 0) node {$X$};
+      \draw (0,5.7) node {$Y$};
+      \draw (0,0) -- (4,1);
+      \draw (0,0) -- (1,4);
+      \draw (1,4) -- (5,5);
+      \draw (4,1) -- (5,5);
+      \draw[dashed] (4,1) -- (4,0);
+      \draw[dashed] (1,4) -- (1,0);
+      \draw[dashed] (5,5) -- (5,0);
+      \draw[dashed] (4,1) -- (5,1);
+      \draw (-.5,-.5) node {$O$};
+      \draw (1,-.5) node {$L$};
+      \draw (4,-.5) node {$M$};
+      \draw (5,-.5) node {$N$};
+      \draw (5.2,1) node {$K$};
+      \draw (3, 1.2) node {$P1(x_1+iy_1)$};
+      \draw (1.3, 4.3) node {$P2(x_2+iy_2)$};
+      \draw (5, 5.2) node {$P(x+iy)$};
+    \end{tikzpicture}
+    \caption{Complex numbers addition}
+  \end{center}
+\end{figure}
+Clearly, $z = z_1 + z_2 = x_1 + x_2 + i(y_1 + y_2)$. Let $P_1M, P_2L$ and $PN$ be parallel to the $y$-axis; $P_1K$ be parallet to
+the $x$-axis. This implied that triangle $OP_2L$ and $PP_1K$ are congruent.
+
+We have $P_1K = OL = x_1$ and $P_2L = PK = y_1$
+
+Thus, $ON = OM + MN = OL + P_1K = x_1 + x_2$ and $PN = PK + KN = P_2L + P_1M = y_2 + y_1$
+
+So we can say that coordinates of $P$ are $(x_1 + x_2, y_1 + y_2)$ which represents the complex number $z.$
+
+We also see that this obeys vector addition i.e. $OP_1 + OP_2 = OP_1 + P_1P = OP$
+
+\subsection{Subtraction}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics{complex-numbers-subtraction}
+    \caption{Complex numbers subtraction}
+  \end{center}
+\end{figure}
+We first represent $-z_2$ by $P_2'$ so that  $P_2P_2'$ is bisected at $O.$ Complete the parallelogram $OP_1PP_2'.$ Then it can be
+easily seen that $P$  representd the difference $z_1 - z_2.$
+
+As $OP_1PP_2'$ is a parallelogram so $P_1P = OP_2'.$ Using vetor notation, we have, $z_1 - z_2 = OP_1 - OP_2 = OP_1 + OP_2' = OP_1 + P_1P = P_2P1$
+
+It follows that the complex number $z_1 - z_2$ is represented by the vector $P_1P_2,$ where points $P_1$ and $P_2$ represent the
+complex numbers $z_1$ and $z_2$ respectively.
+
+It should be noted that $arg(z_1 - z_2)$ is the angle through which $OX$ must be rotated in the anticlockwise direction to make it
+parallel with $P_1P_2.$
+
+\subsection{Multiplication}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{complex-numbers-multiplication}
+    \caption{Complex numbers multiplication}
+  \end{center}
+\end{figure}
+For multiplication it is convenient to use Euler's formula of complex numbers.
+
+Let $z_1 = r_1e^{i\theta_1}$ and $z_2 = r_2e^{i\theta_2},$ then clealry, $z_1z_2 = r_1r_2e^{i(\theta_1 + \theta_2)}$

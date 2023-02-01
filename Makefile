@@ -1,4 +1,4 @@
-SRCS = algebra.tex preface.tex
+SRCS = *.tex
 algebra.pdf: $(SRCS)
 	mkdir -p build
 	xelatex --shell-escape -output-directory=build algebra.tex

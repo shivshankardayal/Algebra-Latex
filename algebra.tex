@@ -23,10 +23,11 @@
 \makeatother
 
 % \usepackage{xcolor, calc, graphicx, soul, fourier, verbments, makeidx, mflogo}
-\usepackage{xcolor, calc, graphicx, soul, minted, makeidx, mflogo,
+\usepackage{xcolor, calc, graphicx, soul, float, makeidx, mflogo,
   pstricks, minitoc, amsmath, amssymb, pst-poly, longtable, tikz, titlesec,
-scalerel, stackengine, microtype}
+  scalerel, stackengine, microtype, enumitem}
 \usetikzlibrary{shapes, arrows, calc}
+\graphicspath{ {./images/} }
 % Define block styles
 \tikzstyle{decision} = [diamond, draw,
   text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
@@ -173,10 +174,6 @@ in the section entitled ``GNU Free Documentation License''.
 \setcounter{page}{1}
 \pagenumbering{roman}
 \tableofcontents
-\newpage
-\listoffigures
-\newpage
-\listoftables
 % \newpage
 % \listofpyglistings
 \newpage
@@ -188,7 +185,11 @@ in the section entitled ``GNU Free Documentation License''.
 \newpage
 \mainmatter
 \pagenumbering{arabic}
+\part{Theory and Problems}
 \include{logarithm}
+\include{complex-numbers}
+\part{Solutions}
+\include{logarithm-solutions}
 \backmatter
 \include{fdl}
 \printindex

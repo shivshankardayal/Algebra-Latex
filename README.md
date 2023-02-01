@@ -11,6 +11,7 @@ The pagsize can be controlled by following lines:
 ```latex
 \documentclass[9pt, oneside, b5paper]{memoir}
 %\documentclass[9pt, twoside, openright, showtrims]{memoir}
+\usepackage[b5paper, total={5in, 7in}]{geometry}
 
 %\setstocksize{11in}{8in}
 %\settrimmedsize{9in}{8in}{*}
@@ -26,4 +27,8 @@ The pagsize can be controlled by following lines:
 If you want a different output page size then tune these parameters to your liking.
 The default paper size is B5 because that is what is most used paper size to print
 the books. Though you may want to make it `twosize` and `openright` in
-`documentclass` if you want to print and bind.
+`documentclass` if you want to print and bind. Refer to geometry package docs for
+details.
+
+Images which are drawn in Asymptote are in images directory and preprocessed as PDF
+so that build times are smaller.
