@@ -1,0 +1,17 @@
+settings.outformat="pdf";
+import geometry;
+import fontsize;
+unitsize(1cm);
+defaultpen(fontsize(9pt));
+defaultpen(linewidth(0.3));
+draw(circle((0,0), 1));
+draw((.707, .707) -- (.707, -.707));
+draw((-.707, .707) -- (-.707, -.707));
+draw((-.707, .707) -- (.707, -.707));
+draw((-.707, -.707) -- (.707, .707));
+draw((.707, -.707) -- (0, - 1) -- (-.707, -.707), dashed);
+label("$A(z_1)$", (-.707, -.707), align=SW);
+label("$B(z_2)$", (.707, -.707), align=SE);
+label("$C(z_3)$", (.707, .707), align=NE);
+label("$P(z)$", (-.707, .707), align=NW);
+label("$P(z)$", (0, -1), align=S);

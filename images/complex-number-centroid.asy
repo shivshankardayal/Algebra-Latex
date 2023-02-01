@@ -1,0 +1,16 @@
+settings.outformat="pdf";
+import geometry;
+import fontsize;
+unitsize(1cm);
+defaultpen(fontsize(9pt));
+draw((-2,0) -- (2, 0) -- (0, 3) -- (-2, 0));
+draw((-2, 0) -- (1, 1.5));
+draw((2, 0) -- (-1, 1.5));
+draw((0, 0) -- (0, 3));
+label("$A(z_1)$", (0, 3), align=N);
+label("$B(z_1)$", (-2, 0), align=SW);
+label("$C(z_3)$", (2, 0), align=SE);
+label("$D$", (0, 0), align=S);
+label("$E$", (1, 1.5), align=E);
+label("$F$", (-1, 1.5), align=W);
+label("$G(z)$", (0, 1), align=NE);

@@ -1,0 +1,18 @@
+settings.outformat="pdf";
+import geometry;
+import fontsize;
+unitsize(1cm);
+defaultpen(fontsize(9pt));
+markangle("$\theta_1$", radius=10, (3, 0), (0, 0), (1.732, 1), 0.5*green);
+markangle("$\theta_2$", radius=20, (3, 0), (0, 0), (1, 1), 0.5*blue);
+markangle("$(\theta_1 - \theta_2)$", radius=10, (1.37, -.37), (0, 0), (3, 0), 0.5*red);
+draw((-1,0) --(3, 0), arrow=Arrow);
+draw((0,-1) --(0, 3), arrow=Arrow);
+draw((0, 0) -- (1.732, 1));
+draw((0, 0) -- (1, 1));
+draw((0, 0) -- (1.37, -.37));
+label("$x$", (3,0), align=E);
+label("$y$", (0,3), align=N);
+label("$P_1(r_1.e^{i\theta_1})$", (1.732,1), align=E);
+label("$P_2(r_2.e^{i\theta_2})$", (1,1), align=N);
+label("$P(r_1/r_2.e^{i(\theta_1 - \theta_2)})$", (1.37, -.37), align=SE);
