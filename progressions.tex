@@ -1,0 +1,163 @@
+\chapter{Progressions}
+There are three different progressions: arithmetic progression, geometric progression and harmonic progression. We start this
+chapter with arithmetic progression or A.P.
+
+\section{Arithmetic Progressions}
+Consider sequences like $1, 2, 3, 4, \ldots$ or $-1, -2, -3, -4, \ldots$ or $1, 3, 5, 7, \ldots$ or $a, a + d, a + 2d, \ldots$
+
+These sequences increase or decrease with a common difference. When quantities increase or decrease with a common difference they
+are said to be in \textit{Arithmetic Progression}. The \textit{common difference} can be found by subtracting any term of the
+series that follows it. For example for the first series it is $1$ and for the last it is $d$.
+
+Consider the series $a, a + d, a + 2d, a + 3d, \ldots$
+
+Simple observation tells us that $1$st term is $a$, $2$nd term is $a + d$, the $3$rd term is $a + 2d$ and hence the $n$th term will
+be $a + (n - 1)d$. These terms are typically written as $t_1, t_2, t_3, \ldots, t_n$.
+
+\subsection{$n$th Term of Arithmetic Progression}
+Following above discussion, we can clearly say that the $n$th term of an arithmetic progression is given by $t_n = a + (n - 1)d$,
+where $a$ is called the first term and $d$ the common difference.
+
+\subsection{Sum of an Arithmetic Progression}
+Let $S_n$ represent the sum of first $n$ terms of an arithmetic progression, then we can write.
+
+$$S_n = a + (a + d) + (a + 2d) + \ldots + [a + (n - 2)d] + [a + (n - 1)d]$$
+Writing the terms in reverse order we have
+$$S_n = [a + (n - 1)s] + [a + (n - 2)d] + \ldots + (a + d) + a$$
+Adding term by term, we get
+$$2S_n = [2a + (n - 1)d] + [2a + (n - 1)d] + \ldots\text{~to~}n\text{~terms~}$$
+$$2S_n = n[2a + (n - 1)d]\Rightarrow S_n = \frac{n}{2}[2a + (n - 1)d]$$
+
+We also see that $S_n = \frac{n}{2}(t_1 + t_n)$
+
+We also see that if a series is $1 + 2 + 3 + \ldots + n = \sum_{i=0}^ni = \frac{n(n + 1)}{2}$.
+
+\subsection{Arithmetic Mean}
+When three quantities are in arithmetic progression the quantity in the middle is known to be arithmetic mean of the other two. For
+example, if $a, b, c$ are in A.P., then $b$ is said to be arithmetic mean of $a$ and $c$. In general, it is written $b = \frac{a +
+  c}{2}$. This can be examined further. Let $b = a + d$, then $c = a + 2d$. Clearly, $b = \frac{a + c}{2}$.
+
+It is also possible to insert $n$ numbers between any two numbers such that all of them are in A.P. Consider two numbers $a$ and
+$b$ in between which we want to insert $n$ numbers such that they are in A.P. Clearly, $b$ will become $n +2$th term of A.P. Let
+common difference be $d$ then we can write $b = a + (n + 1)d \Rightarrow d = \frac{b - a}{n + 1}$. Now all the $n$ arithmetic means
+can be deduced. Let those be $m1, m2, \ldots, m_n$ then $m_1 = a + \frac{b - a}{n + 1}, m_2 = a + \frac{2(b - a)}{n + 1}, \ldots,
+m_n = a + \frac{n(b - a)}{n + 1}$.
+
+Suppose there are $n$ terms of an A.P., then the arithmetic mean of those $n$ terms is given by $\frac{t_1 + t_2 + \ldots +
+  t_n}{n}$.
+
+\subsection{Deducing Number of Terms}
+We know that $S_n = \frac{n}{2}[2a + (n - 1)d]$. Say $S_n, a$ and $d$ are known and we have to evaluate $n$. This being a quadratic
+equaion will have two roots for $n$. If the results are positive and integral then there is no problem in interpreting the
+results. In some cases for a negative root a suitable interpretation can be given.
+
+\textbf{Example:} How many terms of the series $-8, -6, -4, \ldots$ must be added for the sum to be $36$?
+
+$\frac{n}{2}[-16 + (n - 1)2] = 36\Rightarrow n^2 - 9n - 36 = 0 \Rightarrow n = 12, -3$
+
+If we take $12$ terms of the series, we have $-8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14$. The sum of these terms is $36$ and sum of
+last three terms is also $36$ which is represented by $n = -3$.
+
+\subsection{Properties of an A.P.}
+\begin{enumerate}
+\item If a fixed number is added to or subtracted from each item of a given A.P., then the resulting is also an A.P., and it has
+  the same common difference as that of the given A.P.
+\item If each term of an A.P. is multiplied or divided by a non-zero fixed constant then the resulting sequence is also an A.P. The
+  common difference is multiplied or divided by the same factor.
+\item If $a_1, a_2, a_3, \ldots$ and $b_1, b_2, b_3, \ldots$ are two arithmetic progressions then $a_1 + b_1, a_2 + b_2, a_3 + b_3,
+  \ldots$ are also in A.P.
+\item If we have to choose three unknown terms in an A.P. then it is best to choose them as $a - d, a, a + d$.
+\item If we have to choose four unknown terms in an A.P. then it is best to choose them as $a - 3d, a - d, a + d, a + 3d$.
+\item In an A.P., the sum of terms equidistant from the beginning and end is constant and is equal to the sum of first and last
+  term.
+\item Any term of an A.P., except the first, is equal to half the sum of terms which are equidistant from it:
+  $$a_n = \frac{1}{2}(a_{n - k} + a_{n + k}), ~k<n,\text{~and for~} k = 1$$
+  $$a_n = \frac{1}{2}(a_{n - 1} + a_{n + 1})$$
+\item $t_n = S_n - S_{n - 1}, n\geq 2$
+\item If $t_n = pn + q$ i.e. a linear expression in $n$ then it will form an A.P. of common difference $p = t_n - t_{n - 1}$ and
+  first term $p + q$. For example, if $t_n = 3n + 4$, then it is an A.P. of common difference $3$ anda the first term as $7$.
+\item If $S_n = an^2 + bn + c$ i.e. a quadratic function in $n$, then the series in an A.P. where $a = 2a,$ twice the coefficient
+  of $n^2$.
+\end{enumerate}
+
+\subsection{Sum of Squares and Cubes and More}
+We observe that
+$$i^3 - (i - 1)^3 = 3i^3 - 3i + 1 \Rightarrow \sum_{i = 1}^n[i^3 - (i - 1)^3] = 3\sum_{i = 0}^ni^2 - \frac{3n(n + 1)}{2} + n$$
+$$n^3 = 3\sum_{i = 0}^ni^2 - \frac{3n(n + 1)}{2} + n \Rightarrow 3\sum_{i=0}^ni^2 = n^3 + \frac{3n(n + 1)}{2} - n$$
+$$\sum_{i=0}^ni^2 = \frac{n(n + 1)(2n + 1)}{6}$$
+
+Following in a similar fashion, we can show that
+
+$$\sum_{i=0}^n = \left\{\frac{n(n + 1)}{2}\right\}^2$$
+
+More powers can be evaluated in a similar fashion.
+
+\section{Geometric Progressions}
+A succession of numbers is said to be in geometric progressions or geometric sequence if the ratio of any term and the term
+preceeding it is constant throughout. This constant is called \textit{common ratio} of the G.P.
+
+Example: $1, 2, 4, 8, 16, \ldots$
+
+Here, $\frac{t_2}{t_1} = \frac{t_3}{t_2} = \ldots = 2$.
+
+Also, $1, 3, 9, 27,\ldots$ are in geometric progression whose first term is $1$ and common ratio is $3$.
+
+Also, $2, -4, 8, -16, \ldots$ are in geometric progression whose firts term is $2$ and common ratio is $-2$.
+
+\subsection{Properties of a G.P.}
+\begin{enumerate}
+\item If the each term of a G.P. be multiplied by a non-zero number, then the sequence obtained is also a G.P.
+
+  \textbf{Proof:} Let the given G.P. be $a, ar, ar^2, ar^3, \ldots$
+
+  Let $k$ be a non-zero number, the sequence obtained by multiplying each term of the given G.P. by $k$ is $ak, ark, ar^2k, ar^3k,
+  \ldots$
+
+  Clearly, the series is in G.P. with the same common ratio as previous ratio i.e. $r$.
+
+  Again, dividing each term of G.P. $a, ar, ar^2, a^3, \ldots$ we obtain the sequence $\frac{a}{k}, \frac{ar}{k}, \frac{ar^2}{k},
+  \ldots$
+
+  It is clear that this new sequence is also a G.P., whose common ratio is $r$.
+\item The reciprocals of the terms of a G.P. are also in G.P.
+
+  \textbf{Proof:} Let the G.P. be $a, ar, ar^2, \ldots$, the sequence whose terms are reciprocals of this G.P. is $\frac{1}{a},
+  \frac{1}{ar}, \frac{1}{ar^2}, \ldots$
+
+  It is clear that this sequence is in G.P., whose first term is $\frac{1}{a}$ and common ratio is $\frac{1}{r}$.
+\end{enumerate}
+
+\subsection{Sum of the First $n$ Terms of a G.P.}
+Let $a$ be the first term and $r$ be the common ratio of a G.P. and $S_n$ be the sum of its first $n$ terms
+
+\textbf{Case I:} When $r\neq 1$
+$$S_n = a + ar + ar^2 + \ldots + ar^{n - 2} + ar^{n - 1}$$
+$$rS_n = ar + ar^2 + \ldots + ar^{n - 1} + ar^n$$
+
+Subtracting, we get $(1 - r)S_n = a - ar^n = a(1 - r^n)$
+
+$\therefore S_n = \frac{a(1 - r^n)}{1 - r} = \frac{a(r^n - 1)}{r - 1}$
+
+\textbf{Case II:} When $r = 1$
+
+$S_n = a + a + \ldots + a = na$ and this G.P. is also an A.P. whose common difference is $0$.
+
+\subsection{Sum of Infinite Terms of a G.P.}
+If $|r|\geq 1$ then sum would be $\pm\infty$. However, if $|r|< 1$ then sum would be finite.
+
+We have obtained that $S_n = \frac{a(1 - r^n)}{1 - r}$
+
+We see that as $n$ approaches $\infty, r^n$ will approach $0$. Thus, $S_\infty = \frac{a}{1 - r}$
+
+\subsection{Recurring Decimals}
+Recurring decimals are a very interesting and nice example to demonstrate the infinite G. P. and the value can be obtained by the
+formula derived in previous section. Consider a recurring decimal $\dot{7}$.
+
+$$.\dot{7} = .777777 ... \text{to }\infty$$
+$$= .7 + .07 + .007 + .0007 + \ldots$$
+$$= \frac{7}{10} + \frac{7}{100} + \frac{7}{1000} + \ldots$$
+$$= \frac{7}{10} + \frac{7}{10^2} + \frac{7}{10^3} + \ldots$$
+$$= 7\left(\frac{1}{10} + \frac{1}{10^2} + \frac{1}{10^3} + \ldots\right)$$
+$$= \frac{7}{9}$$
+
+\subsection{Geometric Mean}
