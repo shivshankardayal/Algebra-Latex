@@ -43,6 +43,14 @@ common difference be $d$ then we can write $b = a + (n + 1)d \Rightarrow d = \fr
 can be deduced. Let those be $m1, m2, \ldots, m_n$ then $m_1 = a + \frac{b - a}{n + 1}, m_2 = a + \frac{2(b - a)}{n + 1}, \ldots,
 m_n = a + \frac{n(b - a)}{n + 1}$.
 
+First A.M. $= a + d = \frac{an + b}{n +1}$
+
+Second A.M. $= a + 2d = \frac{a(n - 1) + b}{n + 1}$
+
+$\ldots$
+
+$n$th A.M. $= a + nd = \frac{a + nb}{n + 1}$
+
 Suppose there are $n$ terms of an A.P., then the arithmetic mean of those $n$ terms is given by $\frac{t_1 + t_2 + \ldots +
   t_n}{n}$.
 
@@ -161,3 +169,855 @@ $$= 7\left(\frac{1}{10} + \frac{1}{10^2} + \frac{1}{10^3} + \ldots\right)$$
 $$= \frac{7}{9}$$
 
 \subsection{Geometric Mean}
+Like arithmetic means; we also have geometric means. Say two numbers $a$ and $b$ are in G.P. and $x$ is a geometric mean between
+them then by definition $a, x, b$ will be in G.P. Then,
+$$\frac{x}{a} = \frac{b}{x}$$
+$$\Rightarrow x^2 = ab \Rightarrow x = \sqrt{ab}$$
+
+If $G_1, G_2, \ldots, G_n$ are $n$ geometric means between two numbers $a$ and $b$, then $G_1G_2\ldots G_n = \sqrt{ab^n}$
+
+\noindent\textbf{Proof:} $b$ is the $n + 2$nd term. Thus, $b = ar^{n + 1}$ where common ratio is $r$.
+
+Thus, $G_1 = ar, G_2 = ar^2, \ldots, G_n = ar^n$
+
+$G_1G_2\ldots G_n = ar^{1 + 2 + \ldots + n} = ar^{\frac{n(n + 1)}{2}}$
+
+$= \sqrt{ab^n}$
+
+If $a_1, a_2, \ldots, a_n$ are $n$ positive numbers in G.P. then their geometric mean is given by $G = (a_1a_2\ldots
+a_n)^{\frac{1}{n}}$
+
+Thus, first G.M. $= ar = a\left(\frac{b}{a}\right)^{1/(n + 1)}$
+
+Second G.M. $= ar^2 = a\left(\frac{b}{a}\right)^{2/(n + 1)}$
+
+$\ldots$
+
+$n$th G.M. $= ar^{n} = a\left(\frac{b}{a}\right)^{n/(n + 1)}$
+\subsection{Notes}
+\begin{enumerate}
+\item Odd number of terms in a G.P. should be taken as $\ldots\frac{a}{r^2}, \frac{a}{r}, a, ar, ar^2, \ldots$
+\item Even number of terms in a G.P. should be taken as $\ldots, \frac{a}{r^5}, \frac{a}{r^3}, \frac{a}{r}, ar, ar^3, ar^5, \ldots$
+\item If $a_1, a_2, \ldots, a_n$ and $b_1, b-2, \ldots, b_n$ be two G.P. of common ratios $r_1$ and $r_2$ then $a_1b_1, a_2b_2,
+  a_3b_3, \ldots$ and $\frac{a_1}{b_1}, \frac{a_2}{b_2}, \frac{a_3}{b_3}, \ldots$ also form G.P., where common ratios will be
+  $r_1r_2$ and $\frac{r_1}{r_2}$ respectively.
+\item Let $a_1, a_2, a_3, \ldots$ be a G.P. of positive terms, then $\log a_1, \log a_2, \log a_3, \ldots$ will be an A.P. and
+  vice-versa.
+
+  Let $a$ be the first term and $r$ be the common ratio of the G.P. then $a_i = ar^{i - 1}$. Now $\log a_i = \log a + (i - 1)\log
+  r$ which represents $i$th term of an A.P. with first term as $\log a$ and common difference $\log r$.
+
+  Conversely, let us assume that $\log a_1, \log a_2, \log a_3, \ldots$ are in A.P. then $a_i = x^{a + (i - 1)d} = x^ax^{{i - 1}d}$
+  where $x$ is the base of the logarithm. This shows that $a_1, a_2, a_3,\ldots$ will be in G.P., whose first term is $x^a$ and
+  whos ecommon ratio is $x^d$.
+\item Increasing and decreasing G.P.
+
+  \textbf{Case I:} Let the first term $a$ be positive. Then if $r > 1$, then it is an increasing G.P. but if $0< r< 1$ then it is a
+  decreasing G.P.
+
+  \textbf{case II:} Let the first term $a$ be negative. Then if $r > 1$, then it is a decreasing G.P. but if $0 < r < 1$ then it is
+  an increasing G.P.
+\end{enumerate}
+
+\subsection{Arithmetico Geometric Series}
+If the termms of an A.P. are multiplied y corresponding terms of a G.P., then the new series obtained is called an
+Arithmetico-Geometric series.
+
+\textbf{Exmaple:} If the terms of the arithmetic series $2 + 5 + 8 + \ldots$ are multiplied with the corresponsing terms of the
+geometric series $x + x^2 + x^3 + \ldots$ then the resulting arithmetico-geometric series is $2x + 5x^2 + 8x^3 + \ldots$
+
+\subsection{Sum of $n$ terms of an Arithmetico-Geometric Series}
+Let $a_1, a_2, \ldots, a_n$ be an A.P. and $b_1, b_2, \ldots, b_n$ be a G.P. Let $d$ be the common difference of the A.P. and $r$
+be the common ratio of the G.P. Also, let $a = a_1$ and $b = b_1$, then
+$$S_n = ab + (a + d)br + (a+ 2d)br^2 + \ldots + [a + (n - 1)d]br^{n - 1}$$
+$$rS_n = abr + (a + d)br^2 + (a + 2d)br^3 + \ldots + [a + (n - 1)d]br^n$$
+$$\Rightarrow (1 - r)S_n = ab + dbr + dbr62 + \ldots + dbr^{n - 1} - [a + (n - 1)d]br^n$$
+$$= ab + \frac{dbr(1 - r^{n - 1})}{(1 - r) - [a + (n - 1)d]br^n}$$
+$$S_n = \frac{ab}{1 - r} + \frac{dbr(1 - r^{n - 1})}{(1 - r)^2} - \frac{[a + (n - 1)d]br^n}{1 - r}(r\neq 1)$$
+
+If $|r|< 1$, then $lim_{n\to \infty}r^n = 0$, therefore , sum of an infinite number of terms of an arithmetico-geometric series is
+given by
+$$S_\infty = \frac{ab}{1 - r} + \frac{dbr}{(1 - r)^2}$$
+
+\section{Harmonic Progressions}
+Consider an A.P. then an H.P. is formed by terms given by reciprocal of terms of the A.P. respectively. So if the terms of A.P. are
+$a_1, a_2, \ldots, a_n$ then terms of H.P. are given by $\frac{1}{a_1}, \frac{1}{a_2}, \ldots, \frac{1}{a_n}$.
+
+When we study H.P. and its properties we do that by studying the properties of the corresponding A.P.
+
+\subsection{Harmonic Means}
+Numbers $H_1, H_2, \ldots, H_n$ are said to be the $n$ H.M. between two numbers $a$ and $b$, if $a, H_1, H_2, \ldots, H_n, b$ are
+in H.P. For example, $\frac{1}{2}, \frac{1}{3}, \frac{1}{4}$ are the H.M. between $1$ and $\frac{1}{5}$ because $1, \frac{1}{2},
+\frac{1}{3}, \frac{1}{4}, \frac{1}{5}$ are in H.P.
+
+Let $a$ and $b$ be the two given quantities and $H$ be the H.M. between them. Then $a, H, b$ will be in H.P.
+
+$\therefore \frac{1}{a}, \frac{1}{H}, \frac{1}{b}$ will be in H.P.
+
+$\frac{1}{H} - \frac{1}{a} = \frac{1}{b} - \frac{1}{H} \Rightarrow H = \frac{2ab}{a =b}$
+
+Let $H_1, H_2, \ldots, H_n$ be the $n$ H.M. between two given quantities $a$ and $b$, and $d$ be the c.d. of the corresponding A.P.
+Then $a, H_1, H_2, \ldots, H_n, b$ will be in H.P.
+
+$\therefore \frac{1}{a}, \frac{1}{H_1}, \frac{1}{H_2}, \ldots, \frac{1}{H_n}, \frac{1}{b}$ will be in A.P.
+
+$\frac{1}{b} = t_{n + 2} = \frac{1}{a} + (n + 1)d \Rightarrow d = \frac{a - b}{ab(n + 1)}$
+
+$\therefore \frac{1}{H_1} = \frac{1}{a} + d \Rightarrow H_1 = \frac{ab(n + 1)}{a + nb}$
+
+$H_2 = \frac{ab(n + 1)}{2a + (n - 1)b}$
+
+$\ldots$
+
+$H_n = \frac{ab(n + 1)}{an + b}$
+
+\section{Relation between A.M., G.M. and H.M.}
+Let $a$ and $b$ be two real, positive and unequal quantities and $A, G$ and $H$ be the single A.M., G.M. and H.M. between them
+respectively.
+
+Then, $A = \frac{a + b}{2}, G = \sqrt{ab}, H = \frac{2ab}{a + b}$
+
+$AH = ab = G^2$ and thus $A, G, H$ form a G.P.
+
+Similarly it can be probve that $A > G > H$
+
+For equal $a$ and $b$, it can be easily verified that $A = G = H$
+
+\section{Problems}
+\begin{enumerate}
+\item If $n$th term of a sequence is $2n^2 + 1,$ find the sequence. Is this seuquence in A.P.?
+\item Find the first five terms of the sequence for which $t_1 = 1, t_2 = 2$ and $t_{n + 2} = t_n + t_{n + 1}$.
+\item Write the sequence whose $n$th term is $3n + 5$.
+\item Write the sequence whose $n$th term is $2n^2 + 3$.
+\item Write the sequence whose $n$th term is $\frac{3n}{2n + 4}$.
+\item Write the first three terms of sequence defined by $t_1 = 2, t_{n + 1} = \frac{2t_n + 1}{t_n + 3}$.
+\item If $n$th term of a sequence is $4n^2 + 1$, find the sequence. Is this sequence an A.P.?
+\item If $n$th term of a sequence is $2an + b$, where $a, b$ are constants, is this sequence an A.P.?
+\item Find the 5th term of the sequence whose first three terms are $3, 3, 6$ and each term after the second is the sum of two
+  preceding terms.
+\item Consider the sequence defined by $t_n = an^2 + bn + c$. If $t_1 = 1, t_2 = 5$ and $t_3 = 11$ then find the value of
+  $t_{10}$.
+\item Show that the seuquence $9, 12, 15, 18, \ldots$ is an A.P. Find its $16^{th}$ term and the general term.
+\item Show that the sequence $\log a, \log (ab), \log(ab^2), \log (ab^3), \ldots$ is an A.P. Find its $n^{th}$ term.
+\item Find the sum to $n$ terms of the sequence $\langle t_n \rangle$, where $t_n = 5 -6n, n\in N$.
+\item How many terms are there in the A.P. $3, 7, 11, \ldots, 407?$
+\item If $a, b, c, d, e$ are in A.P. find the value of $a - 4b + 6c - 4d + e$.
+\item In a certain A.P. $5$ times the $5$th term is equal to $8$ times the $8$th term, then prove that $13$th term is
+  zero.
+\item Find the term of the series $25, 22\frac{3}{4}, 20\frac{1}{2},18\frac{1}{4}, \ldots$ which is numerically smallest positive
+  number.
+\item A person was appointed in the pay scale of Rs. $700 - 40 - 1500$. Find in how many years he will reach the maximum of the
+  scale.
+\item Find the A.P. whose $7$th and $13$th terms are respectively $34$ and $64$.
+\item Is $55$ a term of the sequence $1, 3, 5, 7, \ldots$? If yes, find which term it is.
+\item Find the first negative term of the sequence $2000, 1995, 1990, \ldots$
+\item How many terms are identical in two arithmetic progressions $2, 4, 6, 8, \ldots$ up to $100$ terms and $3, 6, 9, \ldots$ up
+  to $80$ terms.
+\item Find the number of all positive integers of $3$ digits which are divisible by $5$.
+\item Is $105$ a term of the arithmetic progression $4, 9, 14, \ldots?$
+\item Find the first negative term of the sequence $999, 995, 991, \ldots$.
+\item Each of the series $3 + 5 + 7 + \ldots$ and $4 + 7 + 10 + \ldots$ is continued to $100$ term. Find how many terms are
+  identical?
+\item If $m$ times the $m$th term of an A.P. is equal to $n$ times the $n$th term, find its $(m + n)$th term.
+\item If $a, b, c$ be the $p$th, $q$th and $r$th terms respectively of an A.P., prove that $a(q - r) + b(r - p) + c(p - q) =
+  0$.
+\item Find the number of integers between $100$ and $1000$ that are divisible by $7$ and not divisible by $7$.
+\item If $a, b, c$ be the $p$th, $q$th and $r$th terms respectively of an A.P., prove that $(a - b)r + (b - c)p + (c - a)q =
+  0$.
+\item The sum of three numbers in A.P. is $27$ and the sum of their squares is $293.$ Find the numbers.
+\item The sum of four integers in A.P. is $24$ and their product is $945.$ Find the numbers.
+\item If the $p$th term of an A.P. is $q$ and the $q$th term is $p$, find the first term and common difference. Also, show that $(p
+  + q)$th term is zero.
+\item For an A.P. show that $t_m + t_{2n + m} = 2t_{m + n}$.
+\item Divide $15$ into three parts which are in A.P. and the sum of their squares is $83$.
+\item Three numbers are in A.P. Their sum is $27$ and the sum of their squares is $275$. Find the numbers.
+\item The sum of three numbers in A.P. is $12$ and the sum of their cubes is $408$. Find the numbers.
+\item Divide $20$ into four parts which are in A.P. such that the product of first and fourth is to product of second and third is
+  $2:3$.
+\item The sum of three numbers in A.P. is $-3$ and their product is $8$. Find the numbers.
+\item Divide $32$ into four parts which are in A.P. such that the ratio of product of extremes to the product of means is $7:15$.
+\item If $(b + c - a)/a, (c + a - b)/b, (a + b - c)/c$ are in A.P. then prove that $1/a, 1/b, 1/c$ are also in A.P.
+\item If $a, b, c \in R+$ form an A.P., then prove that $a + 1/bc, b + 1/ca, c + 1/ab$ are also in A.P.
+\item If $a, b, c$ are in A. P., then prove that $a^2(b + c), b^2(c + a), c^2(a + b)$ are also in A.P.
+\item If $a, b, c$ are in A.P., then prove that $\frac{1}{\sqrt{b} + \sqrt{c}}, \frac{1}{\sqrt{c} + \sqrt{a}}, \frac{1}{\sqrt{a} +
+  \sqrt{b}}$ are also in A.P.
+\item If $a, b, c$ are in A.P., then prove that $a\left(\frac{1}{b} + \frac{1}{c}\right), b\left(\frac{1}{c} + \frac{1}{a}\right),
+  c\left(\frac{1}{a} + \frac{1}{b}\right)$ are also in A.P.
+\item If $(b - c)^2, (c - a)^2, (a - b)^2$ are in A.P. then prove that $\frac{1}{b - c}, \frac{1}{c - a}, \frac{1}{a - b}$ are also
+  in A.P.
+\item If $a, b, c$ are in A.P. then prove that $b + c, c + a, a + b$ are also in A.P.
+\item If $a^2, b^2, c^2$ are in A.P. then prove that $\frac{1}{b+c}, \frac{1}{c+a}, \frac{1}{a + b}$ are in A.P.
+\item If $a, b, c$ are in A.P., show that $2(a - b) = a - c = 2(b - c)$.
+\item If $a, b , c$ are in A.P., then prove that $(a - c)^2 = 4(b^2 - ac)$.
+\item In an A.P. if $S_n = t_1 + t_2 + \ldots + t_n$ ($n$ odd), $S_2 = t_2 + t_4 + \ldots + t_{n - 1},$ then find the value of
+  $S_1/S_2$ in terms of $n$.
+\item Find the degree of the equation $(1 + x)(1 + x^6)(1 + x^{11})\ldots (1+ x^{101})$.
+\item Prove that a sequence is an A.P. if the sum of its terms is of the form $An^2 + Bn,$ where $A, B$ are constants.
+\item If the sequence $a_1, a_2, \ldots, a_n$ form an A.P., then prove that $a_1^2 - a_2^2 + a_3^2 - a_4^2 + \ldots + a_{2n - 1}^2
+  - a_{2n}^2 = \frac{n}{2n - 1}(a_1^2 - a_{2n}^2)$.
+\item Find the sum of first $24$ terms of the A.P. $a_1, a_2, a_3, \ldots, a_{24},$ if it is known that $a_1 + a_5 + a_{10} +
+  a_{15} + a_{20} + a_{24} = 225$
+\item If the arithmetic progression whose common difference is non-zero, the sum of first $3n$ terms is equal to next $n$
+  terms. Then, find the ratio of sum of first $2n$ terms to the sum of next $2n$ terms.
+\item If the sum of $n$ terms of a series be $5n^2 + 3n,$ find its $n$th term. Are the terms of this series in A.P.?
+\item Find the sum of the series $(a + b)^2 + (a^2 + b^2) + (a - b)^2 + \ldots$ to $n$ terms.
+\item Find $1 - 3 + 5 - 7 + 9 - 11 + \ldots$ to $n$ terms.
+\item The interior angles of a polygon are in A.P. The smallest angle is $120$\textdegree and the commnon difference is
+  $5$\textdegree. Find the number of sides of the polygon.
+\item $25$ trees are planted in a straight line at intervals of $5$ meters. To water them the gardener must bring water for each
+  tree separately from a well $10$ meters from the first tree. How far he will have to travel to water all the trees beginning with
+  the first if he starts from the well.
+\item If $a$ be the first term of an A.P. and the sum of its first $p$ terms is equal to zero, show that the sum of the next $q$
+  terms is $-\frac{a(p + q)}{p - 1}q$.
+\item The sum of the first $p$ terms of an A.P. is equal to the sum of its first $q$ terms, prove that the sum of its first $(p +
+  q)$ terms is zero.
+\item Prove that the sum of latter half of $2n$ terms of a series in A.P. is equal to the one third of the sum of first $3n$ terms.
+\item If $S_1, S_2, S_3, \ldots, S_p$ be the sum of $n$ terms of arithmetic progressions whose first terms are respectively $1, 2,
+  3, \ldots$ and common differences are $1, 2, 3, \ldots$ prove that $$S_1 + S_2 + S_3 + \ldots + S_p = \frac{np}{4}(n+1)(p+1)$$
+\item If $a,b$ and $c$ be the sum of $p, q$ and $r$ terms rspectively of an A.P., prove that $$\frac{a}{p}(q - r) + \frac{b}{q}(r -
+  p) + \frac{c}{r}(p - q) = 0$$
+\item If the sum of $m$ terms of an A.P. is equal to half the sum of $(m + n)$ terms and is also equal to half the sum of $(m + p)$
+  terms, prove that $(m + n)\left(\frac{1}{m} - \frac{1}{p}\right) = (m + p)\left(\frac{1}{m} - \frac{1}{n}\right)$.
+\item If there are $(2n + 1)$ terms in an A.P., then prove that the ratio of sum of odd terms and the sum of even terms is $n + 1:
+  n$.
+\item The sum of $n$ terms of two series in A.P. are in the ration $(3n - 13): (5n + 21)$. Find the ratio of their $24$th terms.
+\item If the $m$th term of an A.P. is $\frac{1}{n}$ and $n$th term of an A.P. is $\frac{1}{m}$ then prove that the sum to $mn$
+  terms is $\frac{mn + 1}{2}$.
+\item If the sum of $m$ terms of an A.P.is $n$ and the sum of its $n$ terms is $m$, show that sum of $(m + n)$ terms is $-(m + n)$.
+\item If $S$ be the sum of $2n + 1$ terms of an A.P., and $S_1$ that of alternate terms beginning with the first, then show that
+  $\frac{S}{S_1} = \frac{2n + 1}{n + 1}$
+\item If $a, b, c$ be the $1$st, $3$rd, $n$th terms respectively of an A.P., prove that the sum of $n$ terms is $\frac{c + a}{2} +
+  \frac{c^2 - a^2}{b - a}$.
+\item The sum of $n$ terms of two series in A.P. are in ratio $(3n + 8):(7n + 15)$. Find the ratio of their $12$th terms.
+\item If the ratio of the sum of $m$ terms and $n$ terms of an A.P. is $m^2:n^2,$ prove that the ratio of its $m$th and $n$th term
+  wil be $(2m - 1):(2n -1)$.
+\item How many terms are in the G.P. $5, 20, 80, ..., 5120$?
+\item How many terms are in the G.P. $0.03, 0.06, 0.12, \ldots, 3.84$?
+\item A boy agrees to work at the rate of one rupee the first day, two rupee the second day, four rupees the third day, eight
+  rupees the fourth day and so on. How much would he get on $20th$ day?
+\item The population of a city in January $1987$ was $20,000$. It increased at the rate of $2\%$ per annum. Find the population of
+  the city in January $1997$.
+\item The sum of $n$ terms of a sequence is $2^n - 1,$ find its $n$th term. Is the sequence in G.P.?
+\item If the fifth term of a G.P. is $81$ and second term is $24$. Find the G.P.
+\item The seventh term of a G.P. is $8$ times the fourth term. Find the G.P. when its $5$th term is $48$.
+\item If the $5$th and $8$th terms of a G.P. be $48$ and $384$ respectively, find the G.P
+\item If the $6$th and $10$th terms of a G.P. are $\frac{1}{16}$ and $\frac{1}{256}$ respectively, find the G.P.
+\item If the $p$th, $q$th and $r$th terms of a G.P. be $a, b, c (a, b, c >0)$, then prove that $(q - r)\log a + (r - p)\log b + (p
+  - q)\log c = 0$.
+\item If the $(p + q)$th term of a G.P. is $a$ and the $(p - q)$th term is $b$, show that its $p$th term is $\sqrt{ab}$.
+\item If the $p$th, $q$th and $r$th terms of a G.P. be $x, y$ and $z$ respectively, prove that $x^{q - r}.y^{r - p}.z^{p - q} = 1$.
+\item The first term of a G.P. is $1$. The sum of third and fifth terms is $90$. Find the common ratio of G.P.
+\item Fifth term of a G.P. is $2$. Find the product of its first nine terms.
+\item The fourth, seventh and last term of a G.P. are $10, 80$ and $2560$ respectively. Find the first term and number of terms in
+  the G.P.
+\item Three numbers are in G.P. If we double the middle term they form an A.P. Find the common ratio of the G.P.
+\item If $p, q$ and $r$ are in A.P. show that $p$th, $q$th and $r$th term of a G.P. are in G.P.
+\item If $a, b, c$ and $d$ are in G.P., show that $(ab + bc + cd)^2 = (a^2 + b^2 + c^2)(b^2 + c^2 + d^2)$.
+\item Three non-zero numbers $a, b$ and $c$ are in A.P. Increasing $a$ by 1 or increading $c$ by 2,the numbers are in G.P. Then
+  find $b$.
+\item Three numbers are in G.P. whose sum is $70$. If the extremes be each multiplied by $4$ and the mean by $5$, they will be in
+  A.P. Find the numbers.
+\item If the product of three numbers in G.P. be $216$ and their sum is $19$, find the numbers.
+\item A number consists of three digits in G.P. The sum of the right hand and left hand digits exceed twice the middle digit by $1$
+  and the sum of left hand and middle digit is two-third of the sum of the middle and right hand digits. Find the number.
+\item In a set of four numbers, the first three are in G.P. and the last three are in A.P. with a common difference of $6$. If the
+  first number is same as fourth, find the four numbers.
+\item The sum of three numbers in G.P. is $21$ and the sum of their squares is $189$. Find the numbers.
+\item The prodduct of three consecutive terms of a G.P. is $-64$ and the first term is four times the third. Find the terms.
+\item Three numbers whose sum is $15$ are in A.P. If $1, 4, 19$ be added to them respectively the resulting numbers are in
+  G.P. Find the numbers.
+\item From three numbers in G.P. other three numbers in G.P. are subtracted. Resulting numbers are found to be in G.P. again. Prove
+  that the three sequences have the same common ratio.
+\item If $a, b, c, d$ are in G.P., show that $(b - c)^2 + (c - a)^2 + (d - b)^2 = (a - d)^2$.
+\item If $a,b,c,d$ are in G. P., then show that $(a^2 + b^2 + c^2)(b^2 + c^2 + d^2) = (ad + bc + cd)^2$.
+\item If $a^x = b^y = c^z$ where $x, y, z$ are in G.P., show that $\log_ba = \log_cb$.
+\item If the continued product of three numbers in a G.P. is $216$ and the sum of their products in pairs is $156$, find the
+  numbers.
+\item If $a, b, c, d$ are in G.P., show that $(a + b)^2, (b + c)^2, (c + d)^2$ are in G.P.
+\item If $a, b, c, d$ are in G.P., show that $(a - b)^2, (b - c)^2, (c - d)^2$ are in G.P.
+\item If $a, b, c, d$ are in G.P., show that $a^2 + b^2 + c^2, ab + bc + cd, b^2 + c^2 + d^2$ are in G.P.
+\item If $a, b, c, d$ are in G.P., show that $\frac{1}{(a + b)^2}, \frac{1}{(b + c)^2}, \frac{1}{(c + d)^2}$ are in G.P.
+\item If $a, b, c, d$ are in G.P., show that $a(b - c)^3 = d(a - b)^3$.
+\item If $a, b, c, d$ are in G.P., show that $(a + b + c + d)^2 = (a + b)^2 + (c + d)^2 + 2(b + c)^2$.
+\item If $a, b, c$ are in G.P., show that $a^2b^2c^2\left(\frac{1}{a^3} + \frac{1}{b^3} + \frac{1}{c^3}\right) = a^3 + b^3 + c^3$.
+\item If $a, b, c$ are in G.P., show that $(a^2 - b^2)(b^2 + c^2) = (b^2 - c^2)(a^2 + b^2)$.
+\item If $a, b, c$ are in G.P., show that $\log a, \log b, \log c$ are in A.P.
+\item Find $1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots$ to $n$ terms.
+\item Find $1 + 2 + 4 + 8 + \ldots$ to $12$ terms.
+\item Find $1 - 3 + 9 - 27 + \ldots$ to $9$ terms.
+\item Find $1 + \frac{1}{3} + \frac{1}{9} + \frac{1}{27} \ldots$ to $n$ terms.
+\item Find the sum of $n$ terms of the series $(a + b) + (a^2 + 2b) + (a^3 + 3b) + \ldots$ to $n$ terms.
+\item A man agrees to work at the rate of one dollar the first day, two dollars the second day, four dollars the third day, eight
+  dollars the fourth day and so on. How much would he get at the end of $120$ days.
+\item Find the sum to $n$ terms of the series $8 + 88 + 888 + \ldots$.
+\item  Find the sum to $n$ terms of the series $6 + 66 + 666 + \ldots$.
+\item Find the sum to $n$ terms of the series $4 + 44 + 444 + \ldots$.
+\item Find the sum to $n$ terms of the series $.5 + .55 + .555 + \ldots$.
+\item Find $1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8}$ to $n$ terms.
+\item If you had a choice of a salary of a salary of $\$ 1000$ a day for a month of $31$days or $\$ 1$ for the first day, doubling
+  every day which choice would you make?
+\item How many terms of the series $1 + 3 + 3^2 + 3^3 + \ldots$ must be taken to make $3280$?
+\item Find the least value of $n$ for which $1 + 3 + 3^2 + \ldots + 3^{n - 1} > 1000$.
+\item Find $1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8}$ to $\infty$.
+\item A person starts collecting \$ 1 first day, \$ 3 second day, \$ 9 third day and so on. What will be his collection in $20$
+  days.
+\item Find the sum of $\left(x^2 + \frac{1}{x^2} + 2\right) + \left(x^4 + \frac{1}{x^4} + 5\right) + \left(x^6 + \frac{1}{x^6} +
+  8\right) + \ldots$ to $n$ terms.
+\item How many terms of the series $1 + 2 + 2^2 + \ldots$ must be taken to make $511?$
+\item Find the least value of $n$ such that $1 + 2 + 2^2 + \ldots + 2^{n - 1} \geq 300$.
+\item Determine the no. of terms of a G.P. if $a_1 = 3, a_n = 96$ and $S_n = 189$.
+\item Prove that $a^n - b^n$ is divisible by $a - b$ for any $n \in N$.
+\item Prove that $a^n + b^n$ is divisible by $a + b$ for any $n \in N$.
+\item Express $0.4\dot{2}\dot{3}$ as a rational number.
+\item Find $\frac{1}{5} + \frac{1}{7} + \frac{1}{5^2} + \frac{1}{7^2}$ to $\infty$.
+\item Prove that the sum of $n$ terms of the series $11 + 103 + 1005+ \ldots$ is $\frac{10}{9}(10^n - 1) + n^2$.
+\item Find the sum to $n$ terms of the series $\left(x + \frac{1}{x}\right)^2 + \left(x^2 + \frac{1}{x^2}\right)^2 + \left(x^3 +
+  \frac{1}{x^3}\right)^2 + \ldots$.
+\item If $S$ be the sum, $P$ be the product and $R$ the sum of reciprocals of $n$ terms in G.P., prove that $P^2 =
+  \left(\frac{S}{R}\right)^n$.
+\item Find $1 + \frac{x}{1 + x} + \frac{x^2}{(1 + x)^2} + \ldots$ to $\infty$ if $x > 0$.
+\item Prove that in an infinite G.P. whose common ratio is $r$ is numerically less than one, the ratio of any term to the
+  sum of all the succeediing terms is $\frac{1 - r}{r}$.
+\item If $S_1, S_2, S_3, \ldots, S_p$ are the sum of infinite geometric series whose first terms are $1, 2, 3, \ldots, p$
+  and whose common ratios are $\frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots, \frac{1}{p + 1}$ respectively, prove that $S_1 + S_2
+  + S_3 + \ldots + S_p = p(p + 3)/2$.
+\item If $x = 1 + a + a^2 + a^3 + \ldots~\text{to}~\infty$ and $y = 1 + b + b^2 + b^3 + \ldots~\text{to}~\infty,$ show
+  that $1 + ab + a^2b^2 + a^3b^3 + \ldots~\text{to}~\infty = \frac{xy}{x + y - 1},$ where $0<a< 1$ and $0<b<1$.
+\item Find the sum to infinity for the series $1 + (1 + a)r + (1 + a + a^2)r^2 + \ldots,$ where $0<a<1$ and $0<r<1$.
+\item After striking the floor a certain ball rebound to $\frac{4}{5}$th of the height from which it has fallen. Find the total
+  distance it travels before coming to rest if it is gently dropped from a height of $120$ meters.
+\item If $a$ be the first term and $b$ be the $n$th term and $p$ be the product of $n$ terms of a G.P., show that $p^2 = (ab)^n$.
+\item Show that the ratio of sum of $n$ terms of two G.P.'s having the same common ratio is equal to the ratio of their $n$th
+  terms.
+\item If $S_1, S_2, S_3$ be the sum of $m, 2n, 3n$ terms respectively of a G.P. show that $(S_2 - S_1)^2 = S_1(S_3 - S_2)$.
+\item If $S_n$ denotes the sum of $n$ terms of a G.P.,whose first term is $a$ and common ratio is $r,$ find $S_1 + S_2 +  \ldots +
+  S_{2n - 1}$.
+\item The sum of $n$ terms of a series is $a.2^n - b,$ find its $n$th term. Are the terms of this series in G.P.
+\item Find $\frac{1}{1 + x^2}\left[1 + \frac{2x}{1 + x^2} + \left(\frac{2x}{1 + x^2}\right)^2 + \ldots~\text{to}~\infty\right]$
+  where $x\geq 0$.
+\item The sum of an infinite G.P. whose common ratio is numerically less than $1$ is $32$ and the sum of their first two
+  terms is $24.$ Find the terms of the G.P.
+\item The sum of infinite number of terms of a decreasing G.P. is $4$ and the sum of the squares of its terms to infinity
+  is $\frac{16}{3},$ find the G.P.
+\item If $p(x) = (1 + x^2 + x^4 + \ldots + x^{2n - 2})/(1 + x + x^2 + \ldots + x^{n - 1})$ is a polynomial in $x$, then
+  find the possible values of $n$.
+\item If each term in a G.P. is twice the terms following it, then find the common ratio of the G.P.
+\item If $x = a + \frac{a}{r} + \frac{a}{r^2} + \ldots \infty, y = b - \frac{b}{r} + \frac{b}{r^2} - \ldots \infty$ and $z
+  = c + \frac{c}{r^2} + \frac{c}{r^4} + \ldots \infty,$ then prove that $\frac{xy}{z} = \frac{ab}{c}$.
+\item A G.P. consists of an even number of terms. If the sum of all terms is $5$ times the sum of the terms occupying odd
+  places, then find the common ratio.
+\item If sum of $n$ terms of a G.P. is $3 - \frac{3^{n + 1}}{4^{2n}},$ then find the common ratio.
+\item In an infinite G.P. whose terms are all positive, the common ratio being less than unity, prove that any term $>, =,
+  <$ the sum of all the succeeding terms according as the common ratio $<, =, \frac{1}{2}$.
+\item Prove that $(666\ldots n~\text{digits})^2 + 888\ldots n~\text{digits} = 444\ldots 2n~\text{digits}$.
+\item Find the sum $(x + y) + (x^2 + xy + y^2) + (x^3 + x^2y + xy^2 + y^3) + \ldots$ to $n$ terms.
+\item If the sum of the series $\sum_{n = 0}^\infty r^n, |r| < 1$ is $s,$ then find the sum of the series $\sum_{n=0}^\infty
+  r^{2n}$.
+\item If for a G.P. $t_m = \frac{1}{n^2}$ and $t_n = \frac{1}{m^2}$ then find the term $t_{\frac{m + n}{2}}$.
+\item If $a, b, c$ be three successive terms of a G.P. with common ratio $r$ and $a < 0$ satisfying the condition $c > 4b
+  - 3a,$ then prove that $r > 3$ or $r < 1$.
+\item If $(1 - k)(1 + 2x + 4x^2 + 8x^3 + 16x^4 + 32x^5) = 1 - k^6,$ where $k \neq 1,$ then find $\frac{k}{x}$.
+\item If $(a^2 + b^2 + c^2)(b^2 + c^2 + d^2) \leq (ab + bc + cd)^2,$ where $a, b, c, d$ are non-zero real numbers, then
+  show that they are in G.P.
+\item If $a_1, a_2, \ldots, a_n$ are $n$ non-zero numbers such that $(a_1^2 + a_2^2 + \ldots + a_{n - 1}^2)(a_2^2 + a_3^2
+  + \ldots + a_n^2) \leq (a_1a_2 + a_2a_3 + \ldots + a_{n - 1}a_n)^2,$ then show that $a_1, a_2, \ldots, a_n$ are in G.P.
+\item $\alpha, \beta$ be the roots of $x^2 - 3x + a = 0$ and $\gamma, \delta$ be the roots of $x^2 - 12x + b = 0$ and the
+  numbers $\alpha, \beta, \gamma, \delta$ form an increasing G.P., then find the values of $a$ and $b$.
+\item There are $4n + 1$ terms in a certain sequence of which the first $2n + 1$ terms are in A.P. of common difference
+  $2$ and the last $2n + 1$ terms are in G.P. of common ratio $\frac{1}{2}.$ If the middle terms of both the A.P. and G.P. are same
+  then find the mid term of the sequence.
+\item If $f(x) = 2x + 1$ and three unequal numbers $f(x), f(2x), f(4x)$ are in G.P, then find the number of values for
+  $x$.
+\item Three distinct real numbers, $a, b, c$ are in G.P. such that $a + b + c = xb,$ then show that $x < -1$ or $x > 3$.
+\item If $x = \sum_{n=0}^\infty a^n, y = \sum_{n=0}^\infty b^n, z = \sum_{n=0}^\infty c^n$ where $a, b, c$ are in A.P.,
+  such that $|a| < 1, |b|< 1, |c| < 1,$ then show that $\frac{1}{x}, \frac{1}{y}, \frac{1}{z}$ are in A.P. as well.
+\item Given that $0 < x< \frac{\pi}{4}, \frac{\pi}{4} < y <\frac{\pi}{2}$ and $\sum_{k=0}^\infty(-1)^k\tan^{2k}x = p,
+  \sum_{k=0}^\infty(-1)^k\cot^{2k}y = q$ then prove that $\sum_{k = 0}^\infty \tan^{2k}x\cot^{2k}y$ is $\frac{1}{\frac{1}{p} +
+    \frac{1}{q} - \frac{1}{pq}}$
+\item An equilateral triangle is drawn by joining the mid-points of a given equilateral triangle. A third equilateral
+  triangle is drawn inside the second in the same manner and the process is continued indefinitely. If the side of first
+  equilateral triangle is $3^{1/4}$ inch, then find the sum of areas of all these triangles.
+\item If $S = exp(1 + |\cos x| + \cos^2x + |\cos^3x| + \cos^4x \ldots~\text{to}~\infty)\log_c 4$ satisfies the roots of
+  the equation $t^2 - 20t + 64 = 0$ for $0 < x< \pi$ then find the values of $x$.
+\item If $S\subset (-\pi, \pi),$ denote the set of values of $x$ satisfying the equation
+
+  $8^{1 + |\cos x| + \cos^2x + |\cos^3x| + \ldots~\text{to}~\infty} = 4^3$ then find the value of $S$.
+\item If $0 < x <\frac{\pi}{2}$ and $2^{\sin^2x + \sin^4x + \ldots~\text{to}~\infty}$ satisfies the roots of the equation
+  $x^2 - 9x + 8 = 0,$ then find the value of $\cos x/(\cos x + \sin x)$.
+\item If $S_\lambda = \sum_{r=0}^\infty \frac{1}{\lambda^r},$ then find $\sum_{\lambda = 1}^n(\lambda - 1)S_\lambda$.
+\item If $a, b, c$ are in A.P. then prove that $2^{ax + 1}, 2^{bx + 1}, 2^{cx + 1}$ are in G.P. $\forall x\neq 0$.
+\item If $\frac{a + be^x}{a - be^x} = \frac{b + ce^x}{b - ce^x} = \frac{c + de^x}{c - de^x}$ then prove that $a, b, c, d$
+  are in G.P.
+\item If $x, y, z$ arein G.P. and $\tan^{-1}x, \tan^{-1}y, \tan^{-1}z$ are in A.P. then prove that $x = y = z$ but their
+  common values are not necessarily zero.
+\item If $a, b, c$ are three unequal numbers such that $a, b, c$ are in A.P. and $b - a, c - b, a$ are in G.P. then prove
+  that $a:b:c = 1:2:3$.
+\item The sides $a,b,c$ of a triangle are in G.P. sych that $\log a - \log 2b, \log 2b - \log 3c, \log 3c - a$ are in
+  A.P., then prove that $\triangle ABC$ is an obtuse angled triangle.
+\item If the roots of the equation $ax^3 + bx^2 + cx + d = 0$ be in G.P. then prove that $c^3a = b^3d$.
+\item Find the $100$th term of the sequence $1, \frac{1}{3}, \frac{1}{5}, \frac{1}{7}, \ldots$.
+\item If $p$th term of an H.P. is $qr,$ and $q$th term is $rp,$ prove that $r$th term is $pq$.
+\item If the $p$th, $q$th and $r$th terms of an H.P. be respectively $a, b$ and $c,$ then prove that $(q - r)bc + (r - p)ca + (p -
+  q)ab = 0$.
+\item If $a, b, c$ are in H.P., prove that $\frac{a - b}{b - c} = \frac{a}{c}$.
+\item If $a, b, c, d$ are in H.P., then, prove that $ab + bc + cd = 3ad$.
+\item If $x_1, x_2, x_3, \ldots, x_n$ are in H.P., prove that $x_1x_2 + x_2x_3 + x_3x_4 + \ldots + x_{n - 1}x_n = (n - 1)x_1x_n$.
+\item If $a, b, c$ are in H.P., show that $\frac{a}{b + c}, \frac{b}{c + a}, \frac{c}{a + b}$ are in H.P.
+\item If $a^2, b^2, c^2$ are in A.P. show that $b + c, c + a, a + b$ are in A.P.
+\item Find the sequence whose $n$th term is $\frac{1}{3n - 2}.$ Is tihs sequence an H.P.?
+\item If $m$th term of an H.P. be $n$ and $n$th term be $m,$ prove that $(m + n)$th term $= \frac{mn}{m + n}$ and $(mn)$th term $=
+  1$.
+\item The sum of three rational numbers in H.P. is $37$ and the sum of their reciprocals is $\frac{1}{4},$ find the numbers.
+\item If $a, b, c$ are in H.P., prove that $\frac{1}{b - a} + \frac{1}{b - c} = \frac{1}{a} + \frac{1}{c}$.
+\item If $a, b, c$ are in H.P., prove that $\frac{b + a}{b - a} + \frac{b + c}{b - c} = 2$.
+\item If $x_1, x_2, x_3, x_4, x_5$ are in H.P., prove that $x_1x_2 + x_2x_3 + x_3x_4 + x_4x_5 = 4x_1x_5$.
+\item If $x_1, x_2, x_3, x_4$ are in H.P., prove that $(x_1 - x_3)(x_2 - x_4) = 4(x_1 - x_2)(x_3 - x_4)$.
+\item If $b + c, c + a, a + b$ are in H.P., prove that $\frac{a}{b + c}, \frac{b}{c + a}, \frac{c}{a + b}$ are in A.P.
+\item If $b + c, c + a, a + b$ are in H.P., prove that $a^2, b^2, c^2$ are in A.P.
+\item If $a, b, c$ are in A.P., prove that $\frac{bc}{ab + ac}, \frac{ca}{bc + ab}, \frac{ab}{ca + cb}$ are in H.P.
+\item If $a, b, c$ are in H.P., prove that $\frac{a}{b + c - a}, \frac{b}{c + a - b}, \frac{c}{a + b - c}$ are in H.P.
+\item If $a, b, c$ are in H.P., prove that $\frac{a}{b + c}, \frac{b}{c + a}, \frac{c}{a + b}$ are in H.P.
+\item Find the sum of $n$ terms of the series whose $n$th term is $12n^2 - 6n + 5$.
+\item Find the sum to $n$ terms of the series $1^2 + 3^2 + 5^2 + 7^2 + \ldots$.
+\item Find the sum to $n$ terms of the series $1.2.3 + 2.3.4 + 3.4.5 + \ldots$.
+\item Find the sum of the series $1.n + 2.(n - 1) + 3.(n - 2) + \ldots + n.1$.
+\item Find the sum to $n$ terms of the series $1 + (1 + 2) + (1 + 2 + 3) + \ldots$.
+\item Find the sum to $n$ terms of the series $1 + (2 + 3) + (4 + 5 + 6) + \ldots$.
+\item Find the sum of series $\frac{1^3}{1} + \frac{1^3 + 2^3}{1 + 3} + \frac{1^3 + 2^3 + 3^3}{1 + 3 + 5} + \ldots$ to $16$ terms.
+\item Find $(3^3 - 2^3) + (5^3 - 4^3) + (7^3 - 6^3) + \ldots$ to $10$ terms.
+\item Find $\frac{1}{1.2} + \frac{1}{2.3} + \frac{1}{3.4} + \ldots$ to $n$ terms.
+\item Find the sum of $\frac{1}{1.2.3} + \frac{1}{2.3.4} + \frac{1}{3.4.5} + \ldots$ to infinity.
+\item Find the sum of $n$ terms of the series $1 + 5 + 11 + 19 + \ldots$.
+\item A sum is distributed among certain number of persons. Second person gets one rupee more than the first, third person
+  gets two rupees more than the second, fourth person gets three rupees more than the third and so on. If the first person gets one
+  rupee and the last person get $67$ rupees, find the number of persons.
+\item Natural numbers have been grouped in the following way $1, (2, 3), (4, 5, 6), (7, 8, 9, 10), \ldots$ Show that the
+  sum of the numbers in the $n$th group is $\frac{n(n^2 + 1)}{2}$.
+\item Find $1 + 3 + 7 + 15 + \ldots$ to $n$ terms.
+\item Find $1 + 2x + 3x^2 + 4x^3 + \ldots$ to $n$ terms.
+\item Find $1 + 2.2 + 3.2^2 + 4.3^3 + \ldots + 100.2^{99}$.
+\item Find $1 + 2^2x + 3^2x^2 + 4^2x^4 + \ldots \text{~to~}\infty, |x| < 1$
+\item If the sum of $n$ terms of a sequence be $2n^2 + 4,$ find its $n$th term. Is this sequence in A.P.?
+\item Find the sum of $n$ terms of the series whose $n$th term is $n(n - 1)(n + 1)$.
+\item Find the sum of $80$ terms of the series whose $n$th term is $n(n^2 - 1)$.
+\item Find the sum of the series $1^3 + 3^3 + 5^3 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1^2 + 4^2 + 7^2 + 10^2 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1^2 + 2 + 3^2 + 4 + 5^2 + 6 + \ldots$ to $2n$ terms.
+\item Find the sum of the series $1^2 - 2^2 + 3^2 - 4^2 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1.3 + 3.5 + 5.7 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1.2 + 2.3 + 3.4 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1.2^2 + 2.3^2 + 3.4^2 + \ldots$ to $n$ terms.
+\item Find the sum of the series $2.1^2 + 3.2^2 + 4.3^2 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1 + (1 + 3) + (1 + 3 + 5) + \ldots$ to $n$ terms.
+\item Find the sum of the series $1^2 + (1^2 + 2^2) + (1^2 + 2^2 + 3^2) + \ldots$ to $n$ terms.
+\item Find the sum of the series $1.2.3 + 2.3.5 + 3.4.7 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1.2.3 + 2.3.4 + 3.4.5 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1.3^2 + 2.5^2 + 3.7^2 + \ldots$ to $20$ terms.
+\item Find the sum of the series $(n^2 - 1^2) + 2(n^2 - 2^2) + 3(n^2 - 3^2) + \ldots$ to $n$ terms.
+\item Find the sum of the series $1^2 + (1^2 + 2^2) + (1^2 + 2^2 + 3^2) + \ldots$ to $10$ terms.
+\item Find the sum of the series $(3^3 - 2^3) + (5^3 - 4^3) + (7^3 - 6^3) + \ldots$ to $10$ terms.
+\item Find the sum of the series $1 + \frac{1}{1.2} + \frac{1}{1 + 2 + 3} + \ldots$ to $n$ terms.
+\item Find the sum to infinity of the series $\frac{1}{2.4} + \frac{1}{4.6} + \frac{1}{6.8} + \frac{1}{8.10} + \ldots$.
+\item Find the sum of the series $2 + 6 + 12 + 20 + \ldots$ to $n$ terms.
+\item Find the sum of the series $3 + 6 + 11 + 18 + \ldots$ to $n$ terms.
+\item Find the sum of the series $1 + 9 + 24 + 46 + 75 + \ldots$ to $n$ terms.
+\item Find the $n$th term of the series $2 + 4 + 7 + 11 + 16 + \ldots$.
+\item Find the sum to $10$ terms of the series $1 + 3 + 6 + 10 + \ldots$.
+\item The odd natural numbers have been divided in groups as $(1, 3), (5, 7, 9, 11)$,
+
+  $(13, 15, 17, 19, 21, 23), \ldots$
+  Show that the sum of numbers in the $n$th group is $4n^3$.
+\item Show that the sum of numbers in each of the following groups is an square of an odd positive integer $(1), (2,3,4),
+  (3,4,5,6,7), \ldots$.
+\item Find the sum to $n$ terms of the series $2 + 5 + 14 + 41 + \ldots$.
+\item Find the sum to $n$ terms of the series $1.1 + 2.3 + 4.5 + 8.7 + \ldots$.
+\item If $a_1, a_2, a_3, \ldots, a_{2n}$ are in A.P., show that $a_1^2 - a_2^2 + a_3^2 - a_4^2 + \ldots + a_{2n - 1}^2 -
+  a_{2n}^2 = \frac{n}{2n - 1}(a_1^2 - a_{2n}^2)$.
+\item If $\alpha_1, \alpha_2, \alpha_3, \ldots, \alpha_n$ are in A.P., whose common difference is $d$ show that $\sin
+  d$
+
+  $[\sec\alpha_1\sec\alpha_2 + \sec\alpha_2\sec\alpha_3$ $+ \ldots + \sec\alpha_{n - 1}\sec\alpha_n] = \tan\alpha_n -
+  \tan\alpha_1$.
+\item If $a_1, a_2, a_3, \ldots, a_n$ be in A.P., prove that $\frac{1}{a_1a_n} + \frac{1}{a_2a_{n - 1}} + \ldots +
+  \frac{1}{a_na_1} =\frac{2}{a_1 + a_n}$
+
+  $\left(\frac{1}{a_1} + \frac{1}{a_2} + \ldots + \frac{1}{a_n}\right)$.
+\item If $a_1, a_2, a_3, \ldots$ be in A.P. such that $a_i\neq 0,$ show that $S = \frac{1}{a_1a_2} + \frac{1}{a_2a_3}
+  + \ldots + \frac{1}{a_na_{n + 1}} = \frac{n}{a_1a_{n + 1}}$.
+\item If $a_1, a_2, a_3, \ldots, a_n$ be in A.P. and $a_1 = 0,$ show that $\frac{a_3}{a_2} + \frac{a_4}{a_3} + \ldots +
+  \frac{a_n}{a_{n - 1}} - a_2\left(\frac{1}{a_2} + \frac{1}{a_3} + \ldots + \frac{1}{a_{n - 2}}\right) = \frac{a_{n - 1}}{a_2} +
+  \frac{a_2}{a_{n - 1}}$.
+\item If $a_1, a_2, \ldots, a_n$ are in A.P., whose common difference is $d,$ show that $\sum_{k = 1}^n\frac{a_ka_{k +
+    1}a_{k + 2}}{a_k+a_{k + 2}}$ $= \frac{n}{2}\left[a_1^2 + (n + 1)a_1d + \frac{(n - 1)(2n + 5)}{6}d^2\right]$.
+\item If $x, y$ and $z$ are positive real numbers different from $1,$ and $x^{18} = y^{21} = z^{28},$ show that $3, 3\log_y
+  x, 3\log_z y, 7\log_x z$ are in A.P.
+\item If $I_n = \int_{0}^{\frac{\pi}{2}}\frac{\sin^2nx}{\sin^2x}dx,$ then $I_1, I_2, I_3, \ldots$ are in A.P.
+\item Can there be an A.P. whose terms are distinct prime numbers?
+\item Four distinct no. are in A.P. If one of these integers is sum of the squares of remaining three, then $0$ must be
+  one of the numbers in A.P.
+\item In an A.P. of $2n$ terms the middle pair of terms are $p + q$ and $p - q.$ Show that the sum of cubes of the terms
+  in A.P. are $2np[p^2 + (4n^2 - 1)q^2]$.
+\item Find the sum $S_n$ of the cubes of the first $n$ terms of an A.P. and show that the sum of the first $n$ terms of
+  the A.P. is a factor of $S_n$.
+\item Show that any positive integral power (greater than $1$) of a positive integer $m,$ is the sum of $m$ consecutive
+  odd positive integers. Find the first odd integer for $m^r(r > 1)$.
+\item If $a$ be the sum of $n$ terms and $b^2$ the sum of the square of $n$ terms of an A.P., find the first term and
+  common difference of the A.P.
+\item If $a_1, a_2, \ldots, a_n$ are in A.P., whose common diference is $d$, then find the sum of the series $\sin
+  d[\csc a_1\csc a_2 + \csc a_2\csc a_3 + \ldots + \csc a_{n - 1}\csc a_n]$.
+\item If $a_1, a_2, \ldots, a_n$ are in A.P. where $a_i > 0~\forall i,$ show that $$\frac{1}{\sqrt{a_1} + \sqrt{a_2}} +
+  \frac{1}{\sqrt{a_2} + \sqrt{a_3}} + \ldots + \frac{1}{\sqrt{a_{n - 1}} + \sqrt{a_n}} = \frac{n - 1}{\sqrt{a_1} + \sqrt{a_n}}$$
+\item If $a_1, a_2, \ldots, a_n$ are in A.P., whose common differemce is $d$ show that $\sum_{2}^n\tan^{-1}\frac{d}{1 +
+  a_{n - 1}a_n} = \tan^{-1}\frac{a_n - a_n}{1 + a_na_1}$.
+\item If $a_1, a_2, \ldots, a_n$ are the first $n$ items of an A.P. with first term $a$ and common difference $d$ such
+  that $ad > 0.$ Let $S_n = \frac{1}{a_1a_2} + \frac{1}{a_2a_3} - \ldots + \frac{1}{a_{n - 1}a_n}$ Prove that the product
+  $a_1a_nS_n$ does not depend on $a$ or $d$.
+\item If $a_1, a_2, \ldots, a_n, a_{n + 1}, \ldots$ be in A.P., whose common difference is $d$ and $S_1 = a_1 + a_2 +
+  \ldots + a_n,$ $S_2 = a_{n + 1} + \ldots + a_{2n}, S_3 = a_{2n + 1} + \ldots + a_{3n}$ Show that $S_1, S_2, S_3, \ldots$ are in
+  A.P. whose common difference is $n^2d$.
+\item If $a, b, c$ are three terms of an A.P. such that $a\neq b,$ show that $(b - c)/(a - b)$ is a rational number.
+\item Prove that $\tan 70^\circ, \tan 50^\circ + \tan 20^\circ, \tan 20^\circ$ are in A.P.
+\item If $\log_l x, \log_m x, \log_n x$ are in A.P. and $x \neq 1,$ prove that $n^2 = (nl)^{\log_l m}$.
+\item The length of sides of a right angled triangle are in A.P., show that their ratio is $3:4:5$
+\item If $\log_3 2, \log_3(2^x - 5), \log_3\left(2^x - \frac{7}{2}\right)$ are in A.P., determine the value of $x$.
+\item Find the values of $a$ for which $5^{1 + x} + 5^{1 - x}, \frac{a}{2}, 25^x + 25^{-x}$ are in A.P.
+\item If $\log 2, \log(2^x - 1)$ and $\log(2^x + 3)$ are in A.P., then find $x$.
+\item If $1, \log_y x, \log_zy, -15\log_xz$ are in A.P., then prove that $x = z^3$ and $y = z^{-3}$.
+\item Show that $\sqrt{2}, \sqrt{3}, \sqrt{5}$ cannot be terms of a single A.P.
+\item A circle of one centimeter radius is drawn on a piece of paper and with the same center $3n - 1$ other circles are
+  drawn of radii $2$ cm, $3$ cm, $4$ cm and so on. The inner circle is painted blue, the ring between that and next circle is
+  painted red, the next ring yellow then other rings blue, red, yellow and so on in this order. Show that the successive aread of
+  each color are in A.P.
+\item If $x, y, z(x, y, z\neq 0)$ are in A.P. and $\tan^{-1}x, \tan^{-1}y, \tan^{-1}z$ are also in A.P., then prove that
+  $x = y = z$.
+\item If $\theta$ and $\alpha$ are two real numbers such that $\frac{\cos^4\theta}{\cos^2\alpha}, \frac{1}{2},
+  \frac{\sin^4\theta}{\sin^2\alpha}$ are in A.P., prove that $\frac{\cos^{2n + 2}\theta}{\cos^{2n}\alpha}, \frac{1}{2},
+  \frac{\sin^{2n + 2}\theta}{\sin^{2n}\alpha}$.
+\item If $a_n = \displaystyle\int_0^\pi (\sin 2nx/\sin x)dx,$ show that $a_1, a_2, a_3, \ldots$ are in A.P.
+\item If $l_n = \displaystyle\int_0^{\frac{\pi}{4}}tan^nxdx,$ show that $\frac{1}{l_2 + l_4}, \frac{1}{l_3 + l_5}, \frac{1}{l_4 + l_6},
+  \ldots$ are in A.P. Find the common difference of A.P.
+\item If $\alpha, \beta, \gamma$ are in A.P.and $\alpha = \sin(\beta + \gamma), \beta = \sin(\gamma + \alpha)$ and $\gamma
+  = \sin(\alpha + \beta).$ Prove that $\tan \alpha = \tan \beta = \tan \gamma$.
+\item Suppose $a, b, c$ are three positive real numbers in A.P., such that $abc = 4.$ Prove that the minimum value of $b$
+  is $4^{\frac{1}{3}}$.
+\item The sixth term of an A.P. is $2,$ and its common difference is greater than $1.$ Show that the value of the common
+  difference of the progression so that the product of first, fourth and fifth terms is greatest is $\frac{8}{5}$.
+\item Find the sum of $n$ terms of the series: $\log a + \log\frac{a^3}{b} + \log \frac{a^5}{b^2} + \log \frac{a^7}{b^3} +
+  \ldots$.
+\item The first, second and the last terms of an A.P. are $a,b, c$ respectively. Prove that the sum of al the terms is
+  $\frac{(b + c - 2a)(a + c)}{2(b - a)}$.
+\item If $S_n$ denotes the sum of $n$ terms of an A.P., show that $S_{n + 3} = 3(S_{n + 2} - S_{n + 1}) + S_n$.
+\item If $a_1, a_2, \ldots, a_n$ are in arithmetic progression with common difference $d,$ prove that
+  $\sum_{r < s}a_ra_s = \frac{1}{2}n(n - 1)[a_1^2 + (n - 1)a_1d + \frac{1}{12}(3n^2 - 7n + 2)d^2]$.
+\item Balls are arranged in rows to form an equilateral triangle. The first row consists of one ball, the second of two
+  balls and so on. If $669$ more balls are added, then all balls can be arranged in the shape of a square and each of the sides
+  contained $8$ balls less than each side of the triangle did. Determine the initial no. of balls.
+\item Find the sum of the  product of the first $n$ natural numbers takes two at a time.
+\item A postman delivered daily for $42$ days $4$ more letters each day than on the previous day. The total delivery made
+  for the first $24$ days of the period was the same as that for the last $18$ days. How many letters did he deliver during the
+  whole period?
+\item If $S_n$ denotes the sum to $n$ terms of an A.P. and $S_n = n^2p, S_m = m^2p, m\neq n,$ prove that $S_n = p^3$.
+\item There are $n$ A.P.'s whose common difference are $1, 2, 3, \ldots, n$ respectively the first term of each being
+  unity. Prove that the sum of their $n$th terms is $\frac{n}{2}(n^2 + 1)$.
+\item If $S_1, S_2, \ldots, S_m$ are the sum of $n$ terms of $m$ A.P.s whose first terms are $1, 2, \ldots, m$ and whose
+  common differences are $1, 3, 5, \ldots, 2m - 1$ respectively, show that $S_1 + S_2 + \ldots + S_m = \frac{1}{2}mn(mn + 1)$
+\item A straight line is drawn through the center of a square $ABCD$ intersecting side $AB$ at point $N$ so that $AN:NB =
+  1:2.$ On this line take an arbitrary point $M$ lying inside the square. Prove that the distances from $M$ to the sides $AB, AD,
+  BC, CD$ of the square taken in that order, form an A.P.
+\item If the sides of a right-angled triangle are in G.P., find the cosine of the greater acute angle.
+\item If $a, b, c, d$ are non-zero real numbers and $(a^2 + b^2 + c^2)(b^2 + c^2 + d^2) = (ab + bc + cd)^2,$ prove that
+  $a, b, c, d$ are in G.P.
+\item Does there exist a geometric progression containing $27, 8$ and $12$ as three of its terms? If it exists, how many
+  such progressions are possible?
+\item Show that $10, 11, 12$ cannot be terms of a G.P.
+\item If $\displaystyle\int_0^{\frac{\pi}{2}}\cos^nx\cos(nx)dx,$ then prove that $I_1, I_2, I_3, \ldots$ are in G.P.
+\item Let $\displaystyle I_n = \int_0^\pi \frac{\sin(2n - 1)x}{\sin x}dx.$ Show that $I_1, I_2, I_3, \ldots$ are in A.P. as well as in
+  G.P.
+\item Prove that the three successive terms of a G.P. will form sides of a triangle if the common ratio $r$ satisfied the
+  inequality $\frac{1}{2}(\sqrt{5} - 1) < r < \frac{1}{2}(\sqrt{5} + 1)$.
+\item Find out whether $111\ldots1( 91$ digits $)$ is a prime number.
+\item Find the natural number $a$ for which $\sum_{k = 1}^nf(a + k) = 16(2^n - 1),$ where the function $f$ satisfied the
+  relation $f(x + y) = f(x)f(y)$ for all natural nuumbers $x, y$ and further $f(1) = 2$.
+\item In a certain test, there are $n$ questions. In this test $2^{n - i}$ students give wrong answers to at least $i$
+  questions ($1\leq i \leq n.$) If total no. of wrong answers given is $2047,$ find the value of $n$.
+\item If $S_1, S_2, S_3, \ldots, S_2n$ are the sums of infinite geometric series whose first terms are respectively $1, 2,
+  3, \ldots, 2n$ and common ratio are respectively $\frac{1}{2}, \frac{1}{3}, \ldots, \frac{1}{2n + 1},$ find the value of $S_1^2 +
+  S_2^2 + \ldots + S_{2n - 1}^2$.
+\item A sqaure is given, a second square is made by joining the middle points of the first square and then a third square
+  is made by joining the middle points of the sides of second square and so on till infinity. Show that the area of first square is
+  equal to sum of the areas of all the succeeding squares.
+\item If $a$ is the value of $x$ for which the function $7 + 2x\log 25 - 5^{x - 1} - 5^{2 - x}$ has the greatest value and
+  $r = \displaystyle\lim_{x\to 0}\int_{0}^x\frac{t^2}{x^2\tan(\pi + x)}dt,$ find $\displaystyle\lim_{n \to \infty}\sum_{n =
+  1}^nar^{n - 1}$.
+\item If $p$th, $q$th, $r$th terms of a G.P. are positive numbers $a, b, c$ respectively, show that the vectors $(\log
+  a).\vec{i} + (\log b)\vec{j} + (\log c)\vec{k}$ and $(q - r)\vec{i} + (r - p)\vec{j} + (p - q)\vec{k}$ are perpendicular.
+\item The pollution in a normal atmosphere is less that $0.01\%.$ Due to leakage of gas from a factory the pollution
+  increased to $20\%.$ If everyday $80\%$ of the pollution us neutralised, in how many days the atmosphere will be normal?
+\item The sides of a triangle are in G.P. and its largest angle is twice the smallest one. Prove that the common ratio of
+  the G.P. lies in the interval $(1, \sqrt{2})$.
+\item If $a, b, c, d$ are in G.P., then prove that $ax^3 + bx^2 + cx + d$ is divisible by $ax^2 + c$.
+\item If $a, b, c$ are three distinct real numbers and they are in G.P. If $a + b + c = xb,$ then prove that $x < -1$ or
+  $x > 3$.
+\item If $a, b, c, d, p$ are real and $(a^2 + b^2 + c^2)p^2 - 2(ab + bc + cd)p + (b^2 + c^2 + d^2)\leq 0.$ Show that $a,
+  b, c, d$ are in G.P. whose common ratio is $p$.
+\item If $2x^4 = y^4 + z^4, xyz = 8$ and $\log_yx, \log_zy, \log_xz$ are in G.P., show that $x = y = z = 2$.
+\item If $a, b, c, d$ are in both A.P. and G.P. and $b = 2,$ then find the number of such sequences.
+\item If $\log_x a, a^{x/2}, \log_b x$ are in G.P., then find $x.$
+\item The $(m + n)$th and $(m - n)$th terms of a G.P. are $p$ and $q$ respectively. Show that $m$th and $n$th terms are
+  $\sqrt{pq}$ and $p\left(\frac{q}{p}\right)^\frac{m}{2n}$ respectively.
+\item If the $p$th, $q$th and $r$th terms of an A.P. are in G.P., then find the common ratio of the G.P.
+\item A G.P. consists of $2n$ terms. If the sum of the terms occupying the odd places is $S_1,$ and that of the terms in
+  even places is $S_2,$ show that the common ratio of the progression is $S_2/S_1$.
+\item If $x\neq 1, y\neq 1, x \neq y,$ find the sum to $n$ terms of the series $(x + y) + (x^2 + xy + y^2) + (x^3 + x^2y +
+  xy^2 + y^3) + \ldots$.
+\item Find a geometric progression of real numbers such that the sum of its first four terms is equal to $30$ and sum of
+  the squares of its first four terms is $340$.
+\item If $S_n$ denotes the sum of $n$ terms of a G.P. whose first term and common ratio are $a$ and $r$ respectively, show
+  that $$rS_n + (1 - r)\sum_{n = 1}^nS_n = na$$
+\item Find the sum of $2n$ terms of the series where every even term if $x$ times the term just before it and every odd
+  term is $y$ times the term just before it, the first term being $1$.
+\item Prove that in the sequence of numbers $49, 4489, 444889, \ldots$ in which every number is made by inserting $48$ in
+  the middle of previous number as indicated, each number is the square of an integer.
+\item If there be $m$ quantities in a G.P., whose common ratio is $r$ and $S_m$ denotes the sum of the first $m$ terms
+  then prove that the sum of their products taken two and two together is $\frac{r}{r + 1}S_mS_{m - 1}$.
+\item Solve the following equations for $x$ and $y$
+  $$\log_{10}x + \log_{10}x^{1/2} + \log_{10}x^{1/4} + \ldots = y$$
+  $$\frac{1 + 3 + 5 + (2y - 1)}{4 + 7 + 10 + \ldots + 3y + 1} = \frac{20}{7\log_{10}x}$$
+\item If $a_1, a_2, \ldots, a_n$ are in G.P. and $S = a_1 + a_2 + \ldots + a_n, T = \frac{1}{a_1} + \frac{1}{a_2} + \ldots
+  + \frac{1}{a_n}$ and $P = a_1.a_2.\ldots.a_n$ show that $P^2 = \left(\frac{S}{T}\right)^n$.
+\item Let $a, b, c$ be respectively the sums of the first $n$ terms, the next $n$ terms and the next $n$ terms of a
+  G.P. show that $a, b, c$ are in G.P.
+\item If $S_n$ denotes the sum to $n$ terms of a G.P. whose first term and common ratio are $a$ and $r$ respectively, then
+  prove that $S_1 + S_2 + \ldots + S_n = \frac{na}{1 - r} - \frac{ar(1 - r^n)}{(1 - r)^2}$
+\item If $S_n$ denotes the sum to $n$ terms of a G.P. whose first term and common ratio are $a$ and $r$ respectively, then
+  prove that $S_1 + S_3 + S_5 + \ldots + S_{2n - 1} = \frac{na}{1 - r} - \frac{ar(1 - r^{2n})}{(1 - r)^2(1 + r)}$
+\item Let $s$ denote the sum of terms of an infinite geometric progression and $\sigma^2$ the sum of squares of the
+  terms. Show that the sum of first $n$ terms of this geometric progression is given by $s\left[1 - \left(\frac{s^2 - \sigma^2}{s^2
+      + \sigma^2}\right)^n\right],$ where $|r| < 1$.
+\item Let $a_1, a_2, a_3, \ldots, a_n$ be a geometric progression with first term $a$ and common ratio $r,$ then the sum
+  of the products $a_1, a_2, \ldots, a_n$ taken two at a time i.e. $\sum_{i < j}a_ia_j = \frac{a^2r(1 - r^{n - 1})(1 - r^n)}{(1 -
+    r)^2(1 + r)}$.
+\item If $a_1, a_2, a_3, \ldots$ is a G.P. with first term $a$ and common ratio $r,$ show that $\frac{1}{a_1^2 - a_2^2} +
+  \frac{1}{a_2^2 - a_3^2} + \ldots + \frac{1}{a_{n - 1}^2 - a_n^2}$ $ = \frac{r^2(1 - r^{2n - 2})}{a^2r^{2n - 2}(1 - r^2)^2}$.
+\item If $a_1, a_2, a_3, \ldots$ is a G.P. with first term $a$ and common ratio $r,$ show that $\frac{1}{a_1^m + a_2^m} +
+  \frac{1}{a_2^m + a_3^m} + \ldots + \frac{1}{a_{n - 1}^m + a_n^m}$ $= \frac{r^{mn - m} - 1}{a^m(1 + r^m)(r^{mn - m} - r^{mn -
+      2m})}$.
+\item If $a_1, a_2, \ldots, a_{2n}$ are $2n$ positive real numbers which are in G.P. show that $\sqrt{a_1a_2} +
+  \sqrt{a_3a_4} + \sqrt{a_5a_6} + \ldots$ $ + \sqrt{a_{2n - 1}a_{2n}} = \sqrt{a_1 + a_3 + \ldots + a_{2n - 1}}\sqrt{a_2 + a_4 +
+    \ldots + a_{2n}}$.
+\item Find the solution of the system of equations $1 + x + x^2 + \ldots + x^{23} = 0$ and $1 + x + x^2 + \ldots + x^{19}
+  = 0$.
+\item A man invests $\$a$ at the end of the first year, $\$2a$ at the end of the second year, $\$3a$ at the end of the
+  third year, and so on up to the end of $n$th year. If the rate of interest is $\$r$ per rupee and the interest is compounded
+  annually, find the amount the man will receive at the end of $(n + 1)$th year.
+\item Find the value of $(0.16)^{\log_{2.5}\left(\frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + \ldots \infty\right)}$
+\item One side of an equilateral triangle is $24$ cm. The mid-point of its sides are joined to form another triangle,
+  whose mid-points are in turn joined for form still another triangle. The process continues indefinitely. Find the sum of
+  perimeter of all the triangles.
+\item A ball is dropped from a height of $900$ cm. Each time is rebounces, it rises to $2/3$ of the height it has fallen
+  through. Find the total distance travelled by the ball before it comes to rest.
+\item A square is drawn by joining the mid-points of the sides of a given square. A third square is drawn inside the
+  second square in the same way and this process continutes indeinitely. If the sides of the first square is $4$ cm, determine the
+  sum of the areas of all the squares.
+\item In an increasing G.P., the sum of the first and the last term is $66,$ the product of the second and the last term
+  but one term is $128,$ and the sum of all the terms is $126.$ How many terms are there in the progression?
+\item The sum of an infinite G.P. is $2$ and the sum of the G.P. made from the cubes of the terms of this infinite series
+  is $24.$ Then find the series.
+\item The sum of an infinite G.P. is $3$ and the sum of squares of the terms of this series is also $3.$ Find the sequence.
+\item If the sum of an infinitely decreasing G.P. is $3.5$ and the sum of the squares of its terms is $147/16.$ Show that
+  the sum of the cubes of the terms is $1029/38$.
+\item Find the value of $x$ in $]-\pi, \pi[$ which satisfy the equation $8^{1 + |\cos x| + \cos^2 x + |\cos^3 x| + \ldots
+      \text{~to~}\infty} = 64$.
+\item If $A = 1 + r^a + r^{2a} + \ldots \text{~to~}\infty$ and $B = 1 + r^b + r^{2b} + \ldots \text{~to~}\infty,$ prove
+  that $r = \left(\frac{A - 1}{A}\right)^{\frac{1}{a}} = \left(\frac{B - 1}{B}\right)^{\frac{1}{b}}$.
+\item If $s_1, s_2, \ldots, s_n$ are the sums of infinite geometric series whose first terms are $1, 2, 3, \ldots, n$ and
+  common ratios are $\frac{1}{2}, \frac{1}{3}, \ldots, \frac{1}{n + 1}$ respectively, then prove that $s_1 + s_2 + \ldots + s_n =
+  \frac{1}{2}n(n + 3)$.
+\item If $S_n$ be the sum of infinite G.P.'s whose first term is $n$ and the common ratio is $\frac{1}{n + 1},$ find
+  $\displaystyle\lim_{n\to \infty} \frac{S_1S_n + S_2S_{n - 1} + \ldots + S_nS_1}{S_1^2 + S_2^2 + \ldots + S_n^2}$.
+\item The sum of the terms of an infinitely decreasing G.P. is equal to the greatest value of the function $f(x) = x^3 +
+  3x - 9$ on the interval $[-5, 3],$ and the difference between the first and second terms is $f'(0).$ Prove that the common ratio
+  of the progression is $\frac{2}{3}$.
+\item Find the sum of the series $\frac{5}{13} + \frac{55}{13^2} + \frac{555}{13^3} + \ldots \infty$.
+\item If $e^{{\sin^2x + \sin^4x + \sin^6x + \ldots \infty}\log_e2}$ satisfies the equation $x^2 - 9x + 8 = 0,$ find the
+  value of $\frac{\cos x}{\cos x + \sin x}, 0 < x < \frac{\pi}{2}$.
+\item If $-\frac{\pi}{2} < x < \frac{\pi}{2}$ and the sum to infinite number of terms of series $\cos x + \frac{2}{3}\cos
+  x\sin^2x + \frac{4}{9}\cos x\sin^4x + \ldots$ is finite, then show that $x$ lies in the set $\left(-\frac{\pi}{2},
+  \frac{\pi}{2}\right)$
+\item Suppose $0 < x < \pi$ and the expression $e^{{1 + |\cos x| + \cos^2x + |\cos^3x| + \ldots \infty}\log_e 4}$
+  satisfies the quadratic equation $y^2 - 20y + 64 = 0,$ then find the value of $x$.
+\item An A.P. and a G.P. with positive terms have the same number of terms and their first terms as well as the last
+  terms are equal. Show that the sum of A.P. is greater than or equal to the sum of the G.P.
+\item Given a G.P. and A.P. of positive terms $a, a_1, a_2, \ldots, a_n, \ldots$ and $b, b_1, b_2, \ldots, b_n, \ldots$
+  respectively, with the common ratio of the G.P. being different from $1,$ prove that there exists $x\in R, x > 0$ such that
+  $\log_x a_n - b_n = \log_x a - b,~\forall n\in N$.
+\item If the $(m + 1)$th, $(n + 1)$th and $(r + 1)$th terms of an A.P. are in G.P., and $m, n, r$ are in H.P., show that
+  the ratio of the first term to the common difference of the A.P. is $-n/2$.
+\item If $a, b, c$ are in G.P. and $a - b, c - a, b - c$ are in H.P., then show that $a + 4b + c = 0$.
+\item If $S_1, S_2$ and $S_3$ denote the sum to $n(> 1)$ terms of three sequences in A.P., whose first terms are unity
+  and common differences are in H.P., prove that $n = \frac{2S_3S_1 - S_1S_2 - S_2S_3}{S_1 - 2S_2 + S_3}$
+\item Find a three-digit number such that its digits are in G.P. and the digits of the number obtained from it by
+  subtracting $400$ form an A.P.
+\item If $a, b, c$ be distinct positive numbers in G.P. and $\log_c a, \log_b c, \log_a b$ be in A.P., prove that the
+  common difference of the progression is $3/2$.
+\item If $p$ be the first of the $n$ arithmetic means between two numbers $a$ and $b$ and $q$ the first of the $n$
+  harmonic means between the same two numbers, prove that the value of $q$ cannot lie between $p$ and $\left(\frac{n + 1}{n -
+    1}\right)^2p$.
+\item Find a three digit number whose consecutive numbers form a G.P. If we subtract $792$ from this number, we get a
+  number consisting of the same digits written in the reverse order. Now if we increase the second digit of the required number by
+  $2,$ the resulting number will form an A.P.
+\item An A.P. and a G.P. each has $p$ as first term and $q$ as second term where $0 < q < p.$ Find the sum to infinity,
+  $s$ of the G.P., and prove that the sum of first $n$ terms of the A.P. may be written as $np - \frac{n(n - 1)}{2}.\frac{p^2}{s}$.
+\item If $\log_xy, \log_zx, \log_yz$ are in G.P., $xyz = 64$ and $x^3, y^3, z^3$ are in A.P., then find $x, y$ and $z.$
+\item Find all complex numbers $x$ and $y$ such that $x, x + 2y, 2x + y$ are in A.P. and $(y + 1)^2, xy + 5, (x + 1)^2$
+  are in G.P.
+\item Find A.P. of distinct terms whose first term is $3$ and second, tenth and thirty fourth terms form a G.P.
+\item Let $a, b, c, d$ be four positive real numbers such that the geometric mean of $a$ and $b$ is equal to the
+  gerometric mean of $c$ and $d$ and the arithmetic mean of $a^2$ and $b^2$ is equal to the arithmetic mean of $c^2$ and $d^2.$
+  Show that the arithmetic mean of $a^n$ and $b^n$ is equal to the arithmetic mean of $c^n$ and $d^n$ for every integral value of
+  $n$.
+\item The sum of first ten terms of an A.P. is equal to $155,$ and the sum of first two terms of a G.P. is $9.$ Find
+  these progressions if the first term of the A.P. euqals the common ratio of the G.P. and the first term of G.P. equals the common
+  difference of A.P.
+\item If $a, b, c$ be in H.P., prove that $\left(\frac{1}{a} + \frac{1}{b} - \frac{1}{c}\right)\left(\frac{1}{b} +
+  \frac{1}{c} - \frac{1}{a}\right) = \frac{4}{ac} - \frac{3}{b^2}$.
+\item If $a, b, c$ are positive real numbers which are in H.P. show that $\frac{a + b}{2a - b} + \frac{b + c}{2c - b}\geq
+  4$.
+\item If $(a + b)/(1 - ab), b, (b + c)/(1 - bc)$ are in A.P., then prove that $a, b^{-1}, c$ are in H.P.
+\item Suppose $a, b, c$ are in A.P. and $|a|, |b|, |c| < 1$ if $x = 1 + a + a^2 + \ldots \infty, y = 1 + b + b^2 + \ldots
+  \infty,$ $z = 1 + c + c^2 + \ldots \infty$ then prove that $x, y, z$ are in H.P.
+\item If $a^{\frac{1}{x}} = b^{\frac{1}{y}} = c^{\frac{1}{z}}$ and $a, b, c$ are in G.P. prove that $x, y, z$ are in A.P.
+\item If $a, b, c$ be in A.P., $l, m, n$ be in H.P. and $al, bm, cn$ be in G.P. with common ratio not equal to $1$ and
+  $a, b, c, l, m, n$ are positive show that $a:b:c = \frac{1}{n}:\frac{1}{m}:\frac{1}{l}$.
+\item Find three numbers $a, b, c$ between $2$ and $18$ such that their sum is $25$, the numbers $2, a, b$ are
+  consecutive terms of an A.P. and the numbers $b, c, 18$ are consecutive terms of a G.P.
+\item If $a, b, c$ are in A.P. and $a, mb, c$ are in G.P.; prove that $a, m^2b, c$ are in H.P.
+\item An A.P., a G.P. and an H.P. have the same first term $a$ abd same second term $b,$ show that $n + 2$th terms will
+  be in G.P. is $\frac{b^{2n + 2} - a^{2n + 2}}{ab(b^{2n} - a^{2n})} = \frac{n + 1}{n}$.
+\item The second, third and sixth terms of an A.P. are consecutive terms of a geometric progression. Find the common
+  ratio of the G.P.
+\item A sequence of numbers is formed by adding together corresponding terms of an A.P. and a G.P. with common ratio $2.$
+  The first term of the sequence is $57,$ the second term is $94$ and the third term is $171.$ Find the fourth term. Find also an
+  expression for the $n$th term of the sequence.
+\item The first, eighth and twenty second terms of an arithmetic progression are three consecutive terms of a geometric
+  progression. Find the common ratio of the geometric progression. If sum of the first twenty two terms of arithmetic progression
+  is $275,$ find its first term.
+\item An arithmetic progression has common difference $2$ and a geometric progression has common ratio $2.$ A new
+  sequence is formed by adding together the corresponding terms of these progressions. Given that the first term of this new
+  sequence is $8$ and the fifth term is $91,$ find the first terms.
+\item If $a, b, c$ are in A.P. and $b, c, d$ are in H.P., prove that $ad = bc$.
+\item If $a, b, c$ are in H.P., $b, c, d$ are in G.P. and $c, d, e$ are in A.P., show that $e = \frac{ab^2}{(2a - b)^2}$.
+\item If an A.P. and a G.P. have the same 1st and 2nd terms then show that every other term of the A.P. will be less than
+  the corresponding term of G.P. all the terms being positive.
+\item If three unequal numbers are in H.P. and their squares are in A.P. show that they are in the ratio $1 +
+  \sqrt{3}:-2:1 - \sqrt{3}$ or $1 - \sqrt{3}:-2:1 + \sqrt{3}$.
+\item If $A, G, H$ are the arithmetic, geometric and harmonic means of two positive real numbers $a$ and $b$, and if $A =
+  kh,$ prove that $A^2 = kG^2.$ Find the ratio of $a$ to $b.$ For what value of $k$ does the ratio exist.
+\item If $p$ be the $r$th term when $n$ A.M.'s are inserted between $a$ and $b$ and $q$ be the $r$th term when $n$ H.M.'s
+  are inserted between $a$ and $b,$ then show that $\frac{p}{a} + \frac{b}{q}$ is independent of $n$ and $r$.
+\item Two trains $A$ and $B$ start from the same station $P$ at the same time. $A$ covers half the distance between first
+  station $P$ and second station $Q$ with speed $x$ and other half distance with speed $y$. Train $B$ covers the whole distance
+  with speed $\frac{x + y}{2}.$ Which train will reach $Q$ earlier.
+\item If $n$ is a root of equation $x^2(1 - ac) - x(a^2+c^2) - (1 + ac) = 0$ and if $n$ H.M.'s are inserted between $a$
+  and $c,$ show that the difference between the first and last mena is equal to $ac(a - c)$.
+\item If $A_1, A_2, \ldots, A_n$ are the $n$ A.M.'s and $H_1, H_2, \ldots, H_n$ the $n$ H.M.'s between $a$ and $b,$ show
+  that $A_rH_{n - r + 1} = ab$ for $1\leq r\leq n$.
+\item Find the coefficient of $x^{99}$ and $x^{98}$ in the polynomial $(x - 1)(x - 2)(x - 3)\ldots(x - 100)$.
+\item Find the $n$th term and sum to $n$ terms of the series $12, 40, 90, 168, 280, 432, \ldots$
+\item Find the $n$th term and the sum to $n$ terms of the series $10, 23, 60, 169, 494, \ldots$.
+\item Find the sum of the series $3 + 5x + 9x^2 + 15x^3 + 23x^4 + 33x^5 + \ldots \infty$.
+\item If $H_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n}$ and $H_n' = \frac{n + 1}{2} - \left\{\frac{1}{n(n - 1)}
+  + \frac{2}{(n - 1)(n - 2)} + \ldots + \frac{n - 2}{2.3}\right\},$ show that $H_n = H_n'$.
+\item Show that $\tan^{-1}\left(\frac{x}{1 + 1.2x^2}\right) + \tan^{-1}\left(\frac{x}{1 + 2.3x^2}\right) + \ldots+
+  \tan^{-1}\left(\frac{x}{1 + n(n + 1)x^2}\right) = \tan^{-1}\left(\frac{nx}{1 + (n + 1)x^2}\right)$.
+\item Find the sum to $n$ terms of the series $\frac{1}{1 + 1^2 + 1^4} + \frac{2}{1 + 2^2 + 2^4} + \frac{3}{1 + 3^2 +
+  3^4} + \ldots$.
+\item Find $\displaystyle\sum_{k=n}^n\tan^{-1}\frac{2k}{2 + k^2 + k^4}$
+\item Show that $\frac{1^4}{1.3} + \frac{2^4}{3.5} + \frac{3^4}{5.7} + \ldots + \frac{n^4}{(2n - 1)(2n + 1)} =
+  \frac{n(4n^2 + 6n + 5)}{48} + \frac{n}{16(2n + 1)}$
+\item If $a_1, a_2, \ldots, a_n, \ldots$ are in A.P. with first term $a$ and common difference $d,$ find the sum for $r >
+  1$ of $a_1a_2\ldots a_r + a_2a_3\ldots a_{r + 1} + \ldots \text{~to~}n\text{~terms}$.
+\item If $a_1, a_2, \ldots, a_n, \ldots$ are in A.P. and none of them is zero. Then prove that $\frac{1}{a_1a_2\ldots
+    a_r} + \frac{1}{a_2a_3\ldots a_{r + 1}} + \ldots + \frac{1}{a_na_{n + 1}\ldots a_{n + r - 1}} = \frac{1}{(r - 1)(a_2 -
+  a_1)}$
+
+  $\left[\frac{1}{a_1a_2\ldots a_{r - 1}} - \frac{1}{a_{n + 1}a_{n + 2}\ldots a_{n + r - 1}}\right]$
+\item Find the sum to $n$ terms of the series $\frac{1}{1.2.3.4} + \frac{1}{2.3.4.5} + \frac{1}{3.4.5.6} + \ldots$.
+\item Find the sum to $n$ terms of the series $\frac{3}{2.4.6} + \frac{4}{2.3.5} + \frac{5}{3.4.6} + \ldots$.
+\item Find $\frac{1}{1.3} + \frac{2}{1.3.5} + \frac{3}{1.3.5.7} + \ldots \text{~to~}n\text{~terms}$.
+\item Find $\frac{2}{1.3}.\frac{1}{3} + \frac{3}{3.5}.\frac{1}{3^2} + \frac{4}{5.7}.\frac{1}{3^3} + \ldots
+  \text{~to~}n\text{~terms}$.
+\item Find the sum of $n$ terms of the series $\frac{1}{3} + \frac{3}{3.7} + \frac{5}{3.7.11} + \frac{7}{3.7.11.15} +
+  \ldots$.
+\item Find the sum of the series: $1 + 2(1 - a) + 3(1 - a)(1 - 2a) + 4(1 - a)(1 -2a)(1 - 3a) +
+  \ldots\text{~to~}m\text{~terms}$.
+\item Find the sum of the series $1 + \frac{x}{b_1} + \frac{x(x + b_1)}{b_1b_2} + \frac{x(x + b_1)(x + b_2)}{b_1b_2b_3} +
+  \ldots + \frac{x(x + b_1)\ldots(x + b_{n - 1})}{b_1b_2\ldots b_n}$.
+\item Let $S_k(n) = 1^k + 2^k + \ldots + n^k,$ show that $nS_k(n) = S_{k+1}(n) + S_k(n - 1) + S_k(n - 2) + \ldots +
+  S_k(2) + S_k(1)$.
+\item Find the sum of all the numbers of the form $n^3$ which lie between $100$ and $10000$.
+\item If $S$ be the sum of the $n$ consecutive integers beginning with $a$ and $t$ the sum of their squares, show that
+  $nt - S^2$ is independent of $a$.
+\item If $\sum_{x = 5}^{n + 5}4(x - 3) = Pn^2 + Qn + R,$ find the value of $P + Q.$
+\item Find the sum to $2n$ terms of the series $5^3 + 4.6^3 + 7^3 + 4.8^3 + 9^3 + 4.10^3 + \ldots$.
+\item Find the sum to $n$ terms of the series $\left(\frac{2n + 1}{2n - 1}\right) + 3\left(\frac{2n + 1}{2n - 1}\right)^2
+  + 5\left(\frac{2n + 1}{2n - 1}\right)^3 + \ldots$.
+\item Find the sum to $n$ terms of the series $1 + 5\left(\frac{4n + 1}{4n - 3}\right) + 9\left(\frac{4n + 1}{4n -
+  3}\right)^2 + 13\left(\frac{4n + 1}{4n - 3}\right)^3 + \ldots$.
+\item Prove that the numbers of the sequence $121, 12321, 1234321, \ldots$ are each a perfect square of an odd integer.
+\item Prove that the sum to $n$ terms of the series $\frac{3}{1^2} + \frac{5}{1^2 + 2^2} + \frac{7}{1^2 + 2^2 + 3^2} +
+  \frac{9}{1^2 + 2^2 + 3^2 + 4^2} + \ldots$ is $6n/(n + 1)$.
+\item Find the sum to $n$ terms of the series $\frac{1}{(1 + x)(1 + 2x)} + \frac{1}{(1 + 2x)(1 + 3x)} + \frac{1}{(1 +
+  3x)(1 + 4x)} + \ldots$.
+\item Find the sum to $n$ terms of the series $\frac{1}{(1 + x)(1 + ax)} + \frac{a}{(1 + ax)(1 + a^2x)} + \frac{1}{(1 +
+  a^2x)(1 + a^3x)} + \ldots$.
+\item Find the $n$th term of the series $-1, -3, 3, 23, 63, 129, \ldots$.
+\item Find the sum to $n$ terms of the series $\frac{1}{\sqrt{1} + \sqrt{3}} + \frac{1}{\sqrt{3} + \sqrt{5}} +
+  \frac{1}{\sqrt{5} + \sqrt{7}} + \ldots$.
+\item If $a_1, a_2, \ldots, a_n, \ldots$ are in A.P. with first term $a$ and common difference $d,$ then prove that
+  $a_1a_2 + a_2a_3$ $+ \ldots + a_na_{n +1} = \frac{[a + (n - 1)d](a + nd) - (a - d)a(a + d)}{3d} = \frac{n}{3}[3a^2 + 2and + (n^2
+  - 1)d^2]$.
+\item If $a_1, a_2, \ldots, a_n, \ldots$ are in A.P. with first term $a$ and common difference $d,$ then prove that
+  $a_1a_2a_3 + a_2a_3a_4$ $+ \ldots + a_na_{n +1}a_{n + 2}$ $=$
+
+  $\frac{[a + (n - 1)d](a + nd)[a + (n + 1)d][a + (n + 2)d] - (a -
+  d)a(a + d)(a + 2d)}{4d}=$
+
+  $\frac{n}{4}[4a^3 + 6(n + 1)a^2d + 2(2n^2 + 3n - 1)ad^2 + (n^3 - 2n^2 - n - 2)d^3]$.
+\item Find the sum to $n$ terms of the series $\frac{3}{1^2.2^2} + \frac{5}{2^2.3^2} + \frac{7}{3^2.4^2} + \ldots$.
+\item Let $S_n$ denote the sum to $n$ terms of the series $1.2 + 2.3 + 3.4 + \ldots$ and $\sigma_{n - 1}$ that to $n - 1$
+  terms of the series $\frac{1}{1.2.3.4} + \frac{1}{2.3.4.5} + \frac{1}{3.4.5.6} + \ldots$ Then prove that
+  $\displaystyle18S_n\sigma_{n - 1} - S_n = -2$.
+\item Find $\frac{5}{1.2}.\frac{1}{3} + \frac{7}{2.3}.\frac{1}{3^2} + \frac{9}{3.4}.\frac{1}{3^3} +
+  \ldots\text{~to~}n\text{~terms}$.
+\item If $\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots\infty = \frac{\pi^2}{6}$ then find
+  $\frac{1}{1^2} + \frac{1}{3^2} + \frac{1}{5^2} + \ldots \infty$.
+\item If $\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots \infty = \frac{\pi^2}{6},$ then find $1
+  - \frac{1}{2^2} + \frac{1}{3^2} - \frac{1}{4^2} + \ldots \infty$.
+\item If $H_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n},$ then prove that $H_n = n - \left(\frac{1}{2} +
+  \frac{2}{3} + \frac{3}{4} + \ldots + \frac{n - 1}{n}\right)$.
+\item Show that $\frac{1}{x + 1} + \frac{2}{x^2 + 1} + \frac{4}{x^4 + 1} + \ldots + \frac{2^n}{x^{2^{n}} + 1} =
+  \frac{1}{x + 1} - \frac{2^{n + 1}}{x^{2^{n + 1}} -1}$.
+\item Show that $\left(1 + \frac{1}{3}\right)\left(1 + \frac{1}{3^2}\right)\left(1 + \frac{1}{3^4}\right) \ldots \left(1
+  + \frac{1}{3^{2^{n}}}\right) = \frac{3}{2}\left(1 - \frac{1}{3^{2^{n + 1}}}\right)$.
+\item If $x + y + z = 1$ and $x, y, z$ are positive numbers show that $(1 - x)(1 - y)(1 - z)\geq 8xyz$.
+\item If $a>0, b > 0$ and $c> 0,$ prove that $(a + b + c)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right)\geq 9$.
+\item If $a + b + c = 3$ and $a>0, b>0, c>0,$ find the greatest value of $a^2b^3c^2$.
+\item Let $a_i + b_i = 1(i = 1, 2, \ldots, n)$ and $a = \frac{1}{n}(a_1 + a_2 + \ldots + a_n), b=\frac{1}{n}(b_1 + b_2 +
+  \ldots + b_n),$ show that $a_1b_1 + a_2b_2 + \ldots + a_nb_n = nab - (a_1 - a)^2 - (a_2 - a)^2 - \ldots - (a_n - a)^2$.
+\item A sequence $a_1, a_2, a_3, \ldots, a_n$ of real numbers is such that $a_1=0, |a_2| = |a_1 + 1|, |a_3| = |a_2 + 1|,
+  \ldots,$ $|a_n| = |a_{n - 1} + 1|.$ Prove that the arithmetic mean $(a_1 + a_2 + \ldots + a_n)/n$ of these numbers cannot be less
+  than $-1/2$.
+\item If $a,b,c > 0,$ show that $(a + b)(b + c)(a + c) \geq 8abc$.
+\item If $x + y + z = a,$ show that $\frac{1}{x} + \frac{1}{y} + \frac{1}{z}\geq \frac{9}{a}$.
+\item If $n$ is a positive integer, show that $n^n \geq 1.3.5\ldots (2n - 1)$.
+\item Find the greatest value of $(7 - x)^4(2 + x)^5$ if $-2<x<7$.
+\item If $a, b, c > 0,$ show that $\frac{bc}{b + c} + \frac{ca}{c + a} + \frac{ab}{a + b}\leq \frac{a + b + c}{2}$.
+\item If $a, b, c > 0,$ show that $\frac{b + c}{a} + \frac{c + a}{b} + \frac{a + b}{c}\geq 6$.
+\item If $x_i > 0, i = 1, 2, 3, \ldots, n$ show that $(x_1 + x_2 + \ldots + x_n)\left(\frac{1}{x_1} + \frac{1}{x_2} +
+  \ldots + \frac{1}{x_n}\right) \geq n^2$.
+\item If $x,y$ are positive real numbers and $m, n$ are positive integers, then show that $\frac{x^ny^m}{(1 + x^{2n})(1 +
+  y^{2m})}\leq \frac{1}{4}$.
+\item If the arithmetic mean of $(b - c)^2, (c - a)^2$ and $(a - b)^2$ is the same as that of $(b + c - 2a)^2, (c + a -
+  2b)^2$ and $(a + b - 2c)^2$, show that $a = b = c$.
+\end{enumerate}
