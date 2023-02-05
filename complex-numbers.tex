@@ -24,11 +24,11 @@ $\frac{1}{2}$ which results in $-1$.
 
 \section{Definitions Related to Complex Numbers}
 A complex number is written as $a + ib$ or $x + iy$ or $a + jb$ or $x + jb$. Here, $a, b, x, y$ are all real numbers. The complex
-numbers itself is denoted by $z$. Therefore, we have $z = x + iy$. Here, $x$ is called the real part and is also denoted by $Re(z)$
-and $y$ is called the imaginary part and is also denoted by $Im(z)$.
+numbers itself is denoted by $z$. Therefore, we have $z = x + iy$. Here, $x$ is called the real part and is also denoted by $\Re(z)$
+and $y$ is called the imaginary part and is also denoted by $\Im(z)$.
 
-A complex number is purely real if its imaginary part or $y$ or $Im(z)$ is zero. Similarly, a complex number is purely imaginary if
-its real part or $x$ or $Re(z)$ is zero. Clearly, as you can imagine that there can exist only one number which has both the parts
+A complex number is purely real if its imaginary part or $y$ or $\Im(z)$ is zero. Similarly, a complex number is purely imaginary if
+its real part or $x$ or $\Re(z)$ is zero. Clearly, as you can imagine that there can exist only one number which has both the parts
 as zero and certainly that is $0$. That is, $0=0+i0$.
 
 The set of all complex number is typically denoted by $C$. Two complex numbers $z_1$ and $z_2$ are said to be true if there real
@@ -60,12 +60,12 @@ $\overline{z} = x - iy. \overline{z}$ is the typical representation for conjugat
 \item $\overline{\left(\overline{z}\right)} = z$
 
   $z = x + iy$, hence, $\overline{z} = x - iy$. Hence, $\overline{\left(\overline{z}\right)} = x - (-iy) = x + iy = z$
-\item $z + \overline{z} = 2Re(z)$
+\item $z + \overline{z} = 2\Re(z)$
 
-  $z + \overline{z} = x + iy + x - iy = 2x = 2Re(z)$.
-\item $z - \overline{z} = 2iIm(z)$
+  $z + \overline{z} = x + iy + x - iy = 2x = 2\Re(z)$.
+\item $z - \overline{z} = 2i\Im(z)$
 
-  $z - \overline{z} = x + iy - (x - iy) = 2iy = 2iIm(z)$
+  $z - \overline{z} = x + iy - (x - iy) = 2iy = 2i\Im(z)$
 \item $z = \overline{z} \Leftrightarrow z$ is purely real.
 
   Clearly, $x + iy = x - iy \Rightarrow 2iy = 0 \Rightarrow y = 0$. Therefore, $z$ is purely real. Conversely, if $z$ is purely
@@ -74,9 +74,9 @@ $\overline{z} = x - iy. \overline{z}$ is the typical representation for conjugat
 
   Clearly, $x + iy + x - iy = 0 \Rightarrow 2x = 0$. Therefore, $z$ is purely imaginary. Conversely, if $z$ is purely imaginary
   then $z = iy$, and thus $z + \overline{z} = 0$.
-\item $z\overline{z} = [Re(z)]^2 + [Im(z)]^2$
+\item $z\overline{z} = [\Re(z)]^2 + [\Im(z)]^2$
 
-  Clearly, $z\overline{z} = (x + iy)(x - iy) = x^2 + y^2 = [Re(z)]^2 + [Im(z)]^2$
+  Clearly, $z\overline{z} = (x + iy)(x - iy) = x^2 + y^2 = [\Re(z)]^2 + [\Im(z)]^2$
 \item $\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$
 
   $\overline{z_1 + z_2} = \overline{(x_1 + iy_1) + (x_2 + iy_2)} = \overline{(x_1 + x_2) + i(y_1 + y_2)} = (x_1 + x_2) - i(y_1 +
@@ -118,10 +118,10 @@ Modulus of a complex number $z$ is denoted by $|z|$ and is equal to the real num
 \item $|z| = |\overline{z}| = |-z| = |-\overline{z}|$
 
   Clearly, all result in $\sqrt{x^2 + y^2}$.
-\item $-|z| \leq Re(z) \leq |z|$.
+\item $-|z| \leq \Re(z) \leq |z|$.
 
   Clearly, $-\sqrt{x^2 + y^2}\leq x\leq \sqrt{x^2 + y^2}$.
-\item $-|z| \leq Im(z) \leq |z|$.
+\item $-|z| \leq \Im(z) \leq |z|$.
 
   Clearly, $-\sqrt{x^2 + y^2}\leq y\leq \sqrt{x^2 + y^2}$.
 \item $z\overline{z} = |z|^2$
@@ -137,8 +137,8 @@ Modulus of a complex number $z$ is denoted by $|z|$ and is equal to the real num
   $|z_1z_2| = |x_1x_2 - y_1y_2 + i(x_1y_2 + x_2y_1)| = \sqrt{(x_1x_2 - y_1y_2)^2 + (x_1y_2 + x_2y_1)^2} = \sqrt{(x_1 + y_1)^2(x_2 +
   y_2)^2} = |z_1||z_2|$
 \item $\left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}$ if $z_2\neq = 0$
-\item $|z_1 + z_2|^2 = |z_1|^2 + |z_2|^2 + \overline{z_1}z_2 + z_2\overline{z_2} = |z_1|^2 + |z_2|^2 + 2Re(z_1\overline{z_2})$.
-\item $|z_1 - z_2|^2 = |z_1|^2 + |z_2|^2 - \overline{z_1}z_2 - z_1\overline{z_2} = |z_1|^2 + |z_2|^2 + 2Re(z_1\overline{z_2})$.
+\item $|z_1 + z_2|^2 = |z_1|^2 + |z_2|^2 + \overline{z_1}z_2 + z_2\overline{z_2} = |z_1|^2 + |z_2|^2 + 2\Re(z_1\overline{z_2})$.
+\item $|z_1 - z_2|^2 = |z_1|^2 + |z_2|^2 - \overline{z_1}z_2 - z_1\overline{z_2} = |z_1|^2 + |z_2|^2 + 2\Re(z_1\overline{z_2})$.
 \item $|z_1 + z_2|^2 + |z_1 - z_2|^2 = 2\left(|z_1|^2 + |z_2|^2\right)$.
 \item If $a$ and $b$ are real numbers, and $z_1$ and $z_2$ are complex numbers, then
 
@@ -804,7 +804,7 @@ Find the square root of the following complex numbers:
 \item If $x_r = \cos\frac{\pi}{2^r} + i\sin\frac{\pi}{2^2}$, then find the value of $x_1x_2x_3\ldots$ to $\infty$.
 \item Find the value of $\frac{(\cos\theta + i\sin\theta)^4}{(\sin\theta + i\cos\theta)^2}$.
 \item If $z = \left(\frac{\sqrt{3}}{2} + \frac{i}{2}\right)^5 + \left(\frac{\sqrt{3}}{2} - \frac{i}{2}\right)^5$, then find
-  $Im(z)$.
+  $\Im(z)$.
 \item Find the product of all values of $\left(\cos\frac{\pi}{3} + i\sin\frac{\pi}{3}\right)^{\frac{3}{4}}$.
 \item If $z_1$ and $z_2$ are two non-zero complex numbers such that$|z_1 + z_2| = |z_1| + |z_2|$, then find $\arg(z_1) - \arg(z_2)$.
 \item If $z = 1 - \sin\alpha + i\cos\alpha$, where $\alpha \in \left(0, \frac{\pi}{2}\right)$, then find the modulus and principal
@@ -825,15 +825,15 @@ Find the square root of the following complex numbers:
 \item Prove that $|z_1 + z_2|^2 + |z_1 - z_2|^2 = 2(|z_1|^2 + |z_2|^2)$.
 \item If $x^2 - x + 1 = 0$, then find the value of $\sum_{n = 1}^5\left(x^n + \frac{1}{x^n}\right)^5$.
 \item If $3^{49}(x + iy) = \left(\frac{3}{2} + \frac{\sqrt{3}}{2}i\right)^{100}$, then find $x$ and $y$.
-\item For any two complex numbers $z_1$ and $z_2$, prove that $|z_1 + z_2|^2 = |z_1|^2 + |z_2|^2 + 2Re(z_1\overline{z_2}) = |z_1|^2
-  + |z_2|^2 + 2Re(\overline{z_1}z_2)$.
+\item For any two complex numbers $z_1$ and $z_2$, prove that $|z_1 + z_2|^2 = |z_1|^2 + |z_2|^2 + 2\Re(z_1\overline{z_2}) = |z_1|^2
+  + |z_2|^2 + 2\Re(\overline{z_1}z_2)$.
 \item If $|z_1| = |z_2| = 1$, then prove that $|z_1 + z_2| = \left|\frac{1}{z_1} + \frac{1}{z_2}\right|$.
-\item If $|z - 2| = 2|z - 1|$, then prove that $|z|^2 = \frac{4}{3}Re(z)$.
+\item If $|z - 2| = 2|z - 1|$, then prove that $|z|^2 = \frac{4}{3}\Re(z)$.
 \item If $\sqrt[3]{a + ib} = x + iy$, then prove that $\frac{a}{x} + \frac{b}{y} = 4(x^2 - y^2)$.
 \item If $x + iy = \sqrt{\frac{a + ib}{c + id}}$, then prove that $(x^2 + y^2)^2 = \frac{a^2 + b^2}{c^2 + d^2}$
 \item If $z_1, z_2, \ldots, z_n$ are cube roots of unity, then prove that $|z_k| = |z_{k + 1}|~\forall~k\in[1, n - 1]$.
 \item If $n$ is a positive integer greater than unity and $z$ is a complex number satisfying the equation $z^n = (1 + z)^2$, then
-  prove that $Re(z) < 0$.
+  prove that $\Re(z) < 0$.
 \item Prove that $x^{3m} + x^{3n - 1} + x^{3r - 2}~\forall~m,n,r\in N$, is divisible by $1 + x + x^2$.
 \item If $(\sqrt{3} + i)^n = (\sqrt{3} - i)^n~\forall~n\in N$, then prove that minimum value of $n$ is $6$.
 \item If $(\sqrt{3} - i)^n = 2^n, n\in I$, the set of integers, then prove that $n$ is multiple of $12$.
@@ -888,7 +888,7 @@ Find the square root of the following complex numbers:
 \item If $|z|^8 = |z - 1|^8,$ then prove that roots of this equation are collinear.
 \item Prove that $z\overline{z} + a\overline{z} + \overline{a}z + b = 0,$ represents a circle if $|a|^2 > b$.
 \item If $z = (\lambda + 3) + i\sqrt{3 - \lambda^2},$ where $|\lambda| < \sqrt{3},$ then prove that it represents a circle.
-\item If $z$ is a complex number such that $|Re(z)| + |Im(z)| = k,~\forall~ k\in R,$ then find the locus of $z$.
+\item If $z$ is a complex number such that $|\Re(z)| + |\Im(z)| = k,~\forall~ k\in R,$ then find the locus of $z$.
 \item Consider a sequence of complex numbers such that $z_{n + 1} = z_n^2 + i,~\forall n\geq 1,$ where $z_1 = 0.$ Find $z_{111}$.
 \item The complex numbers whose real and imaginary parts are integers and satisfy the relation $z\overline{z}^3 +
   z^3\overline{z} = 350,$ forms a rectangle in the argand plane. Find length of its diagonals.
@@ -919,8 +919,8 @@ Find the square root of the following complex numbers:
   \frac{b}{c} + \frac{c}{a} = 1,$ then find the value of $\cos(\alpha - \beta) + \cos(\beta - \gamma) + \cos(\gamma - \alpha)$.
 \item Find the locus of the center of a circle which touches the circles $|z - z_1| = a$ and $|z - z_2| = b$ externally.
 \item Prove that $\tan\left[i\log\left(\frac{a - ib}{a + ib}\right)\right] = \frac{2ab}{a^2 - b^2}$.
-\item $z_1 = a + ib$ and $z_2 = c + id$ are complex numbers such that $|z_1| = |z_2| = 1$ and $Re(z_1\overline{z_2}) =
-  0.$ Also, $w_1 = a + ic, w_2 = b + id$ then prove that $|w_1| = |w_2| = 1$ and $Re(w_1\overline{w_2}) = 0$.
+\item $z_1 = a + ib$ and $z_2 = c + id$ are complex numbers such that $|z_1| = |z_2| = 1$ and $\Re(z_1\overline{z_2}) =
+  0.$ Also, $w_1 = a + ic, w_2 = b + id$ then prove that $|w_1| = |w_2| = 1$ and $\Re(w_1\overline{w_2}) = 0$.
 \item If $\left|\frac{z_1}{z_2}\right| = 1$ and $\arg(z_1z_2) = 0,$ then prove that $|z_2|^2 = z_1z_2$.
 \item Find the value of the expression $2\left(1 + \frac{1}{\omega}\right)\left(1 + \frac{1}{\omega^2}\right) + 3\left(2
   + \frac{1}{\omega}\right)\left(2 + \frac{1}{\omega^2}\right) + 4\left(3 + \frac{1}{\omega}\right) \left(3 +
@@ -944,9 +944,9 @@ Find the square root of the following complex numbers:
 \item If $|z - 2 -i| = |z|\left|\sin\left(\frac{\pi}{4} - \arg(z)\right)\right|$, then find the locus of $z$.
 \item Find the maximum area of the triangle formed by the complex coordinates $z z_1$ and $z_2$, which satisfy the
   relation $|z - z_1| = |z - z_2|$ and $\left|z - \frac{z_1 + z_2}{2}\right|\leq r$, where $r > |z_1 - z_2|$.
-\item If $z_1 = a_1 + ib_1$ and $z_2 = a_2 + ib_2$ are complex numbers such that $|z_1| = 1, |z_1| = 2$ and $Re(z_1z_2) =
+\item If $z_1 = a_1 + ib_1$ and $z_2 = a_2 + ib_2$ are complex numbers such that $|z_1| = 1, |z_1| = 2$ and $\Re(z_1z_2) =
   0,$ and $\omega_1 = a_1 + \frac{ia_2}{2}$ and $\omega_2 = 2b_1 + ib_2$, then prove that $|\omega_1| = 1, |\omega_2| = 2$ and
-  $Re(\omega_1\omega_2) = 0$.
+  $\Re(\omega_1\omega_2) = 0$.
 \item Let $z$ be a complex number and $a$ be $a$ be a real number such that $z^2 + az + a^2 = 0,$ then prove that i)
   locus of $z$ is a pair of straight lines ii) $\arg(z) = \pm\frac{2\pi}{3}$ iii) $|z| = |a|$
 \item If $x + \frac{1}{x} = 1$ and $p = x^{4000} + \frac{1}{x^{4000}}$ and $q$ is the the digit at units place in
@@ -1086,7 +1086,7 @@ Find the square root of the following complex numbers:
   \frac{z_2}{|z_2|}\right) \leq 2|z_1 + z_2|$
 \item Show that the necessary and sufficient condition for both the roots of the equation $z^2 + az + b = 0$ to be unimodular are
   $|a|\leq 2, |b| = 1, \arg(b) = 2\arg(a)$.
-\item If $z$ is a complex number, show that $|z|\leq |Re(z)| + |Im(z)|\leq \sqrt{2}|z|$.
+\item If $z$ is a complex number, show that $|z|\leq |\Re(z)| + |\Im(z)|\leq \sqrt{2}|z|$.
 \item If $|z - \frac{4}{z}| = 2$, show that the greatest value of $|z|$ is $\sqrt{5} + 1$.
 \item If $\alpha, \beta, \gamma, \delta$ be the real roots of the equation $ax^4 + bx^3 + cs^2 + dx + e = 0$, show that $a^2(1 +
   \alpha^2)(1 + \beta^2)(1 + \gamma^2)(1 + \delta^2) = (a - c + e)^2 + (b - d)^2$.
