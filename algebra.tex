@@ -25,11 +25,18 @@
 % \usepackage{xcolor, calc, graphicx, soul, fourier, verbments, makeidx, mflogo}
 \usepackage{xcolor, calc, graphicx, soul, float, makeidx, mflogo,
   pstricks, minitoc, amsmath, amssymb, pst-poly, longtable, tikz, titlesec,
-  scalerel, stackengine, microtype, enumitem, wrapfig, mathtools}
-% make minimum size of math font bigger
+  scalerel, stackengine, microtype, enumitem, wrapfig, mathtools, amsthm, pdfpages}
+% make minimum size of math font bigger for fractions it makes fractions displaystyle
 \let\frac\dfrac
 \usetikzlibrary{shapes, arrows, calc}
 \graphicspath{ {./images/} }
+% symbol for old factorial
+\newcommand{\oldfact}[1]{%
+\tikz[baseline]{\node[anchor=base,inner sep=0.3ex](mynode){\ensuremath{#1}};\draw(mynode.north west)--(mynode.south west)--(mynode.south east);\path[use as bounding box]($(mynode.south west)+(-0.3ex,-0.3ex)$)rectangle($(mynode.north east)+(0.3ex,0.3ex)$);}
+}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
 % Define block styles
 \tikzstyle{decision} = [diamond, draw,
   text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
@@ -65,6 +72,7 @@
 \definecolor{nicegreen}{rgb}{.129,.447,.149}
 \definecolor{niceblue}{rgb}{0, 0, .6}
 \definecolor{niceyellow}{rgb}{1,1,.95}
+\definecolor{nicecyan}{rgb}{0, 0.5, 0.75}
 \color{niceblack}
 \usepackage[colorlinks]{hyperref}
 \hypersetup{%
@@ -72,8 +80,8 @@
   pdfauthor={Shiv S. Dayal},
   bookmarksnumbered,
   pdfstartview={FitH},
-  urlcolor=cyan,
-  linkcolor=cyan,
+  urlcolor=nicecyan,
+  linkcolor=nicecyan,
 }%
 \setlength{\tabcolsep}{10pt}
 \renewcommand{\arraystretch}{1.5}
@@ -91,7 +99,7 @@
 \newcommand\feline@chapter@marker[1][4cm]{%
   \sbox\feline@chapter{%
     \resizebox{!}{#1}{\fboxsep=1pt%
-      \colorbox{cyan}{\color{white}\bfseries\sffamily\thechapter}%
+      \colorbox{nicecyan}{\color{white}\bfseries\sffamily\thechapter}%
   }}%
   \rotatebox{90}{%
     \resizebox{%
@@ -106,7 +114,7 @@
 }}
 \makechapterstyle{daleif1}{
   \renewcommand\chapnamefont{\normalfont\HUGE\sffamily\scshape\raggedleft\so}
-  \renewcommand\chaptitlefont{\normalfont\HUGE\sffamily\bfseries\scshape\color{cyan}}
+  \renewcommand\chaptitlefont{\normalfont\HUGE\sffamily\bfseries\scshape\color{nicecyan}}
   \renewcommand\chapternamenum{}
   \renewcommand\printchaptername{}
   \renewcommand\printchapternum{\null\hspace*{4.5in}\feline@chm[1cm]\par}
@@ -116,27 +124,28 @@
 \makeatother
 \chapterstyle{daleif1}
 
-\title{\sffamily\color{cyan}\HUGE{\textbf{A Variable in Algebra}}}
+\title{\sffamily\color{nicecyan}\HUGE{\textbf{A Variable in Algebra}}}
 \author{\vspace*{1cm}\LARGE{Shiv S. Dayal}}
 \date{}
+%\titlepic{\includegraphics{cover.pdf}}
 \titleformat{\section}
-  {\normalfont\sffamily\Large\bfseries\color{cyan}}
+  {\normalfont\sffamily\Large\bfseries\color{nicecyan}}
   {\thesection}{0.2em}{}
 \titleformat{\subsection}
-  {\normalfont\sffamily\large\bfseries\color{cyan}}
+  {\normalfont\sffamily\large\bfseries\color{nicecyan}}
   {\thesection}{0.2em}{}
 \titleformat{\subsubsection}
-  {\normalfont\sffamily\large\bfseries\color{cyan}}
+  {\normalfont\sffamily\large\bfseries\color{nicecyan}}
   {\thesection}{0.2em}{}
 \titleformat{\subsubsubsection}
-  {\normalfont\sffamily\bfseries\color{cyan}}
+  {\normalfont\sffamily\bfseries\color{nicecyan}}
   {\thesection}{0.2em}{}
 \renewcommand{\ttdefault}{pcr}
 \setlength{\parskip}{1em}
 \renewcommand{\rmdefault}{ptm}
 \renewcommand{\rmdefault}{phv}
 \usepackage{fontspec}
-%\setmainfont{TeX Gyre Heros}
+%\setmainfont{TeX Gyre Termes}
 %\setmonofont[Ligatures=TeX,Scale=.90]{Courier}
 \setsansfont{Roboto}
 \renewcommand{\contentsname}{Table of Contents}
@@ -147,10 +156,7 @@
 \preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
 \makeatother
 \begin{document}
-\minitoc
-\minilof
-\minilot
-\maketitle
+\includepdf[pages=1,fitpaper]{cover}
 \thispagestyle{empty}
 \pagestyle{empty}
 \vfill

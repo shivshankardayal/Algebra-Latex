@@ -1,1 +1,518 @@
 \chapter{Permutations and Combinations}
+In this chapter we will study basic principles of counting, permutations and combinations. This study will enable you to further
+study the branch of mathematics called combinatorics. You would have certainly encountered a combinatorical problem in your
+life. It would be really surprising if you have not. Have you ever solved a Sudoku puzzle or Rubik's cube? Have you ever counted
+the number of poker hands that are full houses in order to determine the odds against a full house? Have you ever attempted to
+trace through a network without removing your pencil from paper and wihtout tracing any part of network more than once? These are
+all combinatorical problems. As you can see that combinatorics has evolved from mathematical games.
+
+With the invention of modern computers, we are enabled to solve more and more problems of combinatorics which were earlier not
+feasible due to calculations involved. The computer programs are often based on combinatorical algorithms which determine the speed
+and efficiency of the solution. Analysis of these programs and algorithms require sound knowledge of combinatorical mathematics and
+thinking. In computer science we write test cases for our programs, and those test cases can be enumerated by applying permutations
+and combinations on input data and states produced in the program. Combinatorics is a powerful tool for making sure that the tester
+does not miss any test case, which in mission-critical programs is of paramount importance.
+
+The best way to learn combinatorics is to solve a lot of problems. This is in general true for all branches of mathematics but even
+more so for combinatorics because a problem which appears simple may be quite difficult to solve or require critical thinking. By
+solving problems of different kinds, and by repeating them the concepts will be enforced and discipline will develop.
+
+We start with four basic counting principles and then we will progress into permutations and combinatins. To study the topic of
+permutations and combinations it is required to have basic knowledge in set theory which the reader is expected to know.
+
+\section{Four Basic Counting Principles}
+Let $S$ be a set. A \textit{partition} of $S$ is a collection of $S_1, S_2, \ldots, S_m$ of subsets of $S$ such that each element
+in $S$ is in exactly one of these subsets:
+$$S = S_1\cup S_2\cup\ldots\cup S_m$$
+$$S_i\cap S_j = \phi(i\neq j)$$
+Thus, the sets $S_1, S_2, \ldots, S_m$ are pairwise disjoint sets, and their union is $S$. The subsets $S_1, S_2, \ldots, S_m$ are
+called the \textit{parts} of the partition. Note that by this definition a part of the partition may be empty, but usually there is
+no advantage in considering partitions with one or more empty sets. The number of objects of a set $S$ is denoted by $|S|$, and is
+called the \textit{size} of $S$.
+
+\subsection{Addition Principle}
+Suppose that a $S$ is partitioned into pairwise disjoint partys $S_1, S_2, \ldots, S_m$. The number of objects in $S$ can be
+determined by finding the number of objects in each of the parts, and adding the numbers so obtained:
+$$|S| = |S_1| + |S_2| + \ldots |S_m|$$.
+If the sets $S_1, S_2, \ldots, S_m$ are allowed to overlap, then a more profound principle, the inclusion-exclusion principle can
+be used to count the number of objects in $S$.
+
+We need to be careful when partitioning $S$ into too many parts. For example, if we partition $S$ into parts in such a way that
+each part contains only one element then addition princinple is becomes counting the number of parts, which is basically same as
+listing all objects of $S$. Thus the art of applying addition princinple is to partition the set $S$ into not too many parts.
+
+\noindent\textbf{Example:} In a university there are four mathematics courses, two economics courses, and three lietrature
+courses. A student is allowed to enroll into one course at most. Thus, we see that a student can take a course in $4 + 2 + 3 = 9$
+ways.
+
+Next principle is multiplication principle which will be stated for two sets, but it can be generalized to any finite number of
+sets.
+
+\subsection{Multiplication Principle}
+Let $S$ be a set of ordered pairs $(a, b)$, where the first object comes from a set of size $p$, and for each choice of object $a$
+there are $q$ choices for object $b$. Then the size of $S$ is $p\times q$:
+$$|S| = p\times q$$
+As in basic arithmetic multiplication is repeated addition, similarly multiplication principle is actuallly a consequence of the
+addition principle i.e. repeated addition. Let $a_1, a_2, \ldots, a_p$ be $p$ different choices for the object $a$. We partition
+$S$ into parts $S_1, S_2, \ldots, S_p$ where $S_i$ is the set of ordered pairs in $S$ with first object $a_i(i = 1, 2, \ldots,
+p)$. The size of each $S_i$ is $q$; hence, by the addition principle,
+$$|S| = |S_1| + |S_2| + \ldots + |S_p|$$
+$$= q + q + \ldots + q(p q'\text{s})$$
+$$= p\times q$$
+The multiplication principle can be stated in another way as: If a first task has $p$ outcomes, and no matter what the outcome of of
+the first task, a second task has $q$ outcomes i.e. outcomes for two tasks are mutually exclusive, then the two tasks can be
+performed in $p\times q$ outcomes.
+
+\noindent\textbf{Example:} Pencil comes in two different lengths, four different hardness, and three different thickness. How many
+different types of pencils are there?
+
+The pencil has three different properties, which are exclusive of each other, and thus, we can apply multiplication
+principle. Hence, number of different types of pencils is $2\times4\times3 = 24$.
+
+\noindent\textbf{Example:} The number of ways a man, woman, boy, and girl can be selected from three men, three women, five boys and
+four girls is $3\times3\times5\times4 = 180$.
+
+\noindent\textbf{Example:} Determine the number of positive integers that are factors of the number
+$$2^3\times3^4\times5^5\times7^7$$
+The numbers $2, 3, 5,$ and $7$ are prime numbers. By the fundamental theorem of arithmetic, each factor is of the form
+$$2^i\times3^j\times5^k\times7^l$$
+where $0\leq i\leq2, 0\leq j\leq3, 0\leq k\leq5,$ and $0\leq l\leq7$. There are three choices for $i$, four for $j$, six for $k$, and
+eight for $l$. By multiplication principle, the number of factors is $3\times4\times6\times8 = 576$.
+
+In the multiplication principle the $q$ choices for object $b$ may vary with the choices of $a$. The only requirement is that there
+be the same number $q$ of choices, not necessarily the same choices.
+
+\noindent\textbf{Example:} How many two-digit numbers have distinct, and nonzero digits?
+
+A two-digit number $ab$ can be regarded as an ordered pair $(a, b)$, where $a$ is the tens digit, and $b$ is the units digit. Both
+are not allowed to be $0$, and they must be different. Thus, we see that there are $9$ ways to choose $a$, which are $1, 2, \ldots,
+9$. Once $a$ is chosen we cannot use the same digit for $b$, which means we are left with $8$ choices for $b$. Here we see that
+choice of $a$ makes a difference on what choices $b$ has. However, for multiplication principle to be applicable what matters is
+that the number of choices remain constant which is $8$ in this case. Applying multiplication principle, we arrive at the answer of
+the question as $9\times8 = 72$.
+
+There is another way to arrive at the same result. Total number of two-digit number is $90, 10,11, 12, \ldots, 99$. Of these $90$
+numbers $9$ have a zero in them$(10, 20, 30, \ldots, 90)$, and $9$ have repeated digits$(11, 22, \ldots, 99)$. Thus, total number of
+required numbers equals $90 - 9 - 9 = 72$.
+
+We can derive two important ideas from the previous example. First is that it is possible to solve a counting problem in many
+ways. The second idea is that to find the number of objects in a set $A$ (in this csae the set of two-digit numbers with nonzero,
+and distinct digits) it may be easier to find the number of objects in a larger set $U$ containing $S$ (the set of all
+two-digit numbers), and then subtract the number of objects of $U$ that do not belong to $A$ (the two-digit numbers containing $0$
+or repeated digit). This leads us to subtraction principle.
+
+\subsection{Subtraction Principle:}
+Let $A$ be a set, and let $U$ be a larger set containing $A$. Let
+$$\overline{A} = U\textbackslash A = \{x\in U: x\notin A\}$$
+be the complement of $A$ in $U$. Then the numebr $|A|$ of object in $A$ is given by the rule
+$$|A| = |U| - |\overline{A}|$$
+
+The set $U$ is usually some natural set containing all the objects under discussion (it is called \textit{universal set}). Using
+the subtraction principle should be used only if it is easier to count the number of object in $U$ nd $\overline{A}$ tha to count the
+number of objects in $A$.
+
+\noindent\textbf{Example:} Most websites on internet have a lower limit of $8$ characters as password length. Suppose if these
+passwordss are to made up of the digits $0, 1, 2, \ldots, 9$, and the lowercase letters $a, b, c, \ldots, z$ then how many passwords
+will have a repeated symbol?
+
+There are a total of $10$ digits, and $26$ letters i.e. 36 symbols. So by two applications of multiplication principle, we get
+$$|U| = 36^8 = 2,821,109,907,456$$
+and
+$$|\overline{A}| = 36.35.34.33.32.31.30.29 = 1,220,096,908,800$$
+Therefore,
+$$|A| = |U| - |\overline{A}| = 1,601,012,998,656$$.
+
+Now we will formulate the last principle of counting principles.
+
+\subsection{Division Principle}
+Let $S$ be a finite set that is partitioned into $k$ parts in such a way that each part contains the same number of objects. Then
+the number of parts in the partition is given by the rule
+$$k = \frac{|S|}{\text{number of objects in a part}}$$
+
+\noindent\textbf{Example;} There are $240$ rats in a collection of cages. If each cage contains $2$ rats, the number of cages
+equals $$\frac{240}{2} = 120$$.
+
+Interesting problems of division principle will be found in the problems section.
+
+Most counting problems can be classified as one of the following types:
+
+\begin{enumerate}
+\item Count the number of ordered arrangements or ordered selection of objects
+  \begin{enumerate}
+  \item without repeating any object,
+  \item with repetion(perhaps limited) of objects permitted.
+  \end{enumerate}
+\item Count the number of unordered arrangements or unordered selection of objects
+  \begin{enumerate}
+    \item without repeating any object,
+  \item with repetion(perhaps limited) of objects permitted.
+  \end{enumerate}
+\end{enumerate}
+
+We can represent repetition, and nonrepetition of objects as selection from a set, and a multiset. The latter might prove to be more
+useful in some cases. A \textit{multiset} is like a set except that its members need not be distinct.\footnote{Thus, a cardinal
+rule of sets is broken by multisets because a set is not supposed to have duplicates or repeated elements. The set $\{a, a, b\}$ is
+same as the set $\{a, b\}$ but not so for multisets} For example, a multiset $M$ with three $a$'s, two $b$'s i.e. $5$ elements of
+$2$ different types. We usually indicate a multiset by specifying the number of times different types of elements occur in
+it. Thus, $M$ is denoted by $\{3.a,2.b\}$.\footnote{In standard set-theory's notation, we could denote the multiset $M$ using
+ordered pairs as $\{(a, 3), (b, 2)\}$}. The numbers $3$, and $2$ are the \textit{repetition members} of the multiset $M$. Thus we
+can extrapolate that a set is a multiset with all repetition numbers equal to $1$. Often there is no limit on number of repetitions
+i.e. infinite repetitions are allowed.\footnote{In no circumstance, we need to consider different sizes of $\infty$.}
+
+\section{Factorial of $n$}
+Factorial of $n$ is denoted by $n!$. In the old style it is written as $\oldfact{n}$. $n!$ is given by the first $n$ natural
+numbers, i.e. $$n! = 1.2.3.4\ldots(n - 1).n$$ Also, $0! = 1$, which we will prove later.
+
+Permutation means arrangement of objects along with selection. In the permutation of object order matter. If order of object
+changes then their permutation also changes. Combination of objects means selection of objects in such a way that order does not
+matter.
+
+\section{Permutation of Sets}
+Let $r\in \mathbb{P}$. By an $r$-\textit{permutation} of a set $S$ of $n$ elements has a meaning of an ordered(by definition of
+permutation) arrangement of $r$ of the $n$ elements$(r\leq n)$. If $S = \{a, b, c\},$ then the three $1$-permutations of $S$ are
+$$a~~~b~~~c,$$
+the six $2$-permutations of $S$ are
+$$ab~~~ac~~~ba~~~bc~~~ca~~~cb,$$
+and the six $3$-permutations of $S$ are
+$$abc~~~acb~~~bac~~~bca~~~cab~~~cba.$$
+
+There are no $4$-permutations of $S$ because that will violate the assumption that $r\leq n$.
+
+The $r$-permutations of an $n$-element set is denoted by $P(n, r)$ or ${}_nP_r$ or ${}^nP_r$. If $r > n$ then ${}^nP_r =
+0$. Clearly, ${}^nP_1 = n$ for each $n\in \mathbb{P}$.
+
+For $n$ and $r$ positive integers with $r\leq n,$ $${}^nP_r = n\times(n - 1)\times\ldots\times(n - r + 1).$$
+
+Permutation of $n$ objects taken $r$ at a time is equivalent ot filling $r$ different vacant spots from $n$ different objects. We
+can fill first spot by $n$ ways, second spot can be filled by remaining objects i.e. $n - 1$ ways, and proceeding this way we find
+that $r$th spot can be filled in $n - r + 1$ ways. Thus total number of ways is $$n\times(n - 1)\times\ldots(n - r + 1)$$.
+
+We can rewrite the above as $$\frac{n\times(n - 1)\ldots(n - r + 1)\times(n - r)\times\ldots2\times 1}{(n - r)\times(n - r -
+  1)\times\ldots2\times1}$$
+$${}^nP_r = \frac{n!}{(n - r)!}$$
+
+Alternatively, first place can be filled in $n$ ways. Rest of $r - 1$ spots from $n - 1$ objects can be filled in ${}^{n - 1}P_{r -
+1}$ ways. Thus, ${}^nP_r = n.{}^{n - 1}P_{r - 1}$. Similarly, ${}^{n - 1}P_{r - 1} = (n - 1).{}^{n - 2}P_{r - 2}$. Proceeding this
+way we find that ${}^{n - r + 1}P_1 = n - r + 1$. Multiplying and cancelling common factors, we get ${}^nP_r = n\times(n -
+1)\times\ldots\times(n - r + 1).$
+
+The number of permutations of $n$ elements is ${}^nP_n = \frac{n!}{0!} = n!$. If we follow first result then it is evident that $0!
+= 1.$
+
+\subsection{Meaning of $\frac{1}{(-k)!}, k\in\mathbb{P}$}
+We have ${}^nP_r = \frac{n!}{(n - r)!}$. Putting $r = n + k$, we have ${}^nP_{n + k} = \frac{n!}{(-k)!}$. But the number of ways of
+arranging $n + 1$ objects out of $n$ different objects $= 0 \Rightarrow \frac{1}{(-k)!} = 0.$
+
+\noindent\textbf{Note:} Although $(-k)!$ has no meaning by the definition of factorial but if we consider the above result then the
+formula for permutation becomes valid even for $r > n.$
+
+\subsection{Circular Permutation}
+Let us consider arranging objects along a circle. Let us consider that four persons $A, B, C,$ and $D$ are sitting around a table. We
+can have following arrangements:
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw (0,0) circle (1cm);
+    \draw (3cm,0) circle (1cm);
+    \draw (6cm,0) circle (1cm);
+    \draw (9,0) circle (1cm);
+    \draw (1cm, 0) node[anchor=east] {$A$};
+    \draw (0, 1cm) node[anchor=north] {$B$};
+    \draw (-1cm, 0) node[anchor=west] {$C$};
+    \draw (0, -1cm) node[anchor=south] {$D$};
+    \draw (4cm, 0) node[anchor=east] {$D$};
+    \draw (3cm, 1cm) node[anchor=north] {$A$};
+    \draw (2cm, 0) node[anchor=west] {$B$};
+    \draw (3cm, -1cm) node[anchor=south] {$C$};
+    \draw (7cm, 0) node[anchor=east] {$C$};
+    \draw (6cm, 1cm) node[anchor=north] {$D$};
+    \draw (5cm, 0) node[anchor=west] {$A$};
+    \draw (6cm, -1cm) node[anchor=south] {$B$};
+    \draw (10cm, 0) node[anchor=east] {$B$};
+    \draw (9cm, 1cm) node[anchor=north] {$C$};
+    \draw (8cm, 0) node[anchor=west] {$D$};
+    \draw (9cm, -1cm) node[anchor=south] {$A$};
+  \end{tikzpicture}
+\end{center}
+
+As shown four persons are sitting around a round table, and four anticlockwise rotations have lead to four arrangements. But if
+$A,B,C,D$ are sitting in a row, and then are shiftedd such that last occupies the place of first, then the four arrangements will be
+different. Thus, if there are $n$ objects then for each circular arrangement there are nn linear arrangements. But for $n$ different
+objects total number of linear arrengements are $n!$ so the total number of circular arrangements are $$\frac{n!}{n} = (n - 1)!$$.
+
+Thus, we can say that number of circular $r$-permutations of a set of $n$ elements is given by $$\frac{{}^nP_r}{r} = \frac{n!}{r.(n
+  - r)!}$$
+
+\subsection{Clockwise and Anti-Clockwise Arrangements}
+When clockwise and anticlockwise arranegemnts are same then total number of permutations will become half of what we computed in
+previous case i.e. $$\frac{{}^nP_r}{2r} = \frac{n!}{2r.(n - r)!}$$
+
+\section{Combination of Sets}
+Consider a set $S$ having $n$ elements. A \textit{combination} of a set $S$ has a meaning of an unordered selection of the elements
+of $S$. The result of each selection is a \textit{subset} $A$ of the elements of $S: A\subset S$. Thus, the terms
+\textit{combination} and \textit{subset} are interchangeable.
+
+Now let $r$ be a nonnegative integer. By an $r$-\textit{combination} of a set $S$ of $n$ elements, we understand an unordered
+selection of $r$ of the $n$ objects of $S$. The result will be an $r$-subset of $S$.
+
+If $S = \{a, b, c, d\},$ then $$\{a, b, c\}, \{a, b, c\}, \{a, c, d\}, \{b, c, d\}$$ are the four $3$-subsets of $S$. We denote
+the number of $r$-subsets or $r$-combinations of an $n$-element set by ${n\choose r}$ or ${}_nC_r$ or ${}^nC_r$. Obviously,
+$${n\choose r} = 0~~~~~~\text{if~}r > n.$$
+Also,
+$${0\choose r} = 0~~~~~~\text{if~}r > 0.$$
+
+The following facts are easy to figure out for each nonnegative integer $n$ $${0\choose 0} = {n\choose 0} = {n\choose n} = 1, {n\choose 1} = n,$$
+
+For $0\leq r\leq n,$ $${}^nP_r = r!{}^nC_r.$$
+Hence,
+$${}^nC_r = \frac{n!}{r!(n - r)!}$$
+
+Let $S$ be an $n$-element set. Each $r$-permutation of $S$ arises from following tasks
+\begin{enumerate}
+\item Choose $r$ elements from $S$.
+\item Arrange the chose $r$ elements in some order.
+\end{enumerate}
+
+The number of ways to carry out first task, by definition, is ${}^nC_r$. The number of ways to carry out second task is ${}^nP_r =
+r!$. By the multiplication principle, we have ${}^nP_r = r!{}^nC_r$. Now applying the formula for permutations, we have
+$${}^nC_r = \frac{n!}{r!(n - r)!}.$$
+
+\section{Permutation of Multisets}
+Let $S$ be a multiset with objects of $k$ different types, where each object can be repeated infinitely. Then the number of
+$r$-permutations of $S$ is $k^r$.
+
+To prove this, we can choose the first item to be an object of any one of the $k$ types. Since the number of repetitions are
+infinite the second item can be also chose in $k$ ways. In fact, any item can be chosen in $k$ ways due to infinite
+repetition. Following, multiplication principle, total number of such permutations is $k^r$.
+
+Let $S$ be a multiset with objects of $k$ different types with finite repetition numbers $n_1, n_2, \ldots, n_k$ respectively. Let
+the size of $S$ be $n = n_1 + n_2 + \ldots + n_k.$ Then the number of permutations of $S$ equals $$\frac{n!}{n_!!n_2!\ldots
+  n_k!}.$$
+
+We can calculate this by thinking in terms of $n$ places, and we want to put exactly one of the objects of $S$ in each of the
+places. We have $n_1$ objects of one type in $S$, so we must choose a subset of $n_1$ places from the set of $n$ places. We can do
+this in ${}^nC_{n_1}$ ways. After this we have $n - n_1$ places left, and we have $n_2$ objects of second type. So following
+similarly we can do this in ${}^{n - n_1}C_{n_2}$ ways. Following this way invoking multiplication principle, the number of
+permutations of $S$ equals
+$${}^nC_{n_1}.{}^{n - n_1}C_{n_2}.{}^{n - n_1 - n_2}C_{n_3}\ldots{}^{n - n_1 - n_2 - \ldots - n_{k - 1}}C_{n_k}$$
+which gives
+$$\frac{n!}{n_1!(n - n_1)!}.\frac{(n - n_1)!}{n_2!(n - n_1 - n_2)!}.\frac{(n - n_1 - n_2)!}{n_3!(n - n_1 - n_2 -n_3)!}\ldots
+\frac{(n - n_1 - n_2 - \ldots - n_{k - 1})!}{n_k!(n - n_1 - n_2 - \ldots - n_k)!}$$
+which after cancellation, reduces to
+$$\frac{n!}{n_1!n_2!\ldots n_k!}$$
+
+Let $n$ be a positive integer, and let $n_1, n_2, \ldots, n_k$ be positive integers with $n = n_1 + n_2 + \ldots + n_k$. The number
+of ways to partition a set of $n$ objects into $k$ labeled boxes in which Box 1 contains $n_1$ objects, Box 2 contains $n_2$
+objects, $\ldots$, Box $k$ contains $n_k$ objects equals
+$$\frac{n!}{n_1!n_2!\ldots n_k!}.$$
+
+If the boxes are not labeled, and $n_1 = n_2 = \ldots = n_k$, then the number of partitions equals $$\frac{n!}{k!n_1!n_2!\ldots
+  n_k!}.$$
+
+We can calculate this by direct application of the multiplication principle. So we first choose $n_1$ objects for the first box,
+then $n_2$ of the remaining $n - n_1$ objects for the second box and so on. By the multiplication principle, the number of ways is
+$${}^nC_{n_1}.{}^{n - n_1}C_{n_2}.{}^{n - n_1 - n_2}C_{n_3}\ldots{}^{n - n_1 - n_2 - \ldots - n_{k - 1}}C_{n_k}$$
+which is same as the last result, i.e.
+$$\frac{n!}{n_1!n_2!\ldots n_k!}$$
+
+If boxes are not labeled and $n_1 = n_2 = \ldots = n_k,$ then the result has to be divided by $k!$ because for each way of
+distributing the objects into the $k$ unalbeled boxes there are $k!$ ways in which we can attach the labels to the boxes. Thus,
+using the division principle, we arrive at the result as
+$$\frac{n!}{n_1!n_2!\ldots n_k!}.$$
+
+\section{Combination of Multisets}
+If $S$ is a multiset, then an $r$-combination of $S$ is an unorndered selection of $r$ of the objects of $S$. Thus, an
+$r$-combination of $S$ is itslef a multiset, a \textit{submultiset} of $S$ of size $r$, or, for short, an $r$-submultiset. If $S$
+has $n$ objects, then there is only one $n$-combination of $S$, namely, $S$ itself. If $S$ contains objects of $k$ different types,
+then there are $k 1$-combinations of $S$.
+
+Let $S$ be a multiset with objects of $k$ types, each with an infinite repetitions, then the number of $r$-combinations of $S$
+equals
+$${}^{r + k - 1}C_r = {}^{r + k - 1}C_{k - 1}.$$
+
+Let $k$ types of objects of $S$ be $a_1, a_2, \ldots, a_k$ so that
+$$S = \{\infty.a_1, \infty.a_2, \ldots, \infty.a_k\}$$
+
+Any $r$-combination of $S$ is of the form $\{x_1.a_1, x_2.a_2, \ldots, x_k.a_k\}$, where $x_1, x_2, \ldots, x_k$ are nonnegative
+integers with $x_1 + x_2 + \ldots + x_k = r$. The converse is also true. Thus, the number of $r$-combinations of $S$ equals the
+number of solutions of the equation $$x_1 + x_2 + \ldots + x_k = r.$$
+
+We will show that the number of solutions of this equation is given by number of permuations of the multiset
+$$T = \{r.1, (k - 1).*\}$$
+of $r + k - 1$ objects of two different types. Given a permuation of $T,$ the $k - 1 *$'s divide the $r 1$s into $k$ groups. Let
+there be $x_1 1$s to the left of the first $*, x_2 1$s between the first and second $*,\ldots,$ and $x_k 1$s to the right of last
+$*$. Clearly, $x_1 + x_2 + \ldots + x_k = r$. The converse of this is also true. Thus, required combination is given by the
+formula $${}^{r + k - 1}C_r = {}^{r + k - 1}C_{k - 1}.$$
+
+\section{Some Important Indentities}
+\begin{enumerate}
+\item ${}^nP_r = r.{}^{n - 1}P_{r - 1} + {}^{n - 1}P_r$.
+\item ${}^nC_r = {}^nC_{n - r}$.
+\item ${}^nC_{r - 1} + {}^nC_r = {}^{n + 1}C_r$.
+\item ${}^nC_r = {}^nC_s \Rightarrow r = s$ or $r + s = n$.
+\item ${}^nC_r = \frac{n - r + 1}{r}.{}^nC_{r - 1}~(1\leq r\leq n)$.
+\item If $n$ is even, then the greatest value of ${}^nC_r$ is ${}^nC_m$, where $m = n/2$. If $n$ is odd, then the greatet value is
+  ${}^nC_m$, where $m = (n - 1)/2$ or $m = (n + 1)/2$.
+\item If $n = 2m + 1$, then ${}^nC_0 < {}^nC_1 < {}^nC_2 < \ldots < {}^nC_m = {}^nC_{m + 1}$. ${}^nC_{m + 1} > {}^nC_{m + 2} >
+  \ldots > {}^nC_n$.
+\item If $n = 2m + 1$, then ${}^nC_0 < {}^nC_1 < {}^nC_2 < \ldots <{}^nC_m > {}^nC_{m + 1} > {}^nC_{m + 1} > \ldots > {}^nC_n$.
+\item ${}^nC_0 + {}^nC_1 + {}^nC_2 + \ldots + {}^nC_n = 2^n$.
+\item ${}^nC_0 + {}^nC_1 + {}^nC_2 + \ldots = {}^nC_1 + {}^nC_3 + \ldots = 2^{n -1}$.
+\item ${}^{2n + 1}C_0 + {}^{2n + 1}C_1 + \ldots + {}^{2n + 1}C_n = {}^{2n + 1}C_{n + 1} = {}^{2n + 1}C_{n + 1} + {}^{2n + 1}C_{n +
+  2} + \ldots + {}^{2n + 1}C_{2n + 1} = 2^{2n}$.
+\item $r.{}^nC_r = n.{}^{n - 1}C_{r - 1}$.
+\end{enumerate}
+
+\section{Some Useful Results}
+Number of selections of $r$ objects out of $n$ different objects:
+
+\begin{enumerate}
+\item When $p$ paticular objects are always included $= {}^pC_p.{}^{n - p}C_{r - p} = {}^{n - p}C_{r - p}$.
+\item When $p$ paticular objects are excluded $= {}^{n - p}C_r$.
+\item Number of selections of $r$ objects out of $n$ different objects such that $p$ particular objects are not together in any
+  selection $= {}^nC_r = {}^{n - p}C_{r - p}$.
+\item Number of selection of $r$ consecutive objects out of $n$ objects in a row $= n - r + 1$.
+\item Number of selection of $r$ consecutive objects out of $n$ objects along a circle $= n$ when $r < n, 1$ when $r = n$.
+\item Number of selections of zero or more objects out of $n$ different objects $= {}^nC_0 + {}^nC_1 + {}^nC_2 + \ldots + {}^nC_n =
+  2^n$.
+\item Number of selections of one or more objects out of $n$ different objects $= {}^nC_1 + {}^nC_2 + \ldots + {}^nC_n = 2^n - 1$.
+\item Number of selections of zero or more objects out of $n$ identical objects $= n + 1$.
+\item Number of selections of one or more objects out of $n$ identical objects $= n$.
+\item Number of selection of one or more objects from $(p + q + r)$ objects, out of which $r$ objects are identical and of one
+  type, $q$ objects are identical and of second type, $r$ objects are identical and of third type $= (p + 1)(q + 1)(r + 1) - 1$.
+\item Number of selection of one or more objects from $(p + q + r + n)$ objects, out of which $r$ objects are identical and of one
+  type, $q$ objects are identical and of second type, $r$ objects are identical and of third type and rest $n$ are different $= (p
+  + 1)(q + 1)(r + 1)({}^nC_0 + {}^nC_1 + {}^nC_2 + \ldots + {}^nC_n) - 1 = (p + 1)(q + 1)(r + 1)2^n - 1$
+\item Number of ways of distributing $n$ different objects among $3$ persons such that they gey $x, y, z$ objects $= {}^nC_x.{}^{n
+  - x}C_y.{}^{n - x - y}C_z.3! = \frac{n!}{x!y!z!}.3!$.
+\item Number of ways of distributing $n$ different objects in $5$ sets having $a, b, c, d, e$ objects$(a + b + c + d + d = n)$:
+  \begin{enumerate}
+  \item When two sets have equal number of objects and three sets have equal number of objects $= \frac{n!}{a!b!c!d!e!2!3!}$
+  \item When all sets have equal number of objects $= \frac{n!}{a!b!c!d!e!5!}$
+  \end{enumerate}
+\item Number of ways of distributing $n$ different objects among $5$ persons
+  \begin{enumerate}
+  \item When all person get different number of objects $= \frac{n!}{a!b!c!d!e!}.5!$.
+  \item When two persons get equal number of objects and three get equal number of objects $= \frac{n!}{a!b!c!d!e!2!3!}.5!$.
+  \item When all get equal number of objects $= \frac{n!}{a!b!c!d!e!5!}.5! = \frac{n!}{a!b!c!d!e!}$.
+  \end{enumerate}
+\end{enumerate}
+
+\section{Permutations with Repetitions}
+The objective is to find permutation of $r$ objects out of $n$ objects of which $p$ are of one type, $q$ of second type and so on.
+
+Let the different objects be denoted by $a, b, c, \ldots$
+
+Consider the product $$\left(1 + \frac{ax}{1!} + \frac{a^2x^2}{2!} + \ldots + \frac{a^px^p}{p!}\right)\left(1 + \frac{bx}{1!} +
+\frac{b^2x^2}{2!} + \ldots + \frac{b^qx^q}{q!}\right)\ldots$$
+
+Required number of permutations $=$ sum of all possible terms of the form $= \frac{r!}{p!q!\ldots}a^pb^q\ldots$ where $p + q + \ldots
+= r$
+
+$= r!$. coeff. of $x^r$ in $\left[\left(1 + \frac{x}{1!} + \frac{x^2}{2!} + \ldots + \frac{x^p}{p!}\right)\left(1 + \frac{x}{1!} +
+\frac{x^2}{2!} + \ldots + \frac{x^q}{q!}\right)\ldots\right]$
+
+\section{Combinations with Repetitions}
+The objective is to find combinations of $r$ objects out of $n$ objects under different cases of repetitions. To begin with we
+consider combinations of $r$ objects taken out of $n$ objects of which $p$ are of one type, $q$ of the second type and so on.
+
+Let the different things be denoted by the letters $a, b, \ldots$
+
+Consider the product $(1 + ax + a^2x^2 + \ldots + a^px^2)(1 + bx + b^2x^2 + \ldots + b^qx^2)\ldots$ All the terms in the product
+is of the same degree in the letters $a, b, \ldots$ as in $x$. The coefficient of $x^r$ in the product is the number of ways of
+taking $r$ of the letters $a, b, \ldots$ with the restriction that maximum number of $a$'s is $p$, maximum number of $b$'s is $q$ and so
+on. Coeff. of $x^r$ will not change if $a = b = \ldots = 1$. Thus required number of combinaitons = Coeff. of $x^r$ in $(1 + x + x^2 +
+\ldots + x^2)(1 + x + x^2 + \ldots + x^2)\ldots$
+
+Similarly, number of combinaitons of $r$ objects out of $n$ objects of which $p$ are of one type, $q$ are of second type and $(n -
+p - q)$ things are all different $=$ Coeff. of $x^r$ in $[(1 + x + x^2 + \ldots + x^p)(1 + x + x^2 + \ldots + x^q)(1 + x)(1 +
+  x)\ldots \text{~to~} (n - p - q)\text{factors~}]$
+
+$=$ Coeff. of $x^r$ in $[(1 + x + x^2 + \ldots + x^p)(1 + x + x^2 + \ldots + x^q)(1 + x)(1 + x)^{n - p - q}]$
+
+Similarly, number of combinations of $r$ objects out of $n$ objects of which $p$ are of one type, $q$ are of second type and so on,
+when each thing is taken at least once $=$ Coeff. of $x^r$ in $[(x + x^2 + \ldots + x^p)(x + x^2 + \ldots + x^q)\ldots]$
+
+$=$ Coeff. of $x^{r - 3}$ in $[(1 + x + x^2 + \ldots + x^p)(1 + x + x^2 + \ldots + x^q)$
+
+If $n$ is a negative integer, then $(1 + x)^n = 1 + \frac{n}{1!}x + \frac{n(n - 1)}{2!}x^2 + \ldots\text{~to~}\infty$ [this comes
+  from binomial theorem]
+
+So if $n$ is a positive inetger then $(1 + x)^{-n} = 1 + \frac{n}{1!}x + \frac{n(n + 1)}{2!}x^2 + \ldots\text{~to~}\infty$
+
+Coeff. of $x^r$ in $(1 - x)^{-n} = {}^{n + r - 1}C_r$ which is number of ways in which $r$ identical objects can be distributed
+among $n$ persons can get zero of more objects $=$ Coeff. of $x^r$ in $(1 + x + \ldots + x^r)^n = \left(\frac{1 - x^{r + 1}}{1 -
+    x}\right)^n = [(1 - x^{r + 1})(1 - x)^{-n}]$.
+
+$=$ Coeff. of $x^r$ in $(1 - x)^{-n}$ (leaving powers higher than $x^r$) $= {}^{n + r - 1}C_r$.
+
+\section{Integral Solutions of Equations}
+As we have proved earlier, for equation $x_1 + x_2 + \ldots + x_r = n$ is equivalent of distributing $r$ identical objects among
+$n$ persons when each person getting zero or more things $= {}^{n + r - 1}C_r$
+
+Similarly, number of non-negative integral solutions of equation $x + 2y + 3z + 4w = n$, equals coeff. of $x^n$ in $[(1 - x)^{-1}(1
+  - x)^{-2}(1 - x)^{-3}(1 - x)^{-4}]$.
+
+Similarly, number of positive integral solutions of equation $x + 2y + 3z + 4w = n$, equals coeff. of $x^{n -(1 + 2 + 3 + 4})$ in
+$[(1 - x)^{-1}(1 - x)^{-2}(1 - x)^{-3}(1 - x)^{-4}]$.
+
+\section{Geometrical Applications of Combinations}
+Some basic geometrical results involving combinations are given below:
+\begin{enumerate}
+\item $n$ non-concurrent and non-parallel straight lines, points of intersection are ${}^nC_2$.
+\item The number of straight lines constructed out of $n$ points, when no three points are collinear, are ${}^nC_2$.
+\item Given $n$ points, if $m$ are collinear, then number of straight lines possible are ${}^nC_2 - {}^mC_2 + 1$.
+\item In a polygon, total number of diagonals out of a $n$ points, when no three points are collinear, are $\frac{n(n - 3)}{2}$.
+\item Number of triangles formed from $n$ points, when no three points are collinear, are ${}^nC_3$.
+\item Number of triangles formed out of $n$ points in which $m$ are collinear, ${}^nC_3 - {}^mC_3$.
+\item Number of triangles constructed out of $n$ points, when none of the side is common with the sides of polygon, are ${}^nC_3 -
+  {}^nC_1 - {}^nC_1.{}^{n - 4}C_1$.
+\item Number of parallelogram constructed by two system of parallel lines, when first set contains $m$ parallel lines and second
+  set contains $n$ parallel lines, are ${}^nC_2\times{}^mC_2$.
+\item Number of squares formed by two system of parallel lines in which first set is perpendicular to second set of lines, when
+  first set contains $m$ parallel lines and second set contains $n$ parallel lines is $\displaystyle\sum_{r=1}^{m - 1}(m - r)(n -
+  r);~m<n$.
+\end{enumerate}
+
+\section{Number of Divisors and Sum of Divisors}
+Let $n = p_1^{n_1}.p_2^{n_2}\ldots p_n^{n_k}$ where $p_1, p_2, \ldots, p_k$ are distinct prime numbers and $n_1, n_2, \ldots,
+n_k\in \mathbb{P}$. Obvously, any divisor of $n$ is of the form $d = p_1^{m_1}.p_2^{m_2}\ldots p_k^{m_k}$ where $m_1, m_2,
+\ldots\in\mathbb{N}$ such that $0\leq m_i\leq n_i, i = 1, 2, \ldots, k$. Therefore, the total no. of divisors for $n$ will be equal
+to the number of ways of selecting at least one from $n_1$ identical prime numbers $p_1, n_2$ primes $p_2$ and so on. The number of
+such ways is $$(n_1 + 1)(n_2 + 1)\ldots(n_k + 1)$$. These divisors will also include $1$ and $n$, so obviously, number of divisors
+other than $1$ and $n$ is $$(n_1 + 1)(n_2 + 1)\ldots(n_k + 1) - 2$$
+
+The sum of all divisors for $n$ is given by $$\sum_{r_1=0}^{n_1}\sum_{r_2=0}^{n_2}\ldots\sum_{r_k=0}^{n_k}
+p_1^{r_1}p_2^{r_2}\ldots p_k^{r_k}$$
+
+$$=\left(\frac{p_1^{n_1 + 1} - 1}{p_1 - 1}\right)\left(\frac{p_2^{n_2 + 1} - 1}{p_2 - 1}\right)\ldots\left(\frac{p_k^{n_k + 1} - 1}{p_k -
+  1}\right)$$
+
+\section{Exponent of Prime $p$ in $n!$}
+Let $E_p(m)$ denote the exponent of the prime $p$ in the positive integer $m$. We have $$E_p(n!) = E_p[1.2.3.4\ldots(n - 1).n]$$
+The last integer amongst $1, 2, 3, \ldots, (n - 1), n$ which is divisible by $p$ is $[n/p]p$, where $[x]$ denotes the greatest
+integer $\leq x$. Therefore, $$E_p(n!) = E_p\left(p.2p.3p\ldots \left[\frac{n}{p}p\right]\right)$$ because the remaining integers
+from the set $(1, 2, 3, \ldots, (n - 1), n)$ are not divisible by $p$.
+
+$$E_p(n!) = \left[\frac{n}{p}\right] + E_p\left(1.2.3\ldots \left[\frac{n}{p}\right]\right)$$
+
+The last integer amongst $1, 2, \ldots, [n/p]$ which is divisible by $p$ is $$\left[\frac{[n/p]}{p}\right]p =
+\left[\frac{n}{p^2}\right]p$$
+
+$$\Rightarrow E_p(n!) = \left[\frac{n}{p}\right] + \left[\frac{n}{p^2}\right] + E_p\left(1.2\ldots\left[\frac{n}{p^2}\right]\right)$$
+
+Proceeding similarly, $$E_p(n!) = \left[\frac{n}{p}\right] + \left[\frac{n}{p^2}\right] + \ldots \left[\frac{n}{p^s}\right]$$
+where $p^s\leq n\leq p^{s+1}$
+
+\section{Inclusion-Exclusion Principle}
+\textbf{Definition:} The number of objects of the set $S$ that have none of the properties $P_1, P_2, \ldots, P_m$ is given by the
+alternating expression
+$$\displaystyle|\bar{A_1}\cap\bar{A_2}\cap\ldots\cap\bar{A_m}| = |S| - \sum|A_i| + \sum|A_i\cap A_j| -\sum|A_i\cap A_j\cap A_k| +
+\ldots + (-1)^m|A_1\cap A_2\cap\ldots A_m|,$$
+where the first sum is over all $1$-subsets of $\{i\}$ of $\{1, 2, \ldots,m\},$ the second sum is over all $2$-subsets $\{i, j\}$
+of $\{1, 2, \ldots, m\}$ the third sum is all over $3$-subsets $\{i, j, k\}$ of $\{1, 2, \ldots, m\},$ and so until the $m$th sum
+over all $m$-subsets of $\{1, 2, \ldots, 2\}$ of which the only one is itself.
+
+The subtraction principle is the simplest instance of inclusion-exclusion principle. As a first generalization of the substraction
+principle, let $S$ be a finite set of objects, and let $P_1$ and $P_2$ be two "properties" that each objects in $S$ may or may not
+possess.
