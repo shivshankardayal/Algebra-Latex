@@ -148,6 +148,12 @@
 %\setmainfont{TeX Gyre Termes}
 %\setmonofont[Ligatures=TeX,Scale=.90]{Courier}
 \setsansfont{Roboto}
+\usepackage{polyglossia}
+
+\setmainlanguage{english}
+\setotherlanguages{sanskrit} %% or other languages
+
+\newfontfamily\devanagarifont[Script=Devanagari]{Lohit Devanagari}
 \renewcommand{\contentsname}{Table of Contents}
 \makeindex
 \setcounter{secnumdepth}{5}
@@ -180,6 +186,12 @@ in the section entitled ``GNU Free Documentation License''.
 \begin{center}
   \large When you take an action think of the poorest person you have seen and evaluate how
   your action will benefit that person.
+\end{center}
+\begin{center}
+\begin{sanskrit}
+  स्वध्याय परमो तपः
+\end{sanskrit}
+(Self study is ultimate penance.)
 \end{center}
 \newpage
 \setcounter{page}{1}

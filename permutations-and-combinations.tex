@@ -3,7 +3,7 @@ In this chapter we will study basic principles of counting, permutations and com
 study the branch of mathematics called combinatorics. You would have certainly encountered a combinatorical problem in your
 life. It would be really surprising if you have not. Have you ever solved a Sudoku puzzle or Rubik's cube? Have you ever counted
 the number of poker hands that are full houses in order to determine the odds against a full house? Have you ever attempted to
-trace through a network without removing your pencil from paper and wihtout tracing any part of network more than once? These are
+trace through a network without removing your pencil from paper and without tracing any part of network more than once? These are
 all combinatorical problems. As you can see that combinatorics has evolved from mathematical games.
 
 With the invention of modern computers, we are enabled to solve more and more problems of combinatorics which were earlier not
@@ -505,8 +505,19 @@ Proceeding similarly, $$E_p(n!) = \left[\frac{n}{p}\right] + \left[\frac{n}{p^2}
 where $p^s\leq n\leq p^{s+1}$
 
 \section{Inclusion-Exclusion Principle}
-\textbf{Definition:} The number of objects of the set $S$ that have none of the properties $P_1, P_2, \ldots, P_m$ is given by the
-alternating expression
+We have seen examples of subtraction principle. Inclusion exclusion principle is an extension of subtraction principle. In this
+type of problems, it is easier to make an indect coutnt of object in a set rather than to count the objects directly. Consder
+following examples:
+
+\noindent\textbf{Example:} Count the permutations $i_1i_2\ldots i_n$ of ${1, 2, \ldots, n}$ in which $1$ is not in the first
+position i.e $i_1\neq 1$.
+
+The number of permutations of $\{1, 2, \ldots, n\}$ with $1$ in the first position is the same as the number $(n - 1)!$ of
+permutations of $2, 3, \ldots, n$. Since the total umber permutations is $n!$, required number of permutations is $n! - (n - 1)! =
+(n - 1).(n - 1)!.$
+
+\noindent\textbf{Definition:} The number of objects of the set $S$ that have none of the properties $P_1, P_2, \ldots, P_m$ is
+given by the alternating expression
 $$\displaystyle|\bar{A_1}\cap\bar{A_2}\cap\ldots\cap\bar{A_m}| = |S| - \sum|A_i| + \sum|A_i\cap A_j| -\sum|A_i\cap A_j\cap A_k| +
 \ldots + (-1)^m|A_1\cap A_2\cap\ldots A_m|,$$
 where the first sum is over all $1$-subsets of $\{i\}$ of $\{1, 2, \ldots,m\},$ the second sum is over all $2$-subsets $\{i, j\}$
@@ -515,4 +526,209 @@ over all $m$-subsets of $\{1, 2, \ldots, 2\}$ of which the only one is itself.
 
 The subtraction principle is the simplest instance of inclusion-exclusion principle. As a first generalization of the substraction
 principle, let $S$ be a finite set of objects, and let $P_1$ and $P_2$ be two "properties" that each objects in $S$ may or may not
-possess.
+possess. We wish to count the number of object in $S$ that have neither the properties of $P_1$ and $P_2$. Extending the
+subtracting principle, we can do this by first including of all objects of $S$ in our count, then excluding all objects that have
+property $P1$ and excluding all objects that have property $P_2$, and then noting that we have excluded objects having both
+properties twice, readmitting all such objects once. Let $A_1$ be the subset of objects of $S$ that have property $A_1$, and let
+$A_2$ be the subset that have property $P_1$. Then $\bar{A_1}$ consists of those which do not have property $P_1$, and similarly
+$\bar{A_2}$ consists of those which do not have property $P_2$. The objects of set $\bar{A_1}\cap\bar{A_2}$ are those that have
+neither property $P_1$ nor property $P_1$. Thus, we have
+
+$$|\bar{A_1}\cap\bar{A_2}| = |S| - |A_1| - |A_2| + |A_1\cap A_2|.$$
+
+To further prove this, we argue as follows. Consider an object $x$ which has neither the property $P_1$, nor the property $P_2$. In
+this case the contribution towards the count by this object would be $1 - 0 - 0 + 0 = 1$. Next, we consider if the object $x$ has
+property $P_2$, then its contribution is $1 - 1 - 0 + 0 = 0$. Similarly, if it has property $P_1$, then its contribution is $1 - 0
+- 1 + 0 = 0$. For the last possibility when $x$ has both the properties its contribution is $1 - 1 - 1 + 1 = 0$. As it is obvious
+any object will fall in either of these four possibilities and the total contribution is $1$ only when it has neither of the
+properties. The inclusion-exclusion principle stated above is generalizatio of this two property example. We will now establish the
+validity of the general case.
+
+First, we conisder an object $x$ with none of the properties. Its contribution to the right side would be $1 - 0 + 0 - 0 + \ldots +
+(-1)^m0 = 1$ since it is in $S$ but in none of the other sets. Now consider an object $y$ with exactly $n\geq 1$ of the
+properties. The contribution of $y$ to $|S| = 1 = {}^nC_0$. Its contribution to $\sum|A_i|$ is $n = {}^nC_1$ since it has exactly
+$n$ of the properties and so it is a member of exactly $n$ of the sets out of $A_1, A_2, \ldots, A_m$. Similarly, the contribution
+of $y$ to $\sum|A_i\cap A_j|$ is ${}^nC_2$ sinc ewe may select a pair of the properties $y$ has in ${}^nC_2$ ways. Following
+similarly, the net contribution of $y$ is
+$${}^nC_0 - {}^nC_1 + {}^nC_2 - \ldots + (-1)^m{}^nC_m$$
+which equal
+$${}^nC_0 - {}^nC_1 + {}^nC_2 - \ldots + (-1)^n{}^nC_n$$
+because $$n\leq m$$ and ${}^nC_k = 0$ if $k > n$. The last expression is $0$ from binomial theorem. Following similarly, we prove
+the inclusion-exclusion principle.
+
+\noindent\textbf{Definition:} The number of objects of $S$ which have at least one of the properties $P_1, P_2, \ldots, P_m$ is
+given by $$|A_1\cup A_2\cup \ldots\cup A_m| = \sum|Ai| - \sum|A_i\cap A_j| + \sum|A_i\cap A_j\cap A_k| - \ldots +(-1)^{m +
+  1}|A_1\cap A_2\cap \ldots\cap A_m|$$
+
+The set $A_1\cup A_2\cup \ldots\cup A_m$ consiste of all those objects in $S$ which possess at least one of the
+properties. Also, $$|A_1\cup A_2\cup \ldots\cup A_m| = |S| - |\bar{A_1\cup A_2\cup \ldots\cup A_m}|.$$
+
+From Demorgan's law $$\bar{|A_1\cup A_2\cup \ldots\cup A_m|} = \bar{A_1}\cap\bar{A_2}\cap\ldots\cap\bar{A_m}$$
+
+Following result from previous definition, we have the required equality.
+
+\section{Derangements}
+Consider following problems. At a party $14$ gentlemen check their overcoats. In how many ways can their overcoats be returned so
+that no gentleman get their own overcoat? In a cricket team there are $11$ players who bat in a certain order. In how many ways
+those can bat so that no player bats at their pre-determined position? This type of problems fall in the category of following
+general problem.
+
+Given an $n$-element set $S$ in which each element has a specified position. We have to find the number of permutations of $S$ in
+which no element is in its specified position. This can be exemplified by a set $S = \{1, 2, \ldots, n\}$ in which location of each
+integer is that specified by its position in the sequence $1, 2, \ldots, n$. A derangement $\{1, 2, \ldots, n\}$ is a permutation
+of $i_1i_2\ldots i_n$ of $1, 2, \ldots, n$ sucb that $i_\neq 1, i_2\neq 2, \ldots, i_n\neq n$. Derangement of such an $n$-element
+set is denoted by $D_n$
+
+For $n\geq 1$ $$D_n = n!\left(1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots + (-1)^n\frac{1}{n!}\right).$$
+
+Let $T$ be the set of all $n!$ permutations of $X$. For $j = 1, 2, \ldots, n$ let $P_j$ be the property that, in a permutation, $j$
+is in its proper position. Let $A_j$ denote the set of permutations with property $P_j$. Thus, $$D_n = |\bar{A_1}\cap\bar{A_2}\cap\ldots\cap\bar{A_n}|.$$
+
+The permutations in $A_1$ are of the form $1i_2\ldots i_n$, where $i_1\ldots i_n$ is a permutation of $\{2, \ldots, n\}$. Thus,
+$|A_1| = (n - 1)!$. We can write the general form as $|A_j| = (n - 1)!$. For $A_j\cap A_k$, two elements have to be in the proper
+position. So, $|A_j\cap A_k| = (n - 2)!$. For any integer $k$ with $1\leq k\leq n$, $|A_1\cap A_2\cap \ldots\cap A_k| = (n -
+k)!$. Since there are ${}^nC_k$ subsets of $T$, applying the inclusion and exclusion principle, we obtain
+$$D_n = n! - {}^nC_1(n - 1)! + {}^nC_2(n - 2)! - \ldots + (-1)^n{}^nC_n0!$$
+$$\Rightarrow D_n = n!\left(1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots + (-1)^n\frac{1}{n!}\right).$$
+
+\section{Problems}
+\begin{enumerate}
+\item If ${}^nP_4 = 360$, find $n$.
+\item If ${}^n_3 = 9240$, find $n$.
+\item If ${}^{10}P_r = 720$, find $r$.
+\item If ${}^{2n + 1}P_{n - 1}:{}^{2n - 1}P_n = 3:5$, find $n$.
+\item If ${}^nP_4 = 12\times{}^nP_2$, find $n$.
+\item If ${}^nP_5 = 20\times{}^nP_3$, find $n$.
+\item If ${}^nP_4:{}^{n + 1}P_4 = 3:4$, find $n$.
+\item If ${}^{20}P_r = 6840$, find $r$.
+\item If ${}^{k + 5}P_{k + 1} = \frac{11(k - 1)}{2}.{}^{k + 3}P_k$, find $k$.
+\item If ${}^{22}P_{r + 1}:{}^{20}P_{r + 2} = 11:52$, find $r$.
+\item If ${}^{m + n}P_2 = 90$ and ${}^{m - n}P_2 = 30$, find $m$ and $n$.
+\item If ${}^{12}P_r = 11880$, find $r$.
+\item If ${}^{56}P_{r + 6}:{}^{54}P_{r + 3} = 308,000:1$, find $r$.
+\item Prove that ${}^1P_1 + 2.{}^2P_2 + 3.{}^3P_3 + \ldots + n.{}^nP_n = {}^{n+1}P_{n + 1} - 1$.
+\item How many numbers of four digits can be formed with digits $1, 2, 3, 4$ and $5$ if repetition of digits is not allowed?
+\item How many numbrs between $400$ and $1000$ can be made with the digits $2, 3, 4, 5, 6$ and $0$, with no repetitions?
+\item Find the number of numbers between $300$ and $3000$ that can be formed with the digits $0, 1, 2, 3, 4$ and $5$ with no
+  repetitions.
+\item How many numbers of four digits greater than $2300$ can be formed with digits $0, 1, 2, 3, 4, 5$ and $6$ with no repetitions?
+\item How many numbers can be formed by using any number of digits $0, 1, 2, 3$ and $4$ with no repetitions?
+\item How many numbers of four digits can be formed with the digits $1, 2, 3$ and $4$? Find the sum of those numbers.
+\item Find the sum of all four digit numbers that can be formed with the digits $0, 1, 2$ and $3$.
+\item Find the sum of all four digits that can be formed with $1, 2, 2$ and $3$.
+\item A person has to send invitation to $6$ friends. In how many ways can he send invitations to them if he has $3$ servants?
+\item In how many ways $3$ prizes can be given away to $7$ boys when each is eligible for any number of boys?
+\item A telegraph has $5$ arms and each arm is capable of $4$ distinct positions, including the position of rest. What is the total
+  number of signals that can be made?
+\item A letter lock consists of three ring each marked with $10$ different letters. In how many ways is it possible to make an
+  unsuccessful attempts to open the lock?
+\item How many numbers greater than $1000$ but less than $4000$ can be formed with the digits $0, 1, 2, 3$ and $4$ with
+  repretitions allowed?
+\item In how many ways can $8$ Indians, $4$ Americans and $4$ Englishmen be seated in a row so that persons of same nationality sit
+  together?
+\item There are $20$ books of which $4$ are single volume and the other are books of $8, 5$ and $3$ volumes. In how many ways can
+  all these books are arranged on a shelf so that volumes of the same book are not separated?
+\item A library has two books each having three copies and three other books each having two copies each. In how many ways can all
+  these books be arranged in a shelf so that copies of same books are not separated?
+\item In how many ways $10$ examination papers be arranged so that the best and worst papers never come together?
+\item There are $5$ boys and $3$ girls. In how many ways can they be seated in a row so that not all girls sit together?
+\item In how many ways can $7$ I.A. and $5$ I.Sc. students can be seated in a row so that no two of the I.Sc. students sit
+  together?
+\item In a class there are $7$ boys and $3$ girls. In how many different ways can they cam be seated in a row so that no two of the
+  three girls are consecutive?
+\item In how many ways $4$ boys and $4$ girls can be seated in a row so that boys and girls alternate?
+\item In how many ways $4$ boys and $3$ girls can be seated in a row so that boys and girls alternate?
+\item In how many ways can the letters of the word ``civilization'' be rearranged?
+\item How any different words can be formed from the word ``university'' so that all vowels are together?
+\item In how many ways can the letters of the word director be arranged so that vowles are never together?
+\item How many words can be formed by rearranging the letter of the word ``welcome''? How many of them end with `o'?
+\item How many words can be formed with the letters of the word ``California'' in such a way that vowels occupy vowels' position
+  and consonants occupy consonants' position?
+\item How many different words ca be formed with the letters of the word ``pencil'' when vowels occupy even place?
+\item How many different words can be formed with five given letters of which three are vowel and two are consonants? How many will
+  have no two vowels together?
+\item How many numbers greater than a million can be formed with the digits $2, 3, 0, 3, 4, 2$ and $3$ with no repetitions?
+\item In how many ways $5$ Indians and $4$ British can be seated at a round table if
+  \begin{enumerate}
+  \item there is no restriction?
+  \item all British sit together?
+  \item all $4$ British do not sit together?
+  \item no two British sit together?
+  \end{enumerate}
+\item In how many ways $5$ Indians and $5$ British can be seated along a circle so that they are alternated?
+\item A round table conference is to be held between $20$ delegates and $30$ countries. In how many wayss can they be seated if two
+  particular delegates are always to sit together?
+\item How many numbers of four digits can be formed with the digits $1, 2, 4, 5, 7$ with no repetitions?
+\item How many numbers of $5$ digits can be formed with the digits $0, 1, 2, 3$ and $4$?
+\item How many numbers between $100$ and $1000$ can be formed with the digits $1, 2, 3, 4, 5, 6$ and $7$; with no repetitions?
+\item How many numbers between $100$ and $1000$ can be formed with the digits $0, 2, 3, 4, 8$ and $9$; with no repetitions?
+\item Find the total no. of nine digit numbers which have all different digits.
+\item How many number between $1000$ and $10000$ can be formed with the digits $0, 1, 2, 3, 4$ and $5$; with no repetitions?
+\item How many different numbers greater than $5000$ can be formed with the digits $0, 1, 5$ and $9$; with no repetitions?
+\item Find the number of numbers between $300$ and $4000$ that can be formed with the digits $0, 1, 2, 3, 4$ and $5$; with no
+  repetitions?
+\item How many numbers of four digits divisible by $5$ can be formed with the digits $0, 4, 5, 6$ and $7$; with no repetitions?
+\item How many even numbers of $5$ digits can be formed with the digits $1, 2, 3, 4$ and $5$?
+\item How many numbers less tht $1000$ and divisible by $5$ can be formed, in which no digit repeats?
+\item How many numbers between $100$ and $999$ can be formed with the digits $0, 4, 5, 6, 7$ and $8$? How many of them are odd?
+\item Find the number of even numbers that can be formed with the digits $0, 1, 2, 3$ and $4$; with no repetitions?
+\item Find the number of numbers of six digits with the digit $1, 2, 3, ,4 ,5$ and $6$, in which $5$ alwyas occupied tens place;
+  with no repetitions.
+\item A number of four different digit is formed using the digits $1, 2, 3, 4, 5, 6$ and $7$. How many such numbers can be formed?
+  How many of them are greter than $3400$?
+\item Find the number of numbers of $4$ digits formed with the digits $1, 2, 3, 4$ and $5$, in which $3$ occurs in the thousand's
+  place and $5$ occurs in the unit's place.
+\item Find the number of numbers of $4$ digits formed with the digits $0, 1, 2, 3, 5$ and $5$; with no repetitions. How many of
+  these are greter than $3000$?
+\item How many number of numbers can be formed by using any number of digits $0, 1, 2, 3, 5, 7$ and $9$?
+\item How many different numbers can be formed with the digits $1, 3, 5, 7$ and $9$; when taken all at a time and what is their
+  sum?
+\item Find the sum of all four digit numbers that can be foemd with the digits $3, 2, 3, 4$.
+\item Find the sum of all numbers greater than $10000$ formed with the digits $0, 2, 4, 6$ and $8$; with no repetitions.
+\item Find the sum of all five digit numbers with the digits $3, 4, 5, 6$ and $7$; with no repetitions.
+\item Find the sum of all four digit numbers that can be formed with $0, 2, 3$ and $5$.
+\item A servant has to post $5$ ketters and there are $4$ letter boxes. In how many ways he can post the letters?
+\item In how many ways can $3$ prizes be given to $5$ students, when each student is eligible for any number of prizes?
+\item In how many ways can $n$ things be given to $p$ persons? Each person can get any number of things$(n > p)$.
+\item There are $m$ men and $n$ monkeys$(m < n)$. If a man can have any number of monkeys, in how many wasy every monkey have a
+  master?
+\item In how many ways the following $5$ prizes be given to $10$ students? First and second in mathematics; first and second in
+  chemistry and first in physics?
+\item There are stalls for $12$ animals in a ship. In how many ways the shipload can be made if there are cows, calves and horses
+  to transported with each being $12$ in number?
+\item In how many ways $5$ delegates be put in $6$ hotels of a city of there is no restriction?
+\item Find the numbers of $5$ digits that can be formed with the digits $0, 1, 2, 3$ and $4$ if repetition is allowed.
+\item In how many ways rings of $6$ different types can be had in $4$ fingers?
+\item Find the number of $4$ digit numbers greater than $3000$ that can be formed with the digits $0, 1, 2, 3, 4$ and $5$ if
+  repetition is allowed.
+\item In a town tyhe car plate numbers can be of three or four digits without digit $0$. What is the maximum number of cars that
+  can be numbered?
+\item In how many wyas can a ten question multiple choice examination with one correct answer can be answered if there are four
+  choices to each question? If no two consecutive questions are answered the same way, how many wyas are there?
+\item There are two books each of three volumes and two books each of two volumes. In how may ways can the ten books be arranged on
+  a table so that the volumes of the same book are not separated?
+\item A library has $5$ copies of $1$ book, $4$ copies of $2$ books, $6$ copies of $3$ books and single copy of f$8$ books. In how
+  many ways all the books can be arranged in so that copies of the same book stay together?
+\item In a dinner part there are $10$ Indians, $5$ Americans and $5$ Britishers. In how many ways they can be seated if all persons
+  of the same nationality always sit together?
+\item In a class there are $4$ girls and $6$ boys. In how many ways can they be seated in a rows so that no two girls are together?
+\item Show that the number of ways in which $n$ books can be arranged on a shelf so that two particular books shall not be
+  togetheris $(n - 2)(n - 1)!$
+\item You are given six balls of different colors(black, white, red, green, violet, yellow). In how many ways can you arraneg them
+  in a row so that black and white balls may never come together?
+\item In how many different ways can $15$ I.Sc. and $12$ B.Sc. students be arranged in a line so that no two B.Sc. students occupy
+  consecutive positions?
+\item In how many wyas can $18$ white and $19$ black balls be arranged in a line so that no two white ballls may be together. It is
+  given that balls of same color are identical.
+\item Show that the number of ways in which $p$ positive and $n$ negative sings mat be placed in a row so that no two negative
+  signs may be together is ${}^{p + 1}C_n$.
+\item $m$ men and $n$ women are to be seated in a row so that no two women sit together. If $m > n$, then show that the number of
+  ways in which they can be seated is $\frac{m!(m + 1)!}{(m - n + 1)!}$
+\item $3$ women and $5$men are to sit in a row. Find in how many ways they can be arranged so that no two women sit next to each
+  other.
+\item Find the number of ways of arranging $5$ a's, $3$ b's, $3$ c's, $1$ d, $2$ e's and $1$ f in a row, if letter $c$'s are
+  separated from one another.
+\item Find the number of different permutations of the letters of the word ``Banana''.
+\item How many words can be formed from the letters of the word ``circumference'' taken all together?
+\item There are three copies of each of four different books. In how many ways they can be arranged in a shelf?
+\end{enumerate}
