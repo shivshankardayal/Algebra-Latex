@@ -1,0 +1,99 @@
+\chapter{Binomials, Multinomials and Expansions}
+An algebraic expression containing one term is called \textit{monomial}, two terms is callled \textit{binomial} and more than two
+is called is called \textit{multinomial}. Examples of a monomial expressions are $2x, 4y$, examples of binomial expressions are $a
++ b, x^2 + y^2, x^3 + y^3, x + \frac{1}{y}$ and exaamples of multinomial expressions are $1 + x + x^2, a^2 + 2a + b^2, a^3 + 3a^2b
++ 3ab^2 + b^3$.
+
+\section{Binomial Theorem}
+Newton gave binomial theorem, by which we can expand any opwer of a binomial expression as a series. First we consider only
+positive integral values of exponent. For positive integral exponent the formula has the following form:
+$$(a + x)^n = {}^nC_0a^nx^0 + {}^nC_1a^{n - 1}x^1 + {}^nC_2a^{n - 2}x^2 + \ldots + {}^nC_na^0x^n$$
+
+\subsection{Proof by Mathematical Induction}
+Let $$P(n) = (a + x)^n = {}^nC_0a^nx^0 + {}^nC_1a^{n - 1}x^1 + {}^nC_2a^{n - 2}x^2 + \ldots + {}^nC_na^0x^n$$
+
+When $n = 1, P(1) = a + x ={}^1C_0a + {}^1C_1x$. When $n = 2, P(2) = a^2 + 2ax + x^2 = {}^2C_0a^2 + {}^2C_1ax + {}^2C_2x^2$. Thus
+we see that $P(n)$ holds good for $n = 1$ and $n = 2$. Let $P(n)$ is true for $n = k$ i.e.
+$$P(k) = (a + x)^k = {}^kC_0a^kx^0 + {}^kC_1a^{k - 1}x^1 + {}^kC_2a^{k - 2}x^2 + \ldots + {}^kC_ka^0x^k$$
+Multiplying both sides with $(a + x)$
+$$P(k + 1) = (a + x)^{k + 1} = {}^kC_0a^{k + 1}x^0 + {}^kC_1a^kx + {}^kC_2a^{k - 1}x^2 + \ldots + {}^kC_kax^k +$$ $${}^kC_0a^kx +
+{}^kC_1a^{k - 1}x^2 + {}^kC_2a^{k - 2}x^3 + \ldots + {}^kC_kx^{k + 1}$$
+
+Combining terms with equal powers of $a$ and $x$, using the formula ${}^nC_r + {}^nC_{r + 1} = {}^{n + 1}C_{r + 1}$ and rewriting
+${}^kC_0$ and ${}^kC_k$ as ${}^{k + 1}C_0$ and ${}^{k + 1}C_{k + 1}$, we get
+$$P(k + 1) = {}^{k + 1}C_0a^{k + 1}x^0 + {}^{k + 1}C_1a^{k}x^1 + {}^{k + 1}C_2a^{k - 1}x^2 + \cdots + {}^{k + 1}C_{k + 1}a^0x^{k + 1}$$
+Thus, we see that $P(n)$ holds good for $n = k + 1$ and we have proven binomial theorem by mathemtical induction.
+
+\subsection{Proof by Combination}
+We know that $(a + x)^n = (a + x)(a + x)\cdots[n~\text{factors}]$. If see only $a$, then we see that $a^n$ exists and hence, $a^n$
+is a term in the final product. This is the term $a^n$, which can be written as ${}^nC_0a^nx^0$. If we take the letter $a, n - 1$
+times and $x$ once then we observe ttat $x$ can be taken in ${}^nC_1$ ways. Thus, we can say that the term in final product is
+${}^nC_1a^{n - 1}x$. Similarly, if we choose $a, n - 2$ times and $x$ twice then the term will be ${}^nC_2a^{n - 2}x^2$. Finally,
+like $a^n, x^n$ will exist and can be written as ${}^nC_nx^n$ for consistency. Thus, we have proven binomial theorem by
+combination.
+
+\section{Special Forms of Binomial Expansion}
+We have
+\begin{equation}
+(a + x)^n = {}^nC_0a^nx^0 + {}^nC_1a^{n - 1}x^1 + {}^nC_2a^{n - 2}x^2 + \ldots + {}^nC_na^0x^n
+\label{eq:be1}
+\end{equation}
+
+\begin{enumerate}
+\item Putting $-x$ instead of $x$
+  $$(a - x)^n = {}^nC_0a^nx^0 - {}^nC_1a^{n - 1}x^1 + {}^nC_2a^{n - 2}x^2 - \ldots + (-1)^n{}^nC_na^0x^n$$
+\item Putting $a = 1$ in eq.\ \ref{eq:be1}
+  $$(1 + x)^n = {}^nC_0 + {}^nC_1x + {}^nC_2x^2 + \ldots + {}^nC_nx^n$$
+\item Putting $x = -x$ in above equation
+  $$(1 - x)^n = {}^nC_0 - {}^nC_1x + {}^nC_2x^2 - \ldots + (-1)^n{}^nC_nx^n$$
+\end{enumerate}
+
+\section{General Term of a Binomial Expansion}
+We see that first term is $t_1 = {}^nC_0a^nx^0$, second term is $t_2 = {}^nC_1a^{n - 1}x^1$ so general term will be $$t_r =
+{}^nC_{r - 1}a^{n - r + 1}x^{r - 1}$$
+
+\section{Middle Term of a Binomial Expansion}
+When $n$ is an even number, i.e. $n = 2m,~m\in\mathbb{P}$. Middle term will be $m + 1$th term i.e. $$t_{m + 1} =
+{}^nC_ma^mmx^m$$. When $n$ an odd number, i.e. $n = 2m + 1~m\in\mathbb{N}$. There will be two middle terms i.e. $m + 1$th and $m +
+2$th terms will be middle terms. So $$t_{m + 1} = {}^nC_ma^{m +1}x^m, t_{m + 2} = {}^nC_{m + 1}a^{m}x^{m + 1}$$
+
+The middle terms have the largest coefficient. In case of two middle terms the coefficients of both the middle terms are equal.
+
+\section{Equidistant Coefficients}
+Binomial coefficients equidistant from start and end are equal. Coefficients of first term from start and end are ${}^nC_0$ and
+${}^nC_n$ which are equal. Coefficients of second term from start and end are ${}^nC_1$ and ${}^nC_{n-1}$ which are
+equal. Similarly, coefficient of $r$th term from start is ${}^nC_{r - 1}$ and from end is ${}^nC_{n - r +1}$. From combinations we
+know that ${}^nC_{r - 1} = {}^nC_{n - r + 1}$. Thus, it is prove that coefficients of terms equidistant from start and end are
+equal.
+
+\section{Properties of Binomial Coefficients}
+We have proven earlier that $$(1 + x)^n = {}^nC_0 + {}^nC_1x + {}^nC_2x^2 + \cdots + {}^nC_nx^n.$$ Putting $x = 1$, we get $$2^n =
+{}^nC_0 + {}^nC_1 + {}^nC_2 + \cdots + {}^nC_n.$$ Putting $x = -1$, we get $$0 = {}^nC_0 - {}^nC_1 + {}^nC_2 - \cdots
++(-1)^n{}^nC_n.$$ Adding the last two, we have $$2^n = 2[{}^nC_0 + {}^nC_2 + {}^nC_4 + \cdots]$$ $$2^{n - 1} \ {}^nC_0 + {}^nC_1 +
+{}^nC_2 + \cdots$$ Subtracting, we get $$2^{n - 1} = {}^nC_1 + {}^nC_3 + {}^nC_5 + \cdots$$
+
+\section{Multinomial Theorem}
+Consider the multinomila $(x_1 + x_2 + \cdots + x_n)^p$, where $n$ and $p$ are positive integers. The general term of such a
+multinomial is givenby $$\frac{p!}{p_1!p_2!\ldots p_n!}x_1^{p_1}x_2^{p_2}\cdots x_n^{p_n}$$ such that $p_1, p_2, \ldots, p_n$ are
+nonnegative integers and $p_1 + p_2 + \cdots + p_n = p.$
+
+We can find the general term using the binomial theorem itself. General term in the expansion $[x_1 + (x_2 + x_3 + \cdots +
+  x_n)]^n$ is $$\frac{n!}{p!(n - p_1)!}x_1^{p_1}(x_2 + x_3 + \cdots + x_n)^{n- p_1}.$$ General term in expansion of $(x_2 + x_3 +
+\cdots + x_n)^{n - p_1}$ is $$\frac{(n - p_1)!}{p_2!(n - p_1 - p_2)!}x_2^{p_2}(x_3 + x_4 + \cdots + x_n)^{n - p_1 -p_2}.$$
+Proceding in this manner we obtain the general term given above.
+
+\subsection{Som Results on Multinomial Expansions}
+\begin{enumerate}
+\item No.\ of terms in the multinomial $(x_1 + x_2 + \cdots + x_n)^p$ is number of nonnegative integral solution of the equation
+  $p_1 + p_2 + \cdots + p_n = p$ i.e. ${}^{n + p - 1}C_{p}$ or ${}^{n + p - 1}C_{n - 1}$.
+\item Largest coeff. in $(x_1 + x_2 + \cdots + x_n)^p$ is $\frac{n!}{(q!)^{n - r}[(q + 1)!]^r}$, where $q$ is the quotient and $r$
+  is the remainder of $p/n$.
+\item Coefficient of $x^r$ in $(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n)^p$ is $\sum\frac{n!}{p_0!p_1!p_2!\ldots
+  p_n!}a_0^{p_0}a_1^{p_1}a_n^{p_n}$ where $p_0, p_1, \cdots, p_n$ are nonnegative integers satisfying the equation $p_0 + p_1 +
+  \ldots + p_n = n$ and $p_1 + 2p_2 + \cdots + np_n = r.$
+\end{enumerate}
+
+\section{Binomial Theorem for Any Index}
+\subsection{Fractional Index}
+Let $f(m) = (1 + x)^m = 1 + mx + \frac{m(m- 1)}{1.2}x^2 + \frac{m(m - 1)(m - 2)}{1.2.3}x^3 + \cdots$, where $m\in R$ then, $f(n) =
+(1 + x)^n = 1 + nx + \frac{n(n - 1)}{1.2}x^2 + \frac{n(n - 1)(n - 2)}{1.2.3}x^3 + \cdots$

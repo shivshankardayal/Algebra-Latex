@@ -1,0 +1,96 @@
+\chapter{Mathematical Induction}
+Any reasoning involving passage from particular assertions to general assertions, which derive their validity from the validity of
+particular assertions is called \textit{induction}. \textit{Mathematical induction} is a mathematical proof technique which enables us to
+draw conclusions about a general law on the basis of particular cases. It is used to prove a statement $P(n)$ holds for every
+natural number $n = 0, 1, 2, 3, \ldots$; that is, the overall statement is a seuqnece of infinitely many cases $P(0), P(1), P(2),
+P(3), \ldots$ The earliest rigorous use of induction was by Gersonides (1288-1344). The first explicit formulation of the priciple
+was given by Pascal in his \textit{Traité du triangle arithmétique} (1665).
+
+In boolean algebra, a statement which is either true and false is called a \textit{proposition}. $P(n)$ will denote a proposition
+whose truth value depends on natural numbers. For example, we recall the sum of first $n$ natural numbers from arithmetic
+progression as $1 + 2 + \ldots + n = \frac{n(n + 1)}{2}$ is denoted by $P(n)$, then we can write
+$$P(n) = 1 + 2 + \ldots + n = \frac{n(n + 1)}{2}$$
+Here $P(2)$ is true means the sum of first two natural numbers is equal to $1 + 2 = \frac{2.3}{2} = 3$.
+
+Mathematical induction is used to prove propositions in many branches of algebra, geometry and analysis.
+
+\section{Principle of Finite Mathematical Induction}
+The proposition $P(n)$ is assumed to be true for all natural numbers if the following two conditions are satisfied:
+\begin{enumerate}
+\item The proposition $P(n)$ is true for $n = 1$ i.e. $P(1)$ is true.
+\item $P(m)$ is true $\Rightarrow P(m + 1)$ is true where $m$ is an arbitrary natural number.
+\end{enumerate}
+
+\section{Extended Form of Mathematical Induction}
+\begin{enumerate}
+\item If $P(n)$ is a proposition such that
+  \begin{enumerate}
+  \item $P(1), P(2), \ldots, P(k)$ are true.
+  \item $P(m), P(m + 1), \ldots, P(m + k - 1)$ are true implies $P(m + k)$ is true.
+  \end{enumerate}
+\item If $P(n)$ is a proposition such that
+  \begin{enumerate}
+  \item $P(r)$ is true.
+  \item $P(r), P(r + 1), \ldots, P(m)$ are true implies $P(m + 1) is true.$
+  \end{enumerate}
+\end{enumerate}
+
+\section{Problems}
+\begin{enumerate}
+\item Show that $1^2 + 2^2 + \ldots + n^2 = \frac{n(n + 1)(2n + 1)}{6}$.
+\item Show that $\frac{1}{1.2} + \frac{1}{2.3} + \ldots + \frac{1}{n(n + 1)} = \frac{n}{n + 1}$.
+\item Show that $1^3 + 2^3 + \ldots + n^3 = \left[\frac{n(n + 1)}{2}\right]^2$.
+\item Show that $1.3 + 2.3^2 + \ldots + n.3^n = \frac{(2n - 1)3^{n + 1} + 3}{4}$.
+\item Show that $\cos\alpha + \cos2\alpha + \ldots + \cos n\alpha = \sin\frac{n\alpha}{2}\csc\frac{\alpha}{2}\cos\frac{(n + 1)\alpha}{2}$.
+\item Show that $\tan^{1}\frac{1}{3} + \tan^{-1}\frac{1}{7} + \ldots + \tan^{-1}\frac{1}{n^2 + n + 1} = \tan^{-1}\frac{n}{n + 2}$.
+\item Show that ${}^nC_1 + 2.{}^nC_2 + \ldots + n.{}^nCn = n.2^{n - 1}$.
+\item If $u_1 = 1, u_2 = 1$ and $u_{n + 2} = u_{n + 1} + u)n,~n\geq 1.~u_n = \frac{1}{\sqrt{5}}\left[\left(\frac{1 +
+    \sqrt{5}}{2}\right)^n - \left(\frac{1 - \sqrt{5}}{2}\right)^n\right]~\forall~n\geq 1$.
+\item Show that $11^{n + 2} + 12^{2n + 1}$, where $n\in\mathbb{N}$, is divisible by $133$.
+\item If $p\in\mathbb{N}$, show that $p^{n + 1} + p^{2n - 1}$ is divisible by $p^2 + p + 1$ for every positive integer $n$.
+\item Show that $2^n > 2n + 1~\forall~n > 2$.
+\item Show that $n^4 < 10^n~\forall~n\geq 2$.
+\item Show that $1^3 + 3^3 + \ldots + (2n - 1)^3 = n^2(2n^2 - 1)$.
+\item Show that $3.2^2 + 3^3.2^3 + \ldots + 3^n.2^{n + 1} = \frac{12}{5}(6^n - 1)$.
+\item Show that $\frac{1}{1.4} + \frac{1}{4.7} + \ldots + \frac{1}{(2n - 2)(3n + 1)} = \frac{n}{3n+ 1}$.
+\item Show that $(\cos\theta + i\sin\theta) = \cos n\theta + i\sin n\theta$.
+\item Show that $\cos\theta.\cos2\theta\ldots\cos2^{n - 1}\theta = \frac{\sin2^n\theta}{2^n\sin\theta}$.
+\item Show that $\sin\alpha + \sin2\alpha + \ldots + \sin n\alpha = \frac{\sin \frac{n\alpha}{2}}{\sin\frac{\alpha}{2}}\sin\frac{n +
+  1}{2}\alpha$.
+\item If $a_1 = 1$ and $a_{n + 1} = \frac{a_n}{n + 1},~n\geq 1$, show that $a_{n + 1} = \frac{1}{(n + 1)!}$.
+\item If $a_1 = 1, a_2 = 5$ and $a_{n + 2} = 5a_{n + 1} - 6a_n,~n\geq 1$, show that $a_n = 3^n - 2^n$.
+\item If $u_0 = 2, u_1 = 3$ and $u_{n + 1} = 3u_n - 2u_{n - 1}$, show that $u_n = 2^n - 1,~n\in \mathbb{N}$.
+\item If $a_0 = 0, a_1 = 1$ and $a_{n + 1} = 3a_n - 2a_{n - 1}$, show that $a_n = 2^n - 1$.
+\item If $A_1 = \cos\theta, A_2 = \cos2\theta$ and for every natural number $m > 2, A_m = 2A_{m-1}\cos\theta - A_{m - 2}$, prove
+  that $A_n = \cos n\theta$.
+\item For any positive number $n$, show that $(2\cos\theta - 1)(2\cos2\theta - 1)\ldots(2\cos2^{n - 1}\theta - 1) =
+  \frac{2\cos2^n\theta + 1}{2\cos\theta + 1}$.
+\item Show that $\tan^{-1}\frac{x}{1.2 + x^2} + \tan^{-1}\frac{x}{2.3 + x^2} + \ldots + \tan^{-1}\frac{x}{n(n + 1) + x^2} =
+  \tan^{-1}x - \tan^{-1}\frac{x}{n + 1},~x\in \mathbb{R}$.
+\item Prove that $3 + 33 + \ldots + \frac{33\ldots3}{n\text{~digits}} = \frac{10^{n + 1} - 9n - 10}{27}$.
+\item Show that $\displaystyle\int_{0}^\pi\frac{\sin(2n + 1)x}{\sin x}dx = \pi$.
+\item Show that $\displaystyle\int_{0}^\pi\frac{\sin^2nx}{\sin^2x}dx = n\pi$.
+\item Show that $\displaystyle\int_{0}^{\frac{\pi}{2}}\frac{\sin^2nx}{\sin^2x}dx = 1 + \frac{1}{3} + \ldots + \frac{1}{2n - 1}$.
+\item Show that if $n\in\mathbb{N}, n(n + 1)(n + 5)$ is divisible by $6$.
+\item Show that if $n\in\mathbb{N}, n^3 + (n + 1)^3 + (n + 2)^3$ is divisble by $9$.
+\item Show that if $n\in\mathbb{P}$, and $n$ is even then $n(n^2 + 20)$ is divisible by $48$.
+\item Show that if $n\in\mathbb{N}, 4^n - 3n - 1$ is divisible by $9$.
+\item Show that if $n\in\mathbb{N}, 3^{2n} - 1$ is divisible by $8$.
+\item Show that if $n\in\mathbb{N}, 5.2^{3n - 2} + 3^{3n - 1}$ is divisible by $19$.
+\item Show that if $n\in\mathbb{N}, 7^{2n} + 2^{3n - 3}.3^{n - 1}$ is divisible by $25$.
+\item Show that if $n\in\mathbb{N}, 10^n + 3.4^{n + 2} + 5$ is divisible by $9$.
+\item Show that if $n\in\mathbb{N}, 3^{4n + 2} + 5^{2n + 1}$ is divisible by $14$.
+\item Show that if $n\in\mathbb{N}, 3^{2n + 2} - 8n - 9$ is divisible by $64$.
+\item Show that if $n\in\mathbb{N}, n^7 - n$ is divisible by $7$.
+\item Show that if $n\in\mathbb{N}, \frac{n^3}{3} + n^2 + \frac{5}{3}n + 1$ is a natural number.
+\item Show that $x^n + y^n$ is divisible by $x + y$, where $n$ is any odd integer.
+\item Show that $x^n - y^n$ is divisible by $x - y$, where $n\in\mathbb{N}$.
+\item Prove that $x(x^{n - 1} - na^{n - 1}) + a^n(n - 1)$ is divisible by $(x - a)^2$ for all positive integers $n > 1$.
+\item Show that $\frac{n^5}{5} + \frac{n^3}{3} + \frac{7n}{15}$ is a natural number.
+\item Show that $\frac{n^7}{7} + \frac{n^5}{5} + \frac{2n^3}{3} - \frac{n}{105}$ is an integer.
+\item Show that $2^n > n^2,~n\geq 5$.
+\item Show that $1 + 2 + \ldots + n\leq \frac{1}{8}(2n + 1)^2$.
+\item Show that $n^n < (n!)^2,~n>2$.
+\item Show that $n! > 2^n,~n>3$.
+\item Show that $\frac{1}{n + 1} + \frac{1}{n + 2} + \ldots + \frac{1}{2n} > \frac{13}{24},~n>1$.
+\end{enumerate}

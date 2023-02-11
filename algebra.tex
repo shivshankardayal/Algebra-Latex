@@ -23,8 +23,8 @@
 \makeatother
 
 % \usepackage{xcolor, calc, graphicx, soul, fourier, verbments, makeidx, mflogo}
-\usepackage{xcolor, calc, graphicx, soul, float, makeidx, mflogo,
-  pstricks, minitoc, amsmath, amssymb, pst-poly, longtable, tikz, titlesec,
+\usepackage{xcolor, calc, graphicx, soul, float, makeidx,
+  minitoc, amsmath, amssymb, longtable, tikz, titlesec,
   scalerel, stackengine, microtype, enumitem, wrapfig, mathtools, amsthm, pdfpages}
 % make minimum size of math font bigger for fractions it makes fractions displaystyle
 \let\frac\dfrac
@@ -148,6 +148,9 @@
 %\setmainfont{TeX Gyre Termes}
 %\setmonofont[Ligatures=TeX,Scale=.90]{Courier}
 \setsansfont{Roboto}
+%\usepackage{unicode-math}
+%\setmathfont{texgyretermes-math.otf}
+
 \usepackage{polyglossia}
 
 \setmainlanguage{english}
@@ -214,6 +217,8 @@ in the section entitled ``GNU Free Documentation License''.
 \include{complex-numbers}
 \include{theory-of-equations}
 \include{permutations-and-combinations}
+\include{mathematical-induction}
+\include{binomials-multinomials-expansions}
 \part{Solutions}
 \include{logarithm-solutions}
 \backmatter
