@@ -97,3 +97,175 @@ Proceding in this manner we obtain the general term given above.
 \subsection{Fractional Index}
 Let $f(m) = (1 + x)^m = 1 + mx + \frac{m(m- 1)}{1.2}x^2 + \frac{m(m - 1)(m - 2)}{1.2.3}x^3 + \cdots$, where $m\in R$ then, $f(n) =
 (1 + x)^n = 1 + nx + \frac{n(n - 1)}{1.2}x^2 + \frac{n(n - 1)(n - 2)}{1.2.3}x^3 + \cdots$
+
+$$f(m)f(n) = (1 + x)^{m + n} = f(m + n)$$
+$$f(m)f(n)\ldots\text{~to~}k\text{~factos~}=f(m + n + \ldots)\text{~to~}k\text{~terms~}$$
+
+Let $m, n, \ldots$ each equal to $\frac{j}{k}$
+
+$$\Rightarrow \left[f\left(\frac{j}{k}\right)\right]^k = f(j)$$
+
+but $j$ is a positive integer, $f(j) = (1 + x)^j$
+
+$$\therefore (1 + x)^{\frac{j}{k}} = f\left(\frac{j}{k}\right)$$
+
+$$\therefore (1 + x)^{\tfrac{j}{k}} = 1 + \frac{j}{k}x + \frac{\frac{j}{k}\left(\frac{j}{k} - 1\right)}{1.2}x^2 + \ldots$$
+
+And thus, we have proven binomial theorem for fractional index.
+
+\subsection{Negative Index}
+We can write $$f(n)f(-n) = f(0) = 1$$
+$$\Rightarrow f(-n) = \frac{1}{f(n)} = (1 + x)^{-n} = 1 - nx + \frac{n(n - 1)}{1.2}x^2 - ldots$$
+
+\section{General Term in Binomial Theorem for Any Index}
+General term is given by $$\frac{n.(n - 1)\ldots(n - r + 1)}{r!}x^r$$
+
+The above expansion does not hold true when $|x| > 1$ which can be quickly proved by making $r$ arbitrarily large. For example, $(1
+- x)^{-1} = 1 + x + x^2 + x^3 + \ldots$. However, if we put $x = 2$, then we have $(-1)^{-1} = 1 + 2 + 2^2 + \ldots$ which shows
+that when $x > 1$ the above formula does not hold true.
+
+From G.P. we know that $1 + x + x^2 + \ldots$ for $r$ terms is $$\frac{1}{1 - x} - \frac{x^r}{1 - x}$$
+
+Thus, if $r$ is very large and $|x| < 1$, we can ignore the second fraction but not when $|x| > 1$.
+
+\section{General Term for Negative Index}
+The $r + 1$th term is given by $$\frac{-n(-n - 1)\ldots(-n - r + 1)}{r!}(-x)^r$$
+$$= \frac{n(n + 1)\ldots(n + r - 1)}{r!}x^r$$
+
+\section{Exponential and Logrithmic Series Expansions}
+Following expansions are useful for solving problem related to exponential and logarithmic series:
+\begin{enumerate}
+\item $e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots$ to $\infty$, where $x$ is any number. $e$ lies between
+  $2$ and $3$.
+\item If $a > 0, a^x = e^{x\log_ea} = 1 + \frac{x\log_ea}{1!} + \frac{(x\log_ea)^2}{2!} + \ldots$
+\item $\log_e(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \ldots$ to $\infty$ where $-1< x\leq 1$.
+\end{enumerate}
+
+\section{Problems}
+
+\begin{enumerate}
+\item Expand $\left(x + \frac{1}{x}\right)^5$.
+\item Use the bonimial theorem to find the exact value of $(10.1)^5$.
+\item Simplify $(x + \sqrt{x - 1})^6 + (x - \sqrt{x - 1})^6$.
+\item If $A$ be the sum of odd terms and $B$ be the sum of even terms in the expansion of $(x + a)^n$, prove that $A^2 - B^2 = (x^2
+  - a^2)^n$.
+\item If $n$ is a positive integer, prove that the integral part of $(7 + 4\sqrt{3})^n$ is an odd number.
+\item If $(7 + 4\sqrt{3})^n = \alpha + beta$, where $\alpha$ is a positive integer and $\beta$ is a proper fraction, then prove
+  that $(1 - \beta)(\alpha + \beta) = 1$.
+\item Find the coefficient of $\frac{1}{y^2}$ in $\left(y + \frac{c^3}{y^2}\right)^{10}$.
+\item Find the coefficient in $(1 + 3x + 3x^2 + x^3)^{15}$.
+\item Find the term independent of $x$ in $\left(\frac{3}{2}x^2 - \frac{1}{3x}\right)^9$.
+\item Find the term independent of $x$ in $(1 + x)^m\left(x + \frac{1}{x}\right)^n$.
+\item Find the coefficient of $x^{-1}$ in $(1 + 3x^2 + x^4)\left(x + \frac{1}{x}\right)^n$.
+\item If $a_r$ denotes the coefficient of $x^r$ in the expansion $(1 - x)^{2n - 1}$, then prove that $a_{r - 1} + a_{2n - r} = 0$.
+\item Find the vallue of $k$ so that the term independent of $x$ in $\left(\sqrt{x} + \frac{k}{x^2}\right)^{10}$ is $405$.
+\item Show that there will be no term containing $x^{2r}$ in the expansion $(x + x^{-2})^{n - 3}$, if $n - 2r$ is positive but not
+  a multiple of $3$.
+\item Show that there will be a term independent of $x$ in the expansion $(x^a + x^{-b})^n$, only if $an$ is a multiple of $a + b$.
+\item Expand $\left(x + \frac{1}{x}\right)^7$ using binomial theorem.
+\item Use binomial theorem to expand $\left(\frac{2x}{3} - \frac{3}{2x}\right)^6$.
+\item If $(1 + ax)^n = 1 + 8x + 24x^2 + \ldots$, find $a$ and $n$.
+\item Find the $7$th term in the expansion of $\left(\frac{4x}{5} - \frac{5}{2x}\right)^9$.
+\item Find the value of $(\sqrt{2} + 1)^6 + (\sqrt{2} - 1)^6$.
+\item Evaluate $(0.99)^{15}$ correct to four decimal places using binomial theorem.
+\item Evaluate $999^3$ using binomial theorem.
+\item Evalaute $(0.99)^{10}$ correct to four decimal places usinng binomial theorem.
+\item Find the value of $(1.01)^{10} + (0.99)^{10}$ correct to $7$ decimal places.
+\item If $A$ be the sum of the odd terms and $B$ be the sum of the even terms in the expansion $(x + a)^n$, show that $4AB = (x +
+  a)^{2n} - (x - a)^{2n}$.
+\item If $n$ be a positive integer, prove that the integral part of $(5 + 2\sqrt{6})^n$ is an odd integer.
+\item If $(3 + \sqrt{8})^n = \alpha + \beta$, where $\alpha, n$ are positive integers and $\beta$ is a proper fraction, then prove
+  that $(1 - \beta)(\alpha + \beta) = 1$.
+\item Find the coefficient of $x$ in the expansion of $\left(2x - \frac{3}{x}\right)^9$.
+\item Find the coefficient of $x^7$ in the expansion of $(3x^2 + 5x^{-1})^{11}$.
+\item Find the coefficient of $x^9$ in the expansion of $(2x^2 - x^{-1})^{20}$.
+\item Find the coefficient of $x^{24}$ in the expansion of $(x^2 + 3ax^{-1})^{15}$.
+\item Find the coefficient of $x^9$ in the expansion of $(x^2 - 3x^{-1})^9$.
+\item Find the coefficient of $x^{-7}$ in the expansion of $\left(2x - \frac{1}{3x^2}\right)^{11}$.
+\item Find the coefficient of $x^7$ in the expansion of $\left(ax^2 + \frac{1}{bx}\right)^{11}$ and the coefficient of $x^{-7}$ in
+  the expansion of $\left(ax - \frac{1}{bx}\right)^{11}$. Also, find the relation between $a$ and $b$ so that the coefficients are
+  equal.
+\item If $x^p$ occurs in the expansion of $\left(x^2 + \frac{1}{x}\right)^{2n}$, show that its coefficient is
+  $\frac{2n!}{\left(\frac{4n - p}{3}\right)!\left(\frac{2n + p}{3}\right)!}$.
+\item Find the term independent of $x$ in the following binomial expansions:
+  \begin{enumerate}
+  \item $\left(x + \frac{1}{x}\right)^{2n}$,
+  \item $\left(2x^2 + \frac{1}{x}\right)^{15}$,
+  \item $\left(\sqrt{\frac{x}{3}} + \frac{3}{2x^2}\right)^{10}$,
+  \item $\left(2x^2 - \frac{1}{x}\right)^{12}$,
+  \item $\left(x^3 - \frac{3}{x^3}\right)^{25}$,
+  \item $\left(x^2 - \frac{3}{x^3}\right)^{25}$,
+  \item $\left(x^2 - \frac{3}{x^3}\right)^{10}$, and
+  \item $\left(\frac{1}{2}x^{1/3} + x^{-1/3}\right)^8$.
+  \end{enumerate}
+\item If there is a term independent of $x$ in $\left(x + \frac{1}{x^2}\right)^n,$ show that it is equal to
+  $\frac{n!}{\left(\frac{n}{3}\right)!\left(\frac{2n}{3}\right)!}$
+\item Prove that in the expansion of $(1 + x)^{m + n}$, coefficients of $x^m$ and $x^n$ are equal, $\forall~m,n > 0,m,
+  n\in\mathbb{N}$.
+\item Give that the $4$th term in the expansion of $\left(px + \frac{1}{x}\right)^n$ is $\frac{5}{2}$. Find $n$ and $p$.
+\item Find the middle term in the expansion of $\left(x - \frac{1}{2x}\right)^{12}$.
+\item Find the middle terms in the expansion of $\left(2x^2 - \frac{1}{x}\right)^7$.
+\item Prove that the middle term in the expansion of $\left(x + \frac{1}{x}\right)^{2n}$ is $\frac{1.3.5\ldots(2n - 1)}{n!}2^n$.
+\item Show that the coefficient of the middle term in $(1 + x)^{2n}$ is equal to the sum of coefficients of the two middle terms in
+  $(1 + x)^{2n - 1}$.
+\item Find the middle term in the expansions of;
+  \begin{enumerate}
+  \item $\left(\frac{2x}{3} - \frac{3y}{2}\right)^{20}$,
+  \item $\left(\frac{2x}{3} - \frac{3}{2x}\right)^6$,
+  \item $\left(\frac{x}{y} - \frac{y}{x}\right)^7$,
+  \item $(1 + x)^{2n}$, and
+  \item $(1 - 2x + x^2)^n$.
+  \end{enumerate}
+\item Find the general and middle term of the expansion $\left(\frac{x}{y} + \frac{y}{x}\right)^{2n + 1}$; $n$ being a positive
+  integer show that there is no term free of $x$ and $y$.
+\item Show that the middle term in the expansion of $\left(x - \frac{1}{x}\right)^{2n}$ is $\frac{1.3.5\ldots (2n -1)}{n!}.(-2)^n$.
+\item If in the expansion of $(1 + x)^{43}$, the coefficient of $(2r + 1)$th term is equal to the coefficient of $(r + 2)$th term,
+  find $r$.
+\item If the $r$th term in the expansion of $(1 + x)^{2n}$ has coefficient equal to that of the $(r + 4)$th term, find $r$.
+\item If the coefficient of $(2r + 4)$th term and $(r - 2)$th term in the expansion of $(1 + x)^{18}$ are equal, find $r$.
+\item If the coefficient of $(2r + 5)$th term and $(r - 6)$th term in the expansion of $(1 + x)^{39}$ are equal, fin ${}^rC_{12}$.
+\item Given positive integers $r>1, n>2, n$ being even and the coefficient of $3r$th term and $(r + 2)$th term in the expansion o f
+  $(1 + x)^{2n}$ are equal, find $r$.
+\item If the coefficient of $(p + 1)$th term in the expansion of $(1 + x)^{2n}$ be equal to that of the $(p + 3)$th term, show that
+  $p = n - 1$.
+\item Find the two consecutive coefficients in the expansion of $(3x - 2)^{75}$, whose values are equal.
+\item Show that the coefficient of $(r + 1)$th term in the expansion of $(1 + x)^{n + 1}$ is equal to the sum of the coefficients
+  of the $r$th and $(r + 1)$th term in the expansion of $(1 + x)^n$.
+\item Find the greatest term in the expansion of $\left(7 - \frac{10}{3}\right)^{11}$.
+\item Show that if the greatest term in the expansion of $(1 + x)^{2n}$ has also the greatest coefficient $x$ lies between
+  $\frac{n}{n + 1}$ and $\frac{n + 1}{n}$.
+\item Find the greatest terms in the expansions of:
+  \begin{enumerate}
+  \item $\left(2 + \frac{9}{5}\right)^{10}$,
+  \item $(4 - 2)^7$, and
+  \item $(5 + 2)^{13}$.
+  \end{enumerate}
+\item Find the limits between which $x$ must lie in order that the greatest term in the expansion of $(1 + x)^{30}$ may have the
+  greatest coefficient.
+\item If $n\in\mathbb{P}$, then prove that $6^{2n} - 35n - 1$ is divisible by $1225$.
+\item Show that $2^{4n} - 2^n(7n + 1)$ is some multuple of the square of $14$, where $n\in\mathbb{P}$.
+\item Show that $3^{4n + 1} - 16n - 3$ is divisible by $256$, if $n\in\mathbb{P}$.
+\item If $n\in\mathbb{P}$, show that
+  \begin{enumerate}
+  \item $4^n - 3n - 1$ is divisible by $9$,
+  \item $2^{5n} - 31n - 1$ is divisible by $961$,
+  \item $3^{2n + 2} - 8n  - 9$ is divisible by $64$,
+  \item $2^{5n + 5} - 31n - 32$ is divisible by $961$ if $n > 1$, and
+  \item $3^{2n} - 32n^2 + 24n - 1$ is divisible by $512$ if $n > 2$.
+  \end{enumerate}
+\item If three consecutive coefficients in the expansion of $(1 + x)^n$ be $165, 330$ and $462$, find $n$ and $r$.
+\item If $a_1, a_2, a_3$ and $a_4$ be any four consecutive coefficients in the expansion of $(1 + x)^n$, prove that $\frac{a_1}{a_1
+  + a_2} + \frac{a_3}{a_3 + a_4} = \frac{2a_2}{a_2 + a_3}$.
+\item If $2$nd, $3$rd and $4$th terms in the expansion of $(x + y)^n$ be $240, 720$ and $1080$ respectively, find $x, y$ and $n$.
+\item If $a, b, c$ be thre three consecutive terms in the expansion of some power of $(1 + x)$, prove that the exponent is
+  $\frac{2ac + ab + bc}{b^2 - ac}$.
+\item If $14$the, $15$th and $16$th term in the expansion of $(1 + x)^n$ are in A.P., find $n$.
+\item If three consecutive terms in the expansion of $(1 + x)^n$ be $56, 70$ and $56$, find $n$ and the position of the
+  coefficients.
+\item If $3$rd, $4$th and $5$th terms in the expansion of $(a + x)^n$ be $84, 280$ and $560$, find $a, x$ and $n$.
+\item If $6$th, $7$th and $8$th terms in the expansion of $(x + y)^n$ be $112, 7$ and $\frac{1}{4}$, find $x, y$ and $n$.
+\item If $a, b, c$ and $d$ be the $6$th, $7$th, $8$th and $9$th terms respectively in any binomial expansion, prove that $\frac{b^2
+  - ac}{c^2 - bd} = \frac{4a}{3c}$.
+\item If the four consecutive coefficients in any binomial expansion be $a, b, c,$ and $d$, then prove that (a) $\frac{a + b}{a},
+  \frac{b + c}{b}, \frac{c + d}{c}$ are in H.P., and (b) $(bc + ad)(b - c) = 2(ac^2 - b^2d)$.
+\end{enumerate}
