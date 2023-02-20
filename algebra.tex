@@ -10,7 +10,7 @@
 %\setheadfoot{\onelineskip}{2\onelineskip}
 %\setheaderspaces{*}{2\onelineskip}{*}
 %\checkandfixthelayout
-
+\special{pdf:minorversion 7}
 \makeatletter
 \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
 \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
@@ -69,11 +69,11 @@
 \definecolor{webbg}{rgb}{1,.8,.2}
 \definecolor{bootstrapurl}{rgb}{0,.5,.75}
 \definecolor{nicered}{rgb}{.7,0,0}
-\definecolor{nicegreen}{rgb}{.129,.447,.149}
+\definecolor{nicegreen}{rgb}{0,.4,0}
 \definecolor{niceblue}{rgb}{0, 0, .6}
 \definecolor{niceyellow}{rgb}{1,1,.95}
 \definecolor{nicecyan}{rgb}{0, 0.5, 0.75}
-\color{niceblack}
+\color{black}
 \usepackage[colorlinks]{hyperref}
 \hypersetup{%
   pdftitle={Algebra},
@@ -83,6 +83,7 @@
   urlcolor=nicecyan,
   linkcolor=nicecyan,
 }%
+\setlist[enumerate]{font=\color{nicecyan}}
 \setlength{\tabcolsep}{10pt}
 \renewcommand{\arraystretch}{1.5}
 
@@ -197,18 +198,16 @@ in the section entitled ``GNU Free Documentation License''.
 (Self study is ultimate penance.)
 \end{center}
 \newpage
-\setcounter{page}{1}
-\pagenumbering{roman}
-\tableofcontents
 % \newpage
 % \listofpyglistings
 \newpage
-\pagestyle{fancy}
 \frontmatter
 \setcounter{page}{1}
 \pagenumbering{roman}
+\tableofcontents
 \include{preface}
 \newpage
+\pagestyle{fancy}
 \mainmatter
 \pagenumbering{arabic}
 \part{Theory and Problems}
@@ -220,6 +219,8 @@ in the section entitled ``GNU Free Documentation License''.
 \include{mathematical-induction}
 \include{binomials-multinomials-expansions}
 \include{determinants}
+\include{matrices}
+\include{inequalities}
 \part{Solutions}
 \include{logarithm-solutions}
 \backmatter

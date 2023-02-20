@@ -1,0 +1,119 @@
+\chapter{Inequalities}
+Ineuqlities come up in different branches of mathematics; for example in algebra, trigonometry and trigonometry. They are very
+useful in establishing many relations among various quantities. Certain inequalities are very useful in studying properties of
+many common expressions which lead to interesting observations. In this chapter we will only study algebraic inequalitites. The
+problems given are quite basic and simple. We start with some useful theorems for these inequalities.
+
+\section{Strum's Method}
+Strum's method is given by the German mathematician {\sl Friedrich Otto Rudolf Sturm}. Sturm's method helps prove a large number of
+different inequalities under certain conditions along with various other applications.
+
+\begin{theorem}
+\label{th:strum:1}
+Prove that if the product of positive numbers $x_1, x_2, \cdots, x_n (n\geq 2)$ is euqal to $1$, then $x_1 + x_2 + \cdots + x_n\geq n$.
+\end{theorem}
+\begin{proof}
+  If $x_1 = \cdots = x_n$, then $x_1 + \cdots + x_n = n$. So we see that the statement is true if all the numbers are equal and are
+  unity. Now we consider the case when at least two numbers are different such that one is greater than $1$ and the other one is
+  smaller. Let us assume that these are $x_1$ and $x_2$ which does not cause loss of generality, and that $x_1 < 1 < x_2$. Note
+  that $x_1 + x_2 > 1 + x_1x_2 [\because (1 - x_1)(x2 - 1) > 0]$. If given numbers are substitued by $1, x_1x_2, x_3, \ldots, x_n$,
+  then the product is equal to $1$ and $1 + x_1x_2 + x_3 + \ldots + x_n < x_1 + x_2 + \ldots + x_n$. Repeating this we will find $n
+  - 1$ numbers equal to $1$ and the $n$th number equal to $x_1x_2\ldots x_n$. Thus, $x_1 + x_2 + \ldots + x_n < 1$. We see that
+  equality holds if and only if $x_1 = x_2 = \cdots = x_n = 1$
+\end{proof}
+
+\begin{theorem}
+\label{th:strum:2}
+  Prove that if the sum of the numbers $x_1, x_2, \ldots, x_n (n\geq 2)$ is equal to $1$, then prove that $x_1^2 + x_2^2 + \ldots +
+  x_n^2 \geq \frac{1}{n}$.
+\end{theorem}
+\begin{proof}
+  If $x_1 = x_2 = \ldots = x_n = \frac{1}{n}$ then $x_1^2 + x_2^2 + \ldots + x_n^2 = \frac{1}{n}$. Like previous theorem we
+  consider two numbers $x_1$ and $x_2$ such that one of them is greater than $\frac{1}{n}$ while the other is smaller than
+  $\frac{1}{n}$. Assume that these two numbers are $x_1$ and $x_2$, which does not cause loss of generality, and that $x_1 <
+  \frac{1}{n}$ and $x_2 > \frac{1}{n}$. So we obtain a sequence of numbers $\frac{1}{n}, x_1 + x_2 - \frac{1}{n}, x_3, \ldots, x_n$
+  suhc that their sum remains equal to $1$. We can easily prove that $x_1^2 + x_2^2 > \frac{1}{n^2} + \left(x_1 + x_2 -
+  \frac{1}{n}\right)^2$, and hence $$x_1^2 + x_2^2 + \ldots + x_n^2 > \frac{1}{n^2} + \left(x_1 + x_2 - \frac{1}{n}\right)^2 +
+  x_3^2 + \ldots + x_n^2.$$
+
+  Repeating this we obtain a sequence in which all terms will be equal to $\frac{1}{n}$, and sum of their square is less than the
+  sum of squares of numbers $x_1, x_2, \ldots, x_n$ i.e. $x_1^2 + x_2^2 + \ldots + x_n^2 > \frac{1}{n^2} +
+  \text{~to~}n\text{~times}.$ From this it follows that equality holds if and only if $x_1 = x_2 = \ldots = x_n$.
+\end{proof}
+
+\section{A.M., G.M., H.M. and Q.M.}
+\begin{theorem}
+  \textbf{\rm\bf (A.M.-- G.M. -- H.M. -- Q.M. Inequality)} Let $x_1, x_2, \ldots, x_n$ be positive real numbers, then
+  $$\frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \cdots + \frac{1}{x_n}} \leq \sqrt[n]{x_1x_2 \ldots x_n}\leq \frac{x_1 + x_2 + \cdots
+    + x_n}{n}\leq \sqrt{\frac{x_1^2 + x_2^2 + \cdots + x_n^2}{n}}.$$
+\end{theorem}
+
+\begin{proof}
+  Consider the numbers $\frac{x_1}{\sqrt[n]{x_1x_2\ldots x_n}}, \frac{x_2}{\sqrt[n]{x_1x_2\ldots x_n}}, \cdots,
+  \frac{x_n}{\sqrt[n]{x_1x_2\ldots x_n}}$, we see that product is equal to $1$. From theorem \ref{th:strum:1}, we have that
+  $$\frac{x_1}{\sqrt[n]{x_1x_2\ldots x_n}} + \frac{x_2}{\sqrt[n]{x_1x_2\ldots x_n}} + \cdots + \frac{x_n}{\sqrt[n]{x_1x_2\ldots
+      x_n}}\geq n \Rightarrow \frac{x_1 + x_2 + \ldots + x_n}{n}\geq \sqrt[n]{x_1x_2\ldots x_n}.$$
+  The above inequality is also known as Cauchy's inequality.
+
+  In the above inequality, if we substitute $x_i = \frac{1}{x_i}$, then $$\frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \cdots +
+    \frac{1}{x_n}} \leq \sqrt[n]{x_1x_2 \ldots x_n}.$$
+
+  Consider the numbers $\frac{x_1}{x_1 + x_2 + \cdots + x_n}, \frac{x_2}{x_1 + x_2 + \cdots + x_n}, \cdots, \frac{x_n}{x_1 + x_2 +
+    \cdots + x_n}$, and note that their sum is equal to $1$. According to theorem \ref{th:strum:2}, we have $$\left(\frac{x_1}{x_1 +
+    x_2 + \cdots + x_n}\right)^2 + \left(\frac{x_2}{x_1 + x_2 + \cdots + x_n}\right)^2 + \cdots + \left(\frac{x_n}{x_1 + x_2 +
+    \cdots + x_n}\right)^2 \geq \frac{1}{n}$$
+  $$\Rightarrow \frac{x_1^2 + x_2^2 + \ldots + x_n^2}{n}\geq \left(\frac{x_1 + x_2 + \ldots + x_n}{n}\right)^2.$$
+
+  Hence, all the inequalities have been proven.
+\end{proof}
+
+\section{Cauchy–Bunyakovsky–Schwarz Inequality}
+\begin{theorem}
+  {\rm \bf (Cauchy–Bunyakovsky–Schwarz Inequality)} Let $a_1, a_2, \ldots, a_n,$ $b_1, b_2, \ldots, b_n \in R$. Then
+  $$(a_1^2 + a_2^2 + \ldots + a_n^2)(b_1^2 + b_2^2 + \ldots + b_n)^2 \geq (a_1b_1 + a_2b_2 + \ldots a_nb_n)^2$$
+\end{theorem}
+
+\begin{proof}
+  Let $x_k = \sqrt{(a_1^2 + a_2^2 + \cdots + a_k^2)(b_1^2 + b_2^2 + \cdots + b_k^2)}$, where $k = 1, 2, \ldots, n$.
+  In this case,
+
+  $$x_{k + 1} = \sqrt{(a_1^2 + a_2^2 + \cdots + a_k^2 + a_{k + 1}^2)(b_1^2 + b_2^2 + \cdots + b_k^2 + b_{k + 1}^2)}$$
+  $$\sqrt{\left[\left(\sqrt{a_1^2 + a_2^2 + \ldots + a_k^2}\right)^2 + a_{k + 1}^2\right]\left[\left(\sqrt{b_1^2 + b_2^2 + \ldots +
+        b_k}\right)^2 + b_{k + 1}^2\right]}$$
+  $$\geq \sqrt{\left(\sqrt{a_1^2 + a_2^2 + \ldots + a_k^2}.\sqrt{b_1^2 + b_2^2 + \ldots + b_k^2} + a_{k + 1}.b_{k + 1}\right)^2} =
+  x_k + a_{k + 1}b_{k + 1}$$
+  {\it Alternative Proof.}
+  $$(a_1^2 + a_2^2 + \ldots + a_n^2)(b_1^2 + b_2^2 + \ldots + b_n)^2 - (a_1b_1 + a_2b_2 + \ldots a_nb_n)^2 =
+  \sum_{i,j=1\\i\geq j}^n(a_ib_j - b_ja_i)^2\geq 0.$$
+\end{proof}
+
+\subsection{Titu's Lemma}
+\begin{lemma}
+  Let $a_1, a_2, \ldots, a_n, b_1, b_2, \ldots, b_n$ be positive real numbers then $$\frac{a_1^2}{b_1} + \frac{a_2^2}{b_2} + \ldots
+  + \frac{a_n^2}{b_n} \geq \frac{(a_1 + a_2 + \ldots + a_n)^2}{b_1 + b_2 + \ldots + b_n}$$
+\end{lemma}
+
+\begin{proof}
+  This is a direct consequence of \textit{Cauchy–Bunyakovsky–Schwarz Inequality}. It is obtained by substituting $a_i =
+  \frac{x_i}{\sqrt{y_i}}$ and $b_i = \sqrt{y_i}$ into Cauchy–Bunyakovsky–Schwarz Inequality. Equality holds if and only if $a_i =
+  kb_i$ for a non-zero real constant $k$.
+\end{proof}
+
+\section{Young's Inequality}
+\begin{theorem}
+  If $p\in [1,\infty)$ and $q = p/(p - 1)$. $q\in [1, \infty]$ and $\dfrac{1}{p} + \frac{1}{q} = 1$. If $a, b > 0$,
+    then $$\frac{a^p}{p} + \frac{b^q}{q}\geq ab$$
+\end{theorem}
+
+\begin{proof}
+  Taking $\log$ of L.H.S. $\log\left(\frac{a^p}{p} + \frac{b^q}{q}\right)$
+
+  Notice that, since $\dfrac{1}{p} + \frac{1}{q} = 1$, so the L.H.S. is just a convext combination of $a^p$ and $b^q$. Since $\log
+  x$ is a concave function, we have
+  $$\log\left(\frac{a^p}{p} + \frac{b^q}{q}\right)\geq \dfrac{\log a^p}{p} + \dfrac{b^q}{q} = \log a + \log b = \log(ab).$$
+  Hence, the inequality is proved(since $\log x$ is strictly increasing).
+
+  {\it Alternative Proof.}
+
+  Using generalized AM-GM inequality, $$\dfrac{x^p}{p} + \frac{b^q}{q}\geq \left[(x^p)^{1/p}(y^q)^{1/q}\right] = xy.$$
+\end{proof}

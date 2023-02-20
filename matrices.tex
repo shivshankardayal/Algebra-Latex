@@ -1,0 +1,522 @@
+\chapter{Matrices}
+Matrices are an important concept which has numerous real life usage in various mathematical branches. Also, it has huge importance
+in modern computer science. It has its applications in computer graphics, artificial intelligence, data structures leading to
+various clever algorithms. Thus, it is of paramount importance that the reader understand this particular concept in a sound
+manner.
+
+\textbf{Definition:} A \textit{matrix} is a rectangular array of real or complex numbers. This rectangular array is made up of rows
+and columns much like determinants. Let us consider a matrix of $m\times n$ symbols, where $m$ is number of rows and :$n$ is the
+number of columns. $$A = \begin{bmatrix}a_{11} & a_{12} & \ldots & a_{1n} \\ a_{21} & a_{22} & \ldots & a_{2n} \\ \vdots & \vdots &
+  \vdots & \vdots \\ a_{m1} & a_{m2} & \ldots & a_{mn}\end{bmatrix}$$
+Such a matrix is called $m$ by $n$ matrix or a matrix of order $m\times n$. Sometimes a matrix is shown with parenthese instead of
+square brackets as shown in last example.
+$$A = \begin{pmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} &
+\cdots & a_{2n} \\ \vdots & \vdots & \vdots & \vdots \\ a_{m1} & a_{m2} &
+\cdots & a_{mn}\end{pmatrix}$$
+A compact way to write a matrix is $A = [a_{ij}], 1\leq i \leq m; 1\leq j \leq n$ or simply $[a_{ij}]_{m\times n} a_{ij}$ is an
+element located at $i^{th}$ row and $j^{th}$ column and is called $(i, j)^{th}$ element of the matrix. A matrix is just a
+rectangular array of numbers and unlike determinants it does not have a value.
+
+\section{Classification of Matrices}
+\subsection{Equal Matrices}
+Two matrices are said to be \textit{equal} if they have same order and each corresponding element is equal.
+
+\subsection{Row Matrix}
+A matrix having a single row is called a \textit{row} matrix. For example, $[1,2, 3, 4]$.
+
+\subsection{Column Matrix}
+A matrix having a single column is called a \textit{column} matrix. For example, \[\begin{bmatrix}1\\2\\3\\4\end{bmatrix}.\]
+
+\subsection{Square Matrix}
+If $m = n$ i.e number of rows and columns are equal then the matrix is called a \textit{square} matrix. For example,
+\[\begin{bmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9\end{bmatrix}\] is a $3\times 3$ matrix.
+
+\subsection{Diagonal Matrix}
+The diagonal from left-hand side upper corner to right-hand side lower corner is known as leading diagonal or principal diagonal. In the example of square
+matrix the elements of diagonal are $1, 5, 9$. When a matrix has all elements as zero except those belonging to its diagonal, then
+it is called a \textit{diagonal} matrix. Equivalently, We can say that a matrix $[a_{ij}]_{m\times n}$ is a diagonal matrix if $a_{ij} =
+0~\forall~i\neq j$. For example, the square matrix example can be converted to a diagonal matrix like below:
+
+\[\begin{bmatrix}1 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 9\end{bmatrix}\]
+
+For an $n\times n$ matrix the diagonal elements are represented as $[d_1, d_2 \ldots, d_n]$ This diagonal is also written with a
+\textit{diag} prefix like $diag [d_1, d_2 \ldots, d_n]$.
+
+\subsection{Scalar Matrix}
+A diagonal matrix whose elements of the diagonal are equal is called \textit{scalar} matrix. For example:
+\[\begin{bmatrix}5 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 5\end{bmatrix}\]
+For a square matrix $[a_{ij}]_{m\times n}$ to be a scalar matrix:
+\[a_{ij} = \begin{cases}0, & i\neq j \\ m,& i = j\end{cases}~\forall~m\neq 0\]
+
+\subsection{Unit Matrix or Identity Matrix}
+A diagonal matrix of order $n$, which has all elements of its diagonal as one, is called a \textit{unit} or \textit{identity}
+matrix. It is also denoted by $I_n$. We can rewrite it in concise way like we did for scalar matrix as
+\[a_{ij} = \begin{cases}0, & i\neq j \\ 1,& i = j\end{cases}\]
+
+\subsection{Horizontal Matrix}
+An $m\times n$ matrix is called a \textit{horizontal} matrix if $m < n$. For example:
+\[\begin{bmatrix}1 & 2 & 3\\4 & 5 & 6\end{bmatrix}\]
+
+\subsection{Vertical Matrix}
+An $m\times n$ matrix is called a vertical matrix if $m > n$. For example:
+\[\begin{bmatrix}1 & 2 \\ 3 & 4 \\ 5 & 6\end{bmatrix}\]
+
+\subsection{Triangular Matrix}
+A sqaure matrix in which all the elements below the diagonal are zero is called \textit{upper triangular} matrix. Conversely, a
+sqaure matrix in which all the elements above the diagonal matrix is called \textit{lower triangular} matrix. Thus, for a lower
+triangular matrix $a_{ij} = 0$ when $i < j$ and for an upper triangular matrix $a_{ij} = 0$ when $i > j$
+
+Clearly, a diagonal matrix is both lower and upper triangular matrix. A triangular matrix is called strictly triangular if $a_{ii}
+= 0~\forall~1\leq i \leq n$. Example of upper triangular matrix:
+\[\begin{bmatrix}1 & 2 & 3\\0 & 5 & 6\\0 & 0 & 9\end{bmatrix}\]
+Example of lower triangular matrix:
+\[\begin{bmatrix}1 & 0 & 0\\4 & 5 & 0\\7 & 8 & 9\end{bmatrix}\]
+
+\subsection{Null or Zero Matrix}
+If all elements of a matrix is zero then it is a \textit{null} or \textit{zero} matrix.
+
+\subsection{Singular and Non-Singular Matrix}
+A matrix is said to be \textit{non-singular} if $|A|\neq 0$ and s\textit{ingular} if $|A| = 0$.
+
+\subsection{Trace of Matrix}
+If sum of the elements of a sqaure matrix $A$ lying along the principal diagonal is called the \textit{trace} of $A,$
+i.e. $tr(A)$. Thus, if $A = [a_{ij}]_{n\times n},$ then $tr(A) = \sum_{i = 1}^n a_{ii}$
+
+\subsection{Properties of Trace of a Matrix}
+To prove the second and third properties of a trace of matrix we will have to use properties given further below on algebraic
+operations on a matrix. If $A = [a_{ii}]_{n\times n}$ and $B = [b_{ii}]_{n\times n}$ and $\lambda$ is a scalar then
+
+\begin{enumerate}
+\item $tr(\lambda A) = \lambda tr(A)$
+\item $tr(A + B) = tr(A) + tr(B)$
+\item $tr(AB) = tr(BA)$
+\end{enumerate}
+
+\subsection{Determinant of a Matrix}
+Every square matrix $A$ has a determinant associated with it. This is written as $det(A)$ or $|A|$ or $\Delta$. We observe
+following for determinants of matrices:
+
+\begin{enumerate}
+\item  If $A_1, A_2, \ldots, A_n$ are square matrices of the same order then $|A_1A_2\ldots A_n| = |A_1||A_2|\ldots|A_n|$.
+\item If $k$ is a scalar, then $|kA| = k^n|A|$, where $n$ is the   order of matrix.
+\item If $A$ and $B$ are two matrices of equal order then $|AB| = |BA|$ even though $AB\neq BA$.
+\end{enumerate}
+
+\section{Algebra of Matrices}
+
+\subsection{Addition of Matrices}
+If any two matrices are of same order then addition of those can be performed. The result is a matrix of same order with
+corresponding elements added. For example, consider two $3\times 3$ matrices as given below:
+\[A = \begin{bmatrix}a_1 & a_2 & a_3\\a_4 & a_5 & a_6\\a_7 & a_8 &
+a_9\end{bmatrix}, B = \begin{bmatrix}b_1 & b_2 & b_3\\b_4 & b_5 & b_6\\b_7 & b_8 &
+b_9\end{bmatrix}\]
+then,
+\[A + B = \begin{bmatrix}a_1 + b_1 & a_2 + b_2 & a_3 + b_3\\a_4 + b_4 &
+a_5 + b_5 & a_6 + b_6\\a_7 + b_7 & a_8 + b_8 & a_9 + b_9\end{bmatrix}\]
+
+\subsection{Subtraction of Matrices}
+The conditions are same for subtraction to happen i.e.\ order of the matrices must be same. The result is like that of addition
+with resulting elements being the difference of original matrices. For example,
+\[A - B = \begin{bmatrix}a_1 - b_1 & a_2 - b_2 & a_3 - b_3\\a_4 - b_4 &
+a_5 - b_5 & a_6 - b_6\\a_7 - b_7 & a_8 - b_8 & a_9 - b_9\end{bmatrix}\]
+where $A$ and $B$ are matrices from previous example. Following is observed for addition and subtraction:
+
+\begin{enumerate}
+\item Addition of matrices is commutative i.e. $A + B = B + A$ as well as associative i.e. $(A + B) + C = A + (B + C)$.
+\item Cancellation laws are true in case of addition.
+\item  The equation $A + B = O$ has a unique solution in the set of all $m\times n$ matrices (where $O$ is null matrix).
+\end{enumerate}
+
+\subsection{Scalar Multiplication}
+The scalar multiplication of a matrix $A$ with a scalar $\lambda$ is defined as $\lambda A = [\lambda a_{ij}]$.
+
+\subsection{Multiplication of two Matrices}
+The prerequisite for matrix multiplication is that number of columns of first matrix must be equal to number of rows of second
+matrix. The product is defined as
+\[A_{m\times n}B_{n\times p} = \sum_{r = 1}^na_{mr}b_{rp}\]
+It can be easily verified that the resulting matrix will have $m$ rows and $p$ columns.
+
+\subsubsection{Properties of Matrix Multiplication}
+\begin{enumerate}
+\item Commutative laws does not hold always for matrices.
+\item If $AB = BA$, then they are called commutative matrices.
+\item If $AB = -BA$, then they are called anti-commutative matrices.
+\item Matrix multiplication is associative i.e. $(AB)C = A(BC)$. Proof of this has been left as an exercise.
+\item Matrix mulplication is distributive wrt addition and subtraction i.e. $A(B\pm C) = AB \pm AC$.
+\end{enumerate}
+
+\subsection{Transpose of a Matrix}
+Let $A$ be any matrix then its \textit{transpose} can be obtained by ecxchanging rows and columns. It is denoted by $A'$ or $A^T$
+and clearly, if order of $A$ is $m\times n$ then $A'$ will have order of $n\times m$.
+
+\subsubsection{Properties of Transpose Matrices}
+\begin{enumerate}
+\item $(A + B)' = A' + B'$.
+\item $(A')' = A$.
+\item $(kA)' = kA'$ where $k$ is a constant.
+\item $(AB)' = B'A'$.
+\end{enumerate}
+Proofs of these properties are simple and have been left as an exercise.
+
+\subsection{Symmetric Matrix}
+A sqaure matrix $A = [a_{ij}]$ is called a \textit{symmetric} matrix if $a_{ij} = a_{ji}~\forall~i,j$. We can also say thet a
+matrix is symmetric if and only if $A = A'$.
+
+\subsection{Skew Symmetric Matrix}
+A square matrix $A$ is said to be a \textit{skew symmetric} matrix if $a_{ij} = -a_{ji}~\forall i, j$. Clearly, if a matrix is skew
+symmetric then elements of its diagonal are all zeros.
+
+\subsection{Orthogonal Matrix}
+A matrix is said to be orthogonal if $AA'=1$.
+\begin{theorem}
+  If $A$ is a square matrix then $A + A'$ is a symmetric matrix and $A-A'$ is a skew symmetric matrix.
+\end{theorem}
+\begin{proof}
+  $(A + A')' = A' + (A')' = A' + A$. Hence, $A + A'$ is a symmetric matrix. $(A - A')' = A' - A = -(A - A')$. Hence, $A- A'$ is a
+  skew symmetric matrix.
+\end{proof}
+
+\begin{theorem}
+  Every square matrix can be shown as sum of a symetric matrix and a skew   symmetric matrix.
+\end{theorem}
+\begin{proof}
+  Let $A$ be any square matrix. $\frac{1}{2}(A + A') + \frac{1}{2}(A - A') = A$ hus, the matrix $A$ is a sum of symmetrix matrix $A
+  + A'$ and a skew symmetric matrix $A - A'$
+\end{proof}
+
+\subsection{Adjoint of a Matrix}
+Let $A= [a_{ij}]$ be a square matrix. Let $B = [A_{ij}]$ where $A_{ij}$ is the cofactor of the element $a_{ij}$ in the
+det.\ $A$. The transpose $B'$ of the matrix $B$ is called the adjoint of the matrix $A$ and is written by $adj. A$. For example,
+
+Let $A = \begin{bmatrix}1 & 2& 5\\2 & 3 & 4\\2& 0 & 5\end{bmatrix}$, then
+$B = \begin{bmatrix}15 & -2 & -6\\-10 & -1 & 4\\-1 & 2 & -1\end{bmatrix}$
+
+\[adj. A = B' = \begin{bmatrix}15& -10 & -1\\-2 & -1 & 2\\-6 & -4 & -1\end{bmatrix}\]
+\[A.adj(A) = adj(A).A = |A|I_n\]
+
+\subsection{Inverse of a Matrix}
+Following from above, inverse of a matrix is $\frac{adj(A)}{|A|}$. Inverse of a matrix $A$ is denoted by $A^{-1}$.
+
+\subsection{Hermitian and Skew Hermitian Matrix}
+A sqaure matrix $A = [a_{ij}]$ is said to be a \textit{Hermitian} matrix if $a_{ij} = \overline{a_{ij}}~\forall~i, j$ i.e. $A =
+A^{\theta}$. For example,
+\[\begin{bmatrix}a & b += ic \\ b - ic & d\end{bmatrix}\] is a Hermitian
+matrix.
+
+Similarly, a sqaure matrix $A = [a_{ij}]$ is said to be a \textit{skew Hermitian} matrix if $a_{ij} = \overline{a_{ji}}~\forall~i,
+j$ i.e. $A = -A^{\theta}$. For example,
+
+\[\begin{bmatrix}0 & -b + ic \\ b + ic & 0\end{bmatrix}\] is a skew Hermitian matrix. Following are observed for these types of
+matrices:
+\begin{enumerate}
+\item If $A$ is a hermitian matrix, then $a_{ii} = \overline{a_{ii}} \Rightarrow a_{ii}$ is real, $\forall~i.$ Thus, members of
+  diagonal of a Hermitian matrix are all real.
+\item A Hermitian matrix over the set of real numbers is actually a real symmetric matrix.
+\item If $A$ is a skew Hermitian matrix, then $a_{ii} = -\overline{(a_{ii})} \Rightarrow a_{ii} = 0$ i.e. $a_{ii}$ must be purely
+  imaginary or zero.
+\item A skew Hermitian matrix over the set of real numbers is acually a real skew-symmetric matrix.
+\end{enumerate}
+
+\subsection{Idempotent Matrix}
+A square matrix $A$ is said to be \textit{idempotent} if $A^2 = A$ i.e. multiplication of the matrix with itself yields itself.
+
+\subsection{Involuntary Matrix}
+A sqaure matrix $A$ is said to be \textit{involuntary} if $A^2 = I$ i.e. multiplication of the matrix with itself yields an
+indetity matrix.
+
+\subsection{Nilpotent Matrix}
+For a positive integer $i$ if a square matrix satisfied the relationship $A^i = O$ then it is called a \textit{nilpotent}
+matrix. Such smallest integer is called index of the nilpotent matrix.
+
+\section{Properties of adjoint and inverse matrices}
+\begin{enumerate}
+\item If $A$ is a sqaure matrix of order $n,$ then $A(adj(A)) = |A|I_n = (adj(A))A$.
+
+Let $A= [a_{ij}],$ and let $C_{ij}$ be a cofactor of $a_{ij}$ in $A$. Then, $(adj(A)) = C_{ji}~\forall~1\leq i, j\leq n$. Now,
+
+\[(A~adj(A)) = \sum_{r = 1}^n (A)_{ir}(adj(A))_{rj}\]
+\[= \sum_{r = 1}^n a_{ir}C_{rj} = \begin{cases} |A|, & \text{if}~i = j \\ 0, & \text{if}~i \neq j\end{cases}\]
+\[\Rightarrow = \begin{bmatrix} |A| & 0 & 0 & \ldots & 0 \\ 0 & |A| & 0
+   \ldots & 0 \\ \vdots & \vdots & \vdots & \vdots & \vdots \\ 0 & 0 & 0 &
+   \ldots & |A|\end{bmatrix}\]
+\[= |A|I_n\]
+Similarly, \[(adj(A) A)_{ij} = \sum_{r = 1}^n (adj(A))_{ir}A_{rj}\]
+\[= \sum_{r = 1}^n C_{ri}a_{rj}= \begin{cases} |A|, & \text{if}~i = j
+   \\ 0, & \text{if}~i \neq j\end{cases}\]
+
+\item Every invertible matrix possesses a unique matrix. Let $A$ be a sqaure matrix of order $n\times n$. Let $B$ and $C$ be two
+inverses of $A$. Then, $AB = BA = I_n$ and $AC = CA = I_n$
+\[AB = I_n\Rightarrow C(AB) = CI_n\Rightarrow (CA)B=CI_n\Rightarrow I_nB = CI_n\]
+\[\Rightarrow B = C\]
+
+\item  Reversal law: If $A$ and $B$ are invertible matrices of same oreder, then $AB$ is invertible and $(AB)^{-1} = B^{-1}A^{-1}.$
+In general, if $A,B, C, ...$ are invertible matrices then $(ABC\ldots)^n = \ldots C^{-1}B^{-1}A^{-1}$
+
+If the given matrices are invertible $|A|\neq 0$ and $|B|\neq 0 \Rightarrow |A||B|\neq 0$ Hence, $AB$ is an invertible matrix. Now,
+
+\[(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1}\]
+\[= A(I_n)A^{-1} = AA^{-1} = I_n\]
+Similarly, \[(B^{-1}A^{-1})(AB) = I_n\]
+
+\item  If $A$ is an invertible matrix, then $A'$ is also invertible and $(A')^{-1} = (A^{-1})'$.
+
+$A$ is an invertible matrix $\therefore |A| \neq 0 \Rightarrow |A'|\neq 0 [\because |A'| = |A|]$. Hence, $A'$ is also invertible. Now,
+\[AA^{-1} = I_n = A^{-1}A\]
+\[(AA^{-1})' = (A^{-1}A)'\]
+\[(A^{-1})'A' = I_n = A'(A^{-1})'\]
+\[\Rightarrow (A')^{-1} = (A^{-1})'\]
+
+\item  If $A$ is a non-singular square matrix of order $n,$ then $|adj A| = |A|^{n - 1}$.
+
+We have $A(adj(A)) = |A|I_n$
+
+\[A(adj(A)) = \begin{bmatrix}|A| & 0 & 0 & \cdots & 0 \\ 0 & |A| & 0 & \cdots & 0 \\ \vdots & \vdots & \vdots \\ 0 & 0 & 0 & \ldots
+  & |A|\end{bmatrix}\]
+\[|A(adj(A))| = |A|^n\]
+\[|adj(A)| = |A|^{n - 1}\]
+
+\item  Reversal law for adjoint: If $A$ and $B$ are non-singular
+   sqaure matrices of the same order, then
+
+   $adj(AB) = adj(B)adj(A)$ using $(AB)^{-1} = B^{-1}A^{-1}$
+
+\item  If $A$ is an invertible square matrix, then $adj(A') =
+   (adj(a))'$
+
+\item  If $A$ is a sqaure non-singular matrix, then $adj(adj(A)) = A^{n
+   - 2}A$
+
+We know that $B(adj(B)) = |B|I_n$ for every sqaure matrix of order $n.$ Replacing $B$ by $adj(A),$ we get $(adj(A))[adj(adj(A))] =
+|adj(A)|I_n = |A|^{n - 1}I_n$. Multiplying both sides by $A$
+\[(A~adj(A))[adj(adj(A))] = A\{|A|^{n - 1}I_n\}\]
+\[|A|I_n (adj(adj(A))) = |A^{n - 1}|(AI_n)\]
+\[adj(adj(A)) = |A^{n - 2}|A\]
+
+\item  If $A$ is a non-singular matrix then $|A^{-1}| = = |A|^{-1}$ i.e. $|A^{-1}| = \frac{I}{A}$. Since $|A|\neq 0, \therefore
+  AA^{-1} = I, |AA^{-1}| = |A|\Rightarrow |A||A^{-1}| = 1$
+
+\item  Inverse of $k^{th}$ power of $A$ is $k^{th}$ power of the inverse of $A$.
+\end{enumerate}
+
+\section{Solution of Simultaneous Linear Equations}
+Consider the system of equations given below:
+
+$$\begin{cases}a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n} = b_1\\a_{21}x_1 +
+a_{22}x_2 + \cdots + a_{2n} = b_2\\\vdots\\a_{n1}x_1 + a_{n2}x_2 + \cdots +
+a_{nn} = b_n\end{cases}$$
+
+Let $$A = \begin{bmatrix}a_{11} & a_{12} & \cdots &a_{1n}\\a_{21} & a_{22}
+& \cdots &a_{2n}\\\vdots & \vdots & \cdots & \vdots\\a_{n1} & a_{n2} & \cdots
+&a_{nn}\end{bmatrix}, X= \begin{bmatrix}x_1\\x_2\\\vdots\\x_n\end{bmatrix}, B =
+\begin{bmatrix}b_1 \\ b_2 \\ \cdots\\ b_n\end{bmatrix}$$
+
+The system of equations can be written as $AX = B\Rightarrow X=A^{-1}B$. If $|A|\neq 0$, the system of equations has only trivial
+solution and the number of solutions is finite. If $|A|=0$, the system of equations has non-trivial solution and the number of
+solutions is infintite. If the number of equations is less than the number of unknonwns then it has non-trivial solutions.
+
+\section{Elementary Operations/Transformations of a Matrix}
+Following are elementary operations of a matrix:
+\begin{enumerate}
+\item The interchange of any two rows or columns.
+\item The multiplication of any row or column with a non-zero number.
+\item The addition to the elements of any row or columns the corresponding elements of any other row or column multiplied with any
+  non-zero number.
+\end{enumerate}
+
+Elementary operations are also called row or column operation.
+
+\subsection{Equivalent Matrices}
+If a matrix $B$ can be obtained from a matrix $A$ by elementary transformations, then they are called equivalent matrices and are
+written as $A\text{~} B$.
+
+Every elementary row or column transformation of $m\times n$ matrix (not identiry matrix) can be obtained by pre-multiplcation or
+post-multiplication with the corresponding elementary matrix obtained from the identity matrix $I_m(I_n)$ by subjecting it to the
+same elementary row or column transformation.
+
+Let $C = AB$ be a product of two matrices. Any elementray row or column transformation of $AB$ can be obained by subjecting the
+pre-factor $A$ or post-factor $B$ to the same elementary row or column transformation.
+
+\subsection{Method of Finding Inverse of a Matrix by Elementary Transformation}
+Let $A$ be a non-singular matrix of order $n$. Then $A$ can be reduced to the identity matrix $I_n$ by a sequence of elementary
+transformations only. As we have discussed every elementary row transformation of a matrix is equivalent top pre-multiplication by
+the corresponding elementary matrix. Therefore, there exists elementary matrices $E_1, E_2,\ldots, E_k$ such that
+$$(E_1,E_2,\ldots, E_k)A = I_n$$
+$$(E_1,E_2,\ldots, E_k)AA^{-1} = I_nA^{-1}$$
+$$(E_1,E_2,\ldots, E_k)I_n = A^{-1}$$
+
+\section{Echelon Form of a Matrix}
+A matrix is said to be in echelon form if
+\begin{enumerate}
+\item Every row of $A$ which has all its elements $0$, occurs below row which has a non-zero element.
+\item The first non-zero element in each non-zero row is $1$.
+\item The number of zeros before the first non-zero element in a row is less than the number of such zeros in the next row.
+\end{enumerate}
+
+\section{Rank of a Matrix}
+Let $A$ be a matrix of order $m\times n$. If at least one of its minors of order $r$ is different from zero and all minors of order
+$r + 1$ are zero, then the number $r$ is called the rank of the matrix $A$ and is denoted by $\rho(A)$.
+
+\begin{enumerate}
+\item The rank of a zero matrix is zero and rank of an identity matrix of order $n$ is $n$.
+\item The rank of a non-singular matrix of order $n$ is $n$.
+\item The rank of a matrix in echelon form is equal to the number of non-zero rows of the matrix.
+\end{enumerate}
+
+\section{Application of Matrices to Geometry or Computer Graphics}
+As said earlier matrices are very useful to represent many operaion in computer
+graphics or geometry. It will require some knowledge of coordinate geometry.
+
+\subsection{Reflection Matrix}
+Consider a point $P(x, y)$ and its reflection $Q(x_1, y_1)$ along
+x-axis.
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[->] (-.5,0) -- (3,0);
+      \draw[->] (0, -0.5) -- (0,3);
+
+      \draw (2, 2) -- (2, -2);
+      \draw (2, 2.2) node{$P(x, y)$};
+      \draw (2, -2.2) node{$Q(x_1, y_1)$};
+      \draw[dashed] (2, 2) -- (2, -2);
+      \draw  (0, 3.2) node{$x$};
+      \draw  (3.2, 0) node{$y$};
+    \end{tikzpicture}
+    \caption{Reflection of a point along x-axis}
+  \end{center}
+\end{figure}
+
+This may be written as $x_1 = x + 0; y_1 = 0 - y$. This system of equation can be written in matrix form as
+
+$$\begin{bmatrix}x_1\\y_1\end{bmatrix} = \begin{bmatrix}1 & 0 \\ 0 &
+-1\end{bmatrix} \begin{bmatrix}x \\ y\end{bmatrix}$$
+
+Thus the matrix $\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}$ is
+reflection matrix of a point along x-axis. Similarly, $\begin{bmatrix}-1
+& 0 \\ 0 & 1\end{bmatrix}$ is reflection matrix along y-axis.
+
+Similarly, the reflection matrix through origin is $\begin{bmatrix}-1
+& 0 \\ 0 & -1\end{bmatrix}$
+
+Similarly, reflection along the line $y = x$ is $\begin{bmatrix}0 &
+1 \\ 1 & 0\end{bmatrix}$
+
+Similarly, reflection along the line $y = x\tan\theta$ is
+$\begin{bmatrix}\cos 2\theta & \sin 2\theta \\ \sin 2\theta & -\cos
+2\theta\end{bmatrix}$
+
+\subsection{Rotation Through an Angle}
+The rotation matrix in such a form would be $\begin{bmatrix}\cos\theta &
+-\sin\theta \\ \sin\theta & \cos\theta\end{bmatrix}$ for anti-clockwise
+rotation.
+
+\section{Problems}
+\begin{enumerate}
+\item Find the number of matrices having $12$ elements.
+\item Write down the matrix $A = [a_{ij}]_{2\times 3}$ where $a_{ij} = 2i - 3j$.
+\item If $A= \begin{bmatrix}a & b\\-b & a\end{bmatrix}, B=\begin{bmatrix}-a & b\\-b & -a\end{bmatrix}$, then find $A + B$.
+\item If $Y = \begin{bmatrix}3 & 2\\1 & 4\end{bmatrix}$ and $2X + Y = \begin{bmatrix}1 & 0\\-3 & 2\end{bmatrix}$, find $X$.
+\item If $\begin{bmatrix}x^2 - 4x & x^2\\x^2 & x^3\end{bmatrix} = \begin{bmatrix}-3 & 1\\ x- + 2 & 1\end{bmatrix}$, then find $x$.
+\item Find $x, y, z$ and $a$ for which $\begin{bmatrix}x + 3 & 2y + x \\ z -1 & 4a - 6\end{bmatrix} = \begin{bmatrix}0 & -7 \\ 3 &
+    2a\end{bmatrix}$.
+\item If $A = \begin{bmatrix}1 & 2 & 3\\-1 & 0 & 2\\1 & -3 & 1\end{bmatrix}, B = \begin{bmatrix}4 & 5 & 6\\ -1 & 0 & 1\\ 2 & 1 &
+    2\end{bmatrix}$, find $4A - 3B$.
+\item If $A = \begin{bmatrix}1 & -2 & 3 \\ -4 & 2 & 5\end{bmatrix}, B = \begin{bmatrix}2 & 3 \\ 4 & 5 \\ 2 & 1\end{bmatrix}$, find
+    $AB$ and $BA$. Also, show that $AB\neq BA$.
+\item If $A, B, C$ are three matrices such that $A = \begin{bmatrix}x & y & z\end{bmatrix}, B = \begin{bmatrix}a & h & g\\h & b & f
+    \\ g & f & c\end{bmatrix}, C = \begin{bmatrix}x \\ y \\ z\end{bmatrix}$, then find $ABC$.
+\item Find the transpose and adjoint of the matrix $A$, where $A =    \begin{bmatrix}1 & 2 & 3\\0 & 5 & 0\\2 & 4 &
+  3\end{bmatrix}$.
+\item Find the inverse of the matrix $A = \begin{bmatrix}0 & 1 & 2\\1 & 2 & 3\\3 & 1 & 1\end{bmatrix}$.
+\item Find the inverse of the matrix $A= \begin{bmatrix}1 & 2 & 5\\2 & 3 & 1\\-1 & 1 & 1\end{bmatrix}$ and verify that $AA^{-1} =
+  1$.
+\item Let $A = \begin{bmatrix}1 & 2 & 2\\2 & 1 & 2\\2 & 2 & 1\end{bmatrix}$, prove that $A^2-4A-5I = 0$, hence obtain $A^{-1}$.
+\item Solve the following equations by matrix method: $5x + 3y +z = 16, 2x + y + 3z = 19 \text{~and~}x + 2y + 4z = 25$.
+\item Find the product of two matrices $A$ and $B$ where  $A=\begin{bmatrix}-5 & 1 & 3\\7 & 1 & -5\\1 & -1 & 1 \end{bmatrix}, B
+  = \begin{bmatrix}1 & 1 & 2\\ 3 & 2 & 1\\ 2 & 1 & 3\end{bmatrix}$ and use it for solving the equations $x + y + 2z = 1, 3x + 2y +
+    z = 7\text{~and~}2x + y + 3z = 2$.
+\item If $\begin{bmatrix}x + y & 2 \\ 1 & x - y\end{bmatrix} = \begin{bmatrix} 3 & 2 \\ 1 & 7\end{bmatrix}$, then find $x$ and $y$.
+\item If $\begin{bmatrix}x - y & 2x + x_1 \\ 2x - y & 3x + y_1\end{bmatrix} = \begin{bmatrix}-1 & 5 \\ 0 & 13\end{bmatrix}$ and
+    co-ordinates of points $P$ and $Q$ be $(x, y)$ and $(x_1, y_1)$, then find $PQ$.
+\item Find $X$ and $Y$ if $X + Y = \begin{bmatrix}7 & 0 \\ 2 & 5\end{bmatrix}$ and $X - Y = \begin{bmatrix}3 & 0 \\ 0 & 3\end{bmatrix}$.
+\item Given $A = \begin{bmatrix} 1 & 2 & -3 \\ 5 & 0 & 2 \\ 1 & -1 & 1\end{bmatrix}$ and $B = \begin{bmatrix}3 & -1 & 2 \\ 4 & 2 &
+    5 \\ 2 & 0 & 3\end{bmatrix}$, find the matrix $C$ such that $A + C = B$.
+\item If $A = \begin{bmatrix}2 & 3 & 4 \\ -3 & 0 & 2\end{bmatrix}, B = \begin{bmatrix}3 & -4 & -5 \\ 1 & 2 & 1\end{bmatrix}$ and $C
+    = \begin{bmatrix} 5 & -1 & 2 \\ 7 & 0 & 3\end{bmatrix}$, find the matrix $X$ such that $2A + 3B = X + C$.
+\item If $A = \begin{bmatrix} 1 & 2 & 3 \\ -1 & 0 & 2 \\ 1 & -3 & 1\end{bmatrix}, B = \begin{bmatrix}4 & 5 & 6 \\ -1 & 0 & 1 \\ 2 &
+    1 & 2\end{bmatrix}, C = \begin{bmatrix}-1 & 2 & 1 \\ -1 & 2 & 3 \\ -1 & -2 & 2\end{bmatrix}$, find $A = 2B + 3C$.
+\item If $P(x) = \begin{bmatrix}\cos x & \sin x \\ -\sin x & \cos x\end{bmatrix},$ then show that $P(x).P(y) = P(x + y) = P(y).P(x)$
+\item If $A = \begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ a & b & -1\end{bmatrix},$ find $A^2$.
+\item If $A=\begin{bmatrix}-1 & 1 & -1 \\ 3 & -3 & 3 \\ 5 & -5 & 5 \end{bmatrix}, B = \begin{bmatrix}0 & 4 & 3 \\ 1 & -3 & -3 \\ -1
+  & 4 & 4\end{bmatrix},$ then find $A^2B^2$.
+\item If $A = \begin{bmatrix}2 & 3 & 4 \\ 1& 2 & 3 \\ -1 & 1 & 2\end{bmatrix}, B = \begin{bmatrix}1 & 3 & 0\\ -1 & 2 & 1 \\ 0 & 0 &
+    2\end{bmatrix},$ find $AB$ and $BA$ and show that $AB \neq BA$.
+\item Find the product of the following two matrices: $\begin{bmatrix}0 & c & -b \\ -c & 0 & a \\ b & -a & 0\end{bmatrix}$ and
+  $\begin{bmatrix}a^2 & ab & ac \\ ab & b^2 & bc \\ ac & bc & c^2\end{bmatrix}$.
+\item If $A = \begin{bmatrix}3 & -5 \\ -4 & 2\end{bmatrix}$, find $A^2 - 5A - 14I,$ where $I$ is a unit matrix.
+\item Verify that $A = \begin{bmatrix}2 & 3\\ 1 & 2\end{bmatrix}$ satisfies the equation $A^3 - 4A^2 + A = O$.
+\item If $A = \begin{bmatrix}0.8 & 0.6 \\ -0.6 & 0.8\end{bmatrix},$ find $A^2$.
+\item If $A = \begin{bmatrix}3 & 1 \\ -1 & 2\end{bmatrix}$, find $f(A)$, where $f(x) = x^2 - 5x + 7I$.
+\item If $A=\begin{bmatrix}\cos\theta & \sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}, B = \begin{bmatrix}\cos\phi & \sin\phi
+  \\\sin\phi & \cos\phi \end{bmatrix},$ show that $AB = BA$.
+\item Let $f(x) = x^2 - 5x + 6,$ find $f(A),$ if $A = \begin{bmatrix} 2 & 0 & 1 \\ 2 & 1 & 3 \\ 1 & -1 & 9\end{bmatrix}$.
+\item If the matrix $A = \begin{bmatrix}5 & 3 \\ 12 & 7\end{bmatrix},$ then verify that $A^2 - 12 A - I = 0,$ where $I is a unit matrix$.
+\item Show that $\begin{pmatrix}\begin{bmatrix}1 & \omega & \omega^2 \\\omega & \omega^2 & 1 \\ \omega^2 & 1 & \omega \end{bmatrix}
+  + \begin{bmatrix} \omega & \omega^2 & 1 \\ \omega^2 & 1 & \omega \\ \omega & \omega^2 &
+    1\end{bmatrix}\end{pmatrix} \begin{bmatrix}1 \\ \omega \\ \omega^2 \end{bmatrix} = \begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}$.
+\item Let $A = \begin{bmatrix}0 & -\tan\frac{\alpha}{2} \\\tan\frac{\alpha}{2} & 0\end{bmatrix}$ and $I$, the identity matrix of
+  order $2$. Show that $I+ A = (I - A) \begin{bmatrix} \cos\alpha & -\sin\alpha \\ \sin\alpha & \cos\alpha\end{bmatrix}$.
+\item Without using the concept of inverse of matrix, find the matrix $\begin{bmatrix} x & y \\ z & u\end{bmatrix}$ such that
+  $\begin{bmatrix} 5 & -7 \\ -2 & 3\end{bmatrix} \begin{bmatrix} x & y \\ z & u \end{bmatrix} = \begin{bmatrix} -16 & -6 \\ 7 &
+      2\end{bmatrix}$.
+\item $x$ so that $\begin{bmatrix}1 & x & 1\end{bmatrix}\begin{bmatrix} 1 & 3 & 2 \\ 0 & 5 & 1 \\ 0 & 3 &
+    2 \end{bmatrix} \begin{bmatrix}1 \\ 1 \\ x\end{bmatrix} = O$.
+\item Prove that the product of two matrices $\begin{bmatrix} \cos^2\theta &\cos\theta\sin\theta \\ \cos\theta\sin\theta &
+  \sin^2\theta\end{bmatrix}$ and $\begin{bmatrix} \cos^2\phi & \cos\phi\sin\phi \\ \cos\phi\sin\phi & \sin^2\phi\end{bmatrix}$ is a
+    zero matrix when $\theta$ and $\phi$ differ by an odd multiple of $\frac{\pi}{2}$.
+\item If $A = \begin{bmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$, then show that $A^n
+  = \begin{bmatrix}\cos \theta & -\sin n\theta \\ \sin n\theta &  \cos n\theta\end{bmatrix}$, where $n$ is a positive integer.
+\item If $A = \begin{bmatrix}3 & -4 \\ 1 & -1\end{bmatrix}$, show that $A^n = \begin{bmatrix}1 + 2n & -4n \\ n & 1 -
+    2n\end{bmatrix}$, where $n$ is a positive integer.
+\item Let $A = \begin{bmatrix} 0 & 1 \\ 0 & 0\end{bmatrix}$. Show that $(aI + bA)^n = a^nI + na^{n - 1}bA,$ where $I$ is a unit
+  matrix of order $2$ and $n$ is a positive integer.
+\item Under what condition is the marix equation $A^2 - B^2 = (A + B)(A - B)$ true?
+\item A man buys $8$ dozens of mangoes, $10$ dozens of apples and $4$ dozens of bananas.Mangoes cost USD $18$ per dozen, apples $9$
+  per dozen and bananas $6$ per dozen. Represent the quntities by a row and a column matrix. Also, find the total cost.
+\item A trust fund has USD $30,000$ that is to be invested in two different types of bonds. The first bond pays $5\%$ interest per
+  year and second bond pays $7\%$ interest per year. Using matrix multiplication determine how to divide USD $30,000$ among the two
+  types of bonds if the turst find must obtain an annual interest of USD $2000$.
+\item A store has in stock $20$ dozen shirts, $15$ dozen trousers and $25$ dozen pair of socks. If the selling prices are USD $50$
+  per shirt, $90$ per trouser and $12$ per pair of socks, then find the toal amount store owner will get after selling all the
+  items in the stock.
+\item Co-operative store of a particular school has $10$ dozen physics books, $8$ dozen chemisty books and $5$ dozen mathematics
+  books. Their selling prices are USD $8.3, 3.45, 4.5$ each respectively. Find the total amnount the store owner will receive after
+    selling all the books.
+\item If $A = \begin{bmatrix}\cos\alpha & \sin\alpha \\ -\sin\alpha & \cos \alpha\end{bmatrix}$, verify that $AA' = I_2 = A'A$.
+\item Express the following matrix as a sum of a symmetric matrix and skew symmetric matrix $\begin{bmatrix}1 & 2 & 4 \\ 6 & 8 & 1
+  \\ 3 & 5 & 7\end{bmatrix}$.
+\item Show that the following matrix is orthogonal $\begin{bmatrix} \cos\alpha & \sin\alpha \\ -\sin\alpha & \cos\alpha\end{bmatrix}$.
+\item Show that the matrix $\frac{1}{3}\begin{vmatrix} -1 & 2 & 2 \\ 2 & -1 & 2 \\ 2 & 2 & -1\end{vmatrix}$ is orthogonal.
+\item If $A = \begin{bmatrix}1 & 2 & 3 \\ 2 & 3 & 2 \\ 3 & 3 & 4\end{bmatrix},$ find $adj(A)$.
+\item For the matrix $\begin{bmatrix}\cos\alpha & -\sin\alpha & 0 \\\sin\alpha & \cos\alpha & 0 \\ 0 & 0 & 1\end{bmatrix}$ verify
+  that $A(adj A) = |A|I$.
+\item For the matrix $A = \begin{bmatrix}1 & -1 & 1 \\ 2 & 3 & 0 \\ 8 & 2 & 10\end{bmatrix}$, show that $A adj(A) = O$.
+\item Find the inverse of $\begin{bmatrix}1 & 3 & 3 \\ 1 & 4 & 3 \\ 1 & 3 & 4\end{bmatrix}$.
+\item Find the inverse of $\begin{bmatrix}2 & -3 & 3 \\ 2 & 2 & 3 \\ 3 & -2 & 2\end{bmatrix}$.
+\item Find the inverse of $\begin{bmatrix}1 & -2 & 3 \\ 0 & -1 & 4 \\ -2 & 2 & 1\end{bmatrix}$.
+\item Find the inverse of $\begin{bmatrix}1 & 2 & 3 \\ -3 & 5 & 0 \\ 0 & 1 & 1\end{bmatrix}$.
+\item If $A = \begin{bmatrix}a & b \\ c & d\end{bmatrix}$ such that $ad - bc \neq 0$, then find the inverse of $A$.
+\item If $A = \begin{bmatrix}3 & 1 \\ 4 & 0\end{bmatrix}, B = \begin{bmatrix} 4 & 0 \\ 2 & 5 \end{bmatrix}$, verify thet $(AB)^{-1}
+  = B^{-1}A^{-1}$.
+\item If $A = \begin{bmatrix}1 & \tan x \\ -\tan x & 1\end{bmatrix}$, show that $AA^{-1} = \begin{bmatrix}\cos 2x & -\sin 2x
+    \\ \sin 2x & \cos 2x\end{bmatrix}$.
+\item If $A = \begin{bmatrix} 3 & 2 \\ 7 & 5 \end{bmatrix}$ and $B = \begin{bmatrix} 6 & 7 \\ 8 & 9 \end{bmatrix}$, find $(AB)^{-1}$.
+\item Solve the following system of equations by matrix method: $3x - 2y = 7$ and $5x + 3y = 1$.
+\item Solve the following system of equations by matrix method: $5x - 7y = 2$ and $7x -5y = 3$.
+\item Solve the following system of equations by matrix method: $2x - 3y + 3z = 1,\ 2x + 2y + 3z = 2$ and $3x -2y + 2z = 3$.
+\item Solve the following system of equations by matrix method: $x + y + z = 3,\ 2x - y + z = 2$ and $x - 2y + 3z = 2$.
+\item Solve the following system of equations by matrix method: $2x - y + 3z = 9,\ x + y + z = 6$ and $x - y + z = 2$.
+\item Examine following system of equations for consistency: $2x + 3y = 5$ and $6x + 9y = 10$.
+\item Examine following system of equations for consistency: $4x - 2y = 3$ and $6x - 3y = 5$.
+\end{enumerate}
