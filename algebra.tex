@@ -1,6 +1,6 @@
 \documentclass[9pt, oneside, b5paper, openright]{memoir}
 %\documentclass[9pt, twoside, openright, showtrims]{memoir}
-\usepackage[b5paper, total={5in, 7in}]{geometry}
+\usepackage[b5paper, total={5in, 7.8in}]{geometry}
 %\setstocksize{11in}{8in}
 %\settrimmedsize{9in}{8in}{*}
 %\settrims{0.7in}{0in}
@@ -10,7 +10,7 @@
 %\setheadfoot{\onelineskip}{2\onelineskip}
 %\setheaderspaces{*}{2\onelineskip}{*}
 %\checkandfixthelayout
-
+\special{pdf:minorversion 7}
 \makeatletter
 \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
 \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
@@ -37,6 +37,7 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
+
 % Define block styles
 \tikzstyle{decision} = [diamond, draw,
   text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
@@ -69,7 +70,7 @@
 \definecolor{webbg}{rgb}{1,.8,.2}
 \definecolor{bootstrapurl}{rgb}{0,.5,.75}
 \definecolor{nicered}{rgb}{.7,0,0}
-\definecolor{nicegreen}{rgb}{.129,.447,.149}
+\definecolor{nicegreen}{rgb}{0,.4,0}
 \definecolor{niceblue}{rgb}{0, 0, .6}
 \definecolor{niceyellow}{rgb}{1,1,.95}
 \definecolor{nicecyan}{rgb}{0, 0.5, 0.75}
@@ -151,7 +152,9 @@
 \setsansfont{Roboto}
 %\usepackage{unicode-math}
 %\setmathrm{texgyrepagella-math.otf}
-
+\newtheorem{remark}{Remark}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
 \usepackage{polyglossia}
 
 \setmainlanguage{english}
@@ -172,7 +175,7 @@
 \vfill
 \newpage
 \vspace*{5in}
-Build Date: \today
+Build Date: \today [{\color{red}Early Draft}]
 \vspace*{0.2in}
 
 Copyright, \copyright~ Shiv Shankar Dayal, 2011-2023. All rights reserved.\\\\
@@ -198,30 +201,28 @@ in the section entitled ``GNU Free Documentation License''.
 (Self study is ultimate penance.)
 \end{center}
 \newpage
-\setcounter{page}{1}
-\pagenumbering{roman}
-\tableofcontents
 % \newpage
 % \listofpyglistings
 \newpage
-\pagestyle{fancy}
 \frontmatter
 \setcounter{page}{1}
 \pagenumbering{roman}
+\tableofcontents
 \include{preface}
 \newpage
+\pagestyle{fancy}
 \mainmatter
 \pagenumbering{arabic}
 \part{Theory and Problems}
-\include{logarithm}
-\include{progressions}
-\include{complex-numbers}
-\include{theory-of-equations}
-\include{permutations-and-combinations}
-\include{mathematical-induction}
-\include{binomials-multinomials-expansions}
-\include{determinants}
-\include{matrices}
+%\include{logarithm}
+%\include{progressions}
+%\include{complex-numbers}
+%\include{theory-of-equations}
+%\include{permutations-and-combinations}
+%\include{mathematical-induction}
+%\include{binomials-multinomials-expansions}
+%\include{determinants}
+%\include{matrices}
 \include{inequalities}
 \part{Solutions}
 \include{logarithm-solutions}
