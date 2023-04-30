@@ -1,5 +1,5 @@
-SRCS = *.tex
-algebra.pdf: $(SRCS)
+SRCS = *.tex Makefile
+build/algebra.pdf: $(SRCS)
 	mkdir -p build
-	xelatex --shell-escape -output-directory=build algebra.tex
+	lualatex --shell-escape -output-directory=build algebra.tex
 	#xelatex --shell-escape -output-directory=build algebra.tex

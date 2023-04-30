@@ -1,5 +1,5 @@
 \chapter{Inequalities}
-Ineuqlities come up in different branches of mathematics; for example in algebra, geometry and trigonometry. They are very
+Ineuqalities come up in different branches of mathematics; for example in algebra, geometry and trigonometry. They are very
 useful in establishing many relations among various quantities. Certain inequalities are very useful in studying properties of
 many common expressions which lead to interesting observations. In this chapter we will only study algebraic inequalitites. The
 problems given are quite basic and simple. We start with some useful theorems for these inequalities.
@@ -1027,4 +1027,264 @@ Some special cases are given below:
     a^3) + (c - b)^3 + (a - c)^3\right]$
   \item $a^4 + b^4 + c^4 - a^2b^2 - b^2c^2 - c^2a^2 = \frac{(a^2 - b^2)^2 + (b^2
     - c^2)^2 + (c^2 - a^2)^2}{2}$
+\end{enumerate}
+
+\begin{theorem}
+  Consider two polynomials having the same degree and same number of variables $A$ and $B$. The difference of these two polynomilas
+  can be written in SOS form:
+  $$\sum_{cyc}a_1^{\alpha_1}a_2^{\alpha_2}\ldots a_n^{\alpha_n} - \sum_{cyc}a_1^{\beta_1}a_2^{\beta_2}\ldots a_n^{\beta_n} = \sum
+  P_{ij}(a)(a_i - a_j)^2,$$
+  where $\alpha_1 + \alpha_2 + \cdots + \alpha_n = \beta_1 + \beta_2 + \cdots + beta_n = m$ and $a = (a_1, a_2, \ldots,
+  a_n)$.
+\end{theorem}
+
+\begin{proof}
+  We need to prove the following lemma first.
+  \begin{lemma}
+    If $a = (a_1, a_2, \ldots, a_n)$ and $\alpha_1 + \alpha_2 + \alpha_n = m$, then:
+    $$\sum_{cyc}a_1^n - \sum_{cyc}a_1^{\alpha_1}a_2^{\alpha_2}\ldots a_n^{\alpha_n} = \sum P_{ij}(a)(a_i - a_j)^2$$
+  \end{lemma}
+  We prove this lemma by induction over $k$, which will be the number of elements except $0$ belonging to the set ${\alpha_1,
+    \alpha_2, \ldots, \alpha_n}$.
+
+  If $k = 1$, the theorem is obviously true.
+
+  If $k = 2$, the expression becomes $\sum_{cyc}a_1^m - \sum_{a_1}^ta_2^{m - t} = \sum P_{ij}(a)(a_i - a_j)^2$
+
+  We observe that $ta^m + (m - t)b^m - ma^tb^{m - t} = P(a, b)(a - b)^2$. We also observe that $f(x) = tx^n + (m - t) - mx^t = 0$
+  has one repeated root which is $1$ because $f(1) = f'(1) = 0$. Therefore $f(x)$ can be written like $Q(x)(x - 1)^2$ where degree
+  of $Q$ will be $m - 2$.
+
+  Let $x = \frac{a}{b}$, then we have: $b^mf\left(\frac{a}{b}\right) = ta^m + (m - t)b^m - ma^tb^{m - 1} = b^{m -
+    2}Q\left(\frac{a}{b}\right)(a - b)^2$.
+
+  However, $b^{m - 2}$ is a polynomial having $2$ variables $a, b$ because $Q$ is a $m - 2$ degree polynomial. If our proposition
+  is already true with $k$, the number of elements except for $0$ in the set of $\alpha$, with $k + 1$ we can transform this into
+  the case of $k$ as given below:
+
+  $a_1^{\alpha_1}a_2^{\alpha_2}\ldots a_{k+1}^{\alpha_{k +1}} = \frac{\alpha_1a_1^{\alpha_1 + \alpha_2} + \alpha_2a_2^{\alpha_1 +
+      \alpha_2} - (\alpha_1 + \alpha_2)a_1^{\alpha_1}a_2^{\alpha_2}}{\alpha_1 + \alpha_2}.a_3^{\alpha_3}\ldots a_{k+1}^{\alpha_{k
+    +1}}\frac{\alpha_1}{\alpha_1 + \alpha_2}a_1^{\alpha_1+\alpha_2}$
+
+  $a_3^{\alpha_3}\ldots a_{k + 1}^{\alpha_{k + 1}} + \frac{\alpha_2}{\alpha_1 + \alpha_2}a_2^{\alpha_1 + \alpha_3}a_3^{\alpha_3}\ldots a_{k
+    + 1}^{\alpha_{k +1}}$
+
+  With $k = 2$: $\frac{\alpha_1a_1^{\alpha_1 + \alpha_2} + \alpha_2a_2^{\alpha_1 + \alpha_2} - (\alpha_1 +
+    \alpha_2)a_1^{\alpha_1}a_2^{\alpha_2}}{\alpha_1 + \alpha_2} = H_{12}(a)(a_1 - a_2)^2$, we have:
+
+  $a_1^{\alpha_1}a_2^{\alpha_2}\ldots a_{k+1}^{k + 1} = Q_{12}(a)(a_1 - a_2)^2 + \frac{\alpha_1}{\alpha_1 +
+    \alpha_2}a_1^{\alpha_1+\alpha_2}a_3^{\alpha_3}\ldots a_{k + 1}^{\alpha_{k + 1}} + \frac{\alpha_2}{\alpha_1 + \alpha_2}a_2^{\alpha_1 +
+    \alpha_3}a_3^{\alpha_3}\ldots a_{k + 1}^{\alpha_{k +1}}$
+
+  $\therefore \sum_{cyc}a_1^m - \sum_{cyc}a_1^{\alpha_1}a_2^{\alpha_2}\ldots a_{k + 1}^{\alpha_{k + 1}} = -\sum_{cyc}Q_{12}(a)(a_1
+  - a_2)^2 + \sum_{cyc}a_1^m - \frac{\alpha_1}{\alpha_1 +
+    \alpha_2}$
+
+  $\sum a_1^{\alpha_1+\alpha_2} a_3^{\alpha_3}\ldots a_{k + 1}^{\alpha_{k + 1}} + \sum\frac{\alpha_2}{\alpha_1 +
+    \alpha_2}a_2^{\alpha_1 +\alpha_3}a_3^{\alpha_3}\ldots a_{k + 1}^{\alpha_{k +1}} \sum_{a_1}^m - \sum_{cyc}a_1^{\alpha_1}\ldots
+  a_{k +1}^{\alpha_{k +1}}$
+
+  $= -\sum Q_{12}(a)(a_1 - a_2)^2 + \frac{\alpha_1}{\alpha_1 + \alpha_2}\left(\sum_{cyc} a_1^m - \sum_{cyc}a_1^{\alpha_1 +
+    \alpha_2}a_3^{\alpha_3}\ldots a_{k+1}^{\alpha_{k+1}}\right) + $
+
+  $\frac{\alpha_2}{\alpha_1 + \alpha_2}\left(\sum_{cyc} a_1^m - \sum_{cyc}a_2^{\alpha_1 + \alpha_2}a_3^{\alpha_3}\ldots a_{k+1}^{\alpha_{k+1}}\right)$
+
+  So we see that these can be written in SOS form recursively. Hence proved.
+\end{proof}
+
+\section{Problems}
+Prove the following equalities:
+
+\begin{enumerate}
+\item $a^2 + b^2 \geq 2ab$.
+\item $\sqrt{ab}\geq \frac{2}{\frac{1}{a} + \frac{1}{b}}$, where $a>0, b>0$.
+\item $\sqrt{\frac{a^2 + b^2}{2}}\geq \frac{a + b}{2}$
+\item $\frac{a + b}{2}\geq \frac{2}{\frac{1}{a} + \frac{1}{b}}$, where $a>0, b>0$.
+\item $a + b > 1 + ab$, where $b < 1 < a$.
+\item $a^2 + b^2 > c^2 + (a + b - c)^2$, where $b < c< a$.
+\item $2\leq \frac{a}{b} + \frac{b}{a}$, where $ab > 0$.
+\item $\frac{a}{b} + \frac{b}{a}\leq -2$, where $ab < 0$.
+\item $x_1\leq \frac{x_1 + \cdots + x_n}{n}\leq x_n$, where $x_1\leq \cdots\leq x_n$.
+\item $\frac{x_1}{y_1}\leq \frac{x_1 + \cdots + x_n}{y_1 + \cdots + y_n}\leq x_n$, where $\frac{x_1}{y_1}\leq\cdots\leq
+  \frac{x_n}{y_n}$ and $y_i> 0, i=1, \ldots, n$.
+\item $x_1\leq(x_1\ldots x_n)^{\tfrac{1}{n}}\leq x_n$, where $n\geq 2, 0\leq x_1\leq\ldots\leq x_n$.
+\item $|a_1| + \cdots + |a_n|\geq |a_1 + a_2 + \cdots + a_n|$.
+\item $\frac{a_1 + \cdots + a_n}{n}\geq \frac{n}{\frac{1}{a_1} + \cdots + \frac{1}{a_n}}$, where $n\geq 2, a_i> 0, i=1, \ldots, n$.
+\item $a + b\sqrt{\frac{a + b}{2}} \geq a\sqrt{b} + b\sqrt{a}$, where $a > 0, b > 0$.
+\item $\frac{1}{2}(a + b) + \frac{1}{4}\geq \sqrt{\frac{a + b}{2}}$, where $a > 0, b > 0$.
+\item $a(x + y - a)\geq xy$, where $x\leq a\leq y$.
+\item $\frac{1}{x - 1} + \frac{1}{x + 1} > \frac{2}{x}$, where $x > 1$.
+\item $\frac{1}{3k + 1} + \frac{1}{3k + 2} + \frac{1}{3k + 3} > \frac{1}{2k + 1} + \frac{1}{2k + 2}$, where $k\in\mathbb{N}$.
+\item $\frac{ab}{(a + b)^2}\leq \frac{(1 - a)(1 - b)}{[(1 - a) + (1 - b)]^2}$, where $o<\leq\frac{1}{2}, 0<b\leq\frac{1}{2}$.
+\item $\frac{1}{\sqrt{3k + 1}}.\frac{2k + 1}{2k + 2} < \frac{1}{\sqrt{3k + 4}}$, where $k\in\mathbb{N}$.
+\item $2^{n - 1}\geq n$, where $n\in\mathbb{N}$.
+\item $\frac{1}{3} + \frac{2}{3}.\frac{1}{5} + \frac{2}{3}.\frac{4}{5} + \frac{1}{7} + \cdots +
+  \frac{2}{3}.\frac{4}{5}.\frac{6}{7}\cdots \frac{100}{101}.\frac{1}{103} < 1$.
+\item $\frac{1 - a}{1 - b} + \frac{1 - b}{1 - a}\leq \frac{a}{b} + \frac{b}{a}$, where $0 < a, b\leq \frac{1}{2}$.
+\item $\displaystyle\sum_{i=1}^n\frac{1}{1 - a_i}\sum_{i=1}^m(1 - a_i)\leq \sum_{i=1}^n\frac{1}{a_i}\sum_{i=1}^na_i$, where $0 < a_1, \ldots,
+  a_n\leq \frac{1}{2}$.
+\item $1 + \frac{1}{2^3} + \cdots + \frac{1}{n^3} < \frac{5}{4}$, where $n\in\mathbb{N}$.
+\item $\frac{1}{1 + a + b}\leq 1 - \frac{a + b}{2} + \frac{ab}{3}$, where $0\leq a\leq 1, 0\leq b\leq$.
+\item $|x - y| < |1 - xy|$, where $|x| < 1, |y| < 1$.
+\item $\frac{a}{bc} + \frac{b}{ca} + \frac{c}{ab}\geq \frac{2}{a} + \frac{2}{b} - \frac{2}{c}$, where $a > 0, b > 0, c > 0$.
+\item $\frac{1}{a} + \frac{1}{b} - \frac{1}{c} < \frac{1}{abc}$, where $a^2 + b^2 + c^2 = \frac{5}{3}$ and $a > 0, b > 0, c > 0$.
+\item $3(1 + a^2 + a^4)\geq (1 + a + a^2)^2$.
+\item $(ac + bd)^2 + (ad - bc)^2\geq 144$, where $a + b = 4, c + d = 6$.
+\item $x_1^2 + x_2^2 + \cdots + x_{2n}^2 + na^2 \geq a\sqrt{2}(x_1 + x_2 + \cdots + x_{2n})$.
+\item $\frac{1}{a + b} + \frac{1}{b + c} + \frac{1}{a + c}\leq \frac{\sqrt{a} + \sqrt{b} + \sqrt{c}}{2\sqrt{abc}}$, where $a > 0, b
+  > 0, c > 0$.
+\item $a^3(b^2 - c^2) + b^3(c^2 - a^2) + c^3(a^2 - b^2) < 0$, where $0 < a < b < c$.
+\item $\frac{y}{x} + \frac{y}{z} + \frac{x + z}{y}\leq \frac{(x + z)^2}{xz}$, where $0< x\leq y\leq z$.
+\item $\sqrt{1 + \sqrt{a}} + \sqrt{1 + \sqrt{a + \sqrt{a^2}}} + \cdots + \sqrt{1 + \sqrt{a + \cdots + \sqrt{a^n}}} < na$ where $n
+  \geq 2, a\geq 2, n\in\mathbb{N}$.
+\item $[5x]\geq [x] + \frac{[2x]}{2} + \frac{[3x]}{3} + \frac{[4x]}{4} + \frac{[5x]}{5}$, where $[x]$ si the integer part of the
+  real number $x$.
+\item $(n!)^2 \geq n^n$, where $n\in\mathbb{N}$.
+\item $x^6 + x^5 + 4x^4 - 12x^3 + 4x^2 + x + 1\geq 0$.
+\item $\log^2\alpha\geq \log\beta\log\gamma$, where $\alpha>1, \beta>1, \gamma>1, \alpha^@\geq\beta\gamma$.
+\item $\log_45 + \log_56 + \log_67 + \log_78> 4.4$.
+\item $\frac{1}{3} + \frac{2}{3.5} + \cdots + \frac{n}{3.5\ldots(2n + 1)} < \frac{1}{2}$, where $n\in\mathbb{N}$.
+\item $\frac{2^3 + 1}{2^3 - 1}\cdots\frac{n^3 + 1}{n^3 - 1}< \frac{3}{2}$, where $n\geq 2, n\in\mathbb{N}$.
+\item $1.1! + 2.2! + \cdots + n.n! < (n + 1)!$, where $n\in\mathbb{N}$.
+\item $\left(1 + \frac{1}{2^2}\right)\left(1 + \frac{1}{3^2}\right)\cdots\left(1 + \frac{1}{n^2}\right) < 2$, where $n\geq 2,
+  n\in\mathbb{B}$.
+\item $\left(1 - \frac{1}{p_1^2}\right)\left(1 - \frac{1}{p_2^2}\right)\cdots\left(1 - \frac{1}{p_n^2}\right) > \frac{1}{2}$, where
+  $1 < p_1 < p_2 <\cdots < p_n, p_i\in\mathbb{N}, i = 1, 2, \ldots n$.
+\item $\frac{1}{2} - \frac{1}{3} + \frac{1}{4} - \frac{1}{5} + \cdots - \frac{1}{999} + \frac{1}{1000}<\frac{2}{5}$.
+\item $\frac{a + b}{1 + a + b}\leq \frac{a}{1 + a} + \frac{b}{1 + b}$, where $a\geq 0, b\geq 0$.
+\item $\frac{a + b}{2 + a + b}\geq \frac{1}{2}\left(\frac{a}{1 + a} + \frac{b}{1 + b}\right)$, where $a\geq 0, b\geq 0$.
+\item $\displaystyle\sum_{i=1}^n\frac{a_1 + 2a_2 + \cdots + ia_i}{i^2}\leq 2\sum_{i=1}^na_i$, where $a_i\geq 0, i=1, 2, \ldots, n$.
+\item $\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\leq \frac{41}{42}$, where $\frac{1}{a} + \frac{1}{b} + \frac{1}{c}< 1, a, b,
+  c\in\mathbb{N}$.
+\item $\frac{4x}{y + z} + \frac{y}{x + z} + \frac{z}{x + y} > 2$, where $x,y,z > 0$.
+\item $1 < \frac{a}{a + b + d} + \frac{b}{a + b + c} + \frac{c}{b + c + d} + \frac{d}{a + c + d}< 2$, where $a,b,c,d > 0$.
+\item $a + b > c + d$, where $a, b, c, d\geq \frac{1}{2}$ and $a^2 + b > c^2 + d, a + b^2 > c + d^2$.
+\item $(b - a)(9 - a^2) + (c - a)(9 - b^2) + (c - b)(9 - c^2)\leq 24\sqrt{2}$, where $0\leq a\leq b\leq c\leq 3$.
+\item If $0<a, b, c < 1$, then one of the numbers $(1 - a)b, (1 - b)c, (1 - c)a$ is not greater than $\frac{1}{4}$.
+\item Let $a > 0, b > 0, c > 0$, and $a + b + c = 1$. Prove that $\sqrt{a + \frac{1}{4}(b - c)^2} + \sqrt{b + \frac{1}{4}(c - a)^2}
+  + \sqrt{c + \frac{1}{4}(b - a)^2}\leq 2$.
+\item Let $a > 0, b > 0, c > 0$, and $a + b + c = 1$. Prove that $\sqrt{a + \frac{1}{4}(b - c)^2} + \sqrt{b} + \sqrt{c}\leq
+  \sqrt{3}$.
+\item Find the smallest possible value of the expression: $\frac{a^4}{b^4} + \frac{b^4}{a^4} - \frac{a^2}{b^2} - \frac{b^2}{a^2} +
+  \frac{a}{b} + \frac{b}{a}$, where $a, b > 0$.
+\item $\frac{(1 - x_1)(1 - x_2)\ldots(1 - x_n)}{x_1x_2\ldots x_n}\geq (n - 1)^n$, where $n\geq 2, x_i>0,  i = 1, 2, \ldots, n$ and
+  $x_1 + x_2 + \cdots + x_n = 1$.
+\item $\frac{1}{1 + x_1} + \frac{1}{1 + x_2} + \cdots + \frac{1}{1 + x_n}$, where $n\geq 2, x_1\geq 1, x_2\geq 1, \ldots, x_n\geq
+  1$.
+\item $abc + bcd + cda + dab\leq \frac{1}{27} + \frac{176}{27}abcd$, where $a, b, c, d\geq 0$, and $a + b + c + d = 1$.
+\item $0\leq xy + yz + zx - 2xyz\leq \frac{7}{27}$, where $x, y, z\geq 0$, and $x + y + z = 1$.
+\item Suppose that for numbers $x_1, x_2, \ldots, x_{1997}$, the following conditions holds: (a) $-\frac{1}{\sqrt{3}}\leq x_i \leq
+  \sqrt{3}, i = 1, 2, \ldots, 1997$, (b) $x_1 + x_2 + \cdots + x_{1997} = -318\sqrt{3}$. Find the greatest possible value of the
+  expression $x_1^{12} + x_2^{12} + \cdots + x_{1997}^{12}$.
+\item Prove that $\cos\alpha_1\cos\alpha_2\cdots\cos\alpha_n(\tan\alpha_1 + \tan\alpha_2 + \cdots + \tan\alpha_n)\leq \frac{(n-
+  1)^{(n - 1)/2}}{n^{(n - 2)/2}}$, where $n\geq 2$ and $0\leq \alpha_i<\frac{\pi}{2}, i = 1, 2, \ldots, n$.
+\item Prove that $\displaystyle\sum_{i=1}^nx_i^k(1 - x_i)\leq a_k$, where $k\geq 2, k\in\mathbb{N}$, and $a_k = {\rm max}[x^k(1 -
+  x) + (1 - x)^kx], x_i\geq 0, i=1, 2, \ldots, n, x_1 + x_2 + \cdots + x)n = 1, n\geq 2$.
+\item $2(n - 1)(x_2x_3 + x_1x_3 + \cdots + x_1x_n + x_2x_3 + \cdots + x_2x_n + \cdots + x_{n - 1}x_n) - n^{n - 1}x_1x_2\ldots
+  x_n\leq n - 2$, where, $n\geq 2, x_1, x_2, \ldots x_n\geq 0$ and $x_1 + x_2 + \cdots + x_n = 1$.
+\item $\frac{x_1 + x_2 + \cdots + x_n}{n} - \sqrt[n]{x_1x_2\ldots x_n}\leq$
+
+  $\frac{(\sqrt{x_1} - \sqrt{x_2})^2 + (\sqrt{x_1} -
+  \sqrt{x_3})^2 + \cdots + (\sqrt{x_1} - \sqrt{x_n})^2 + \cdots + (\sqrt{x_{n - 1}} - \sqrt{x_n})^2}{n}$, where $n\geq 2, x_1, x_2,
+  \ldots, x_n\geq 0$.
+\item \textit{Turkevici's Inequality}: $(n - 1)(x_1^2 + x_2^2 + \cdots + x_n^2) + \sqrt[n]{x_1^2x_2^2\ldots x_n^2}\geq (x_1 + x_2 +
+  \cdots + x_n)^2$, where $n\geq 2, x_2, x_2, \ldots, x_n\geq 0$.
+\item $(a + b)(b + c)(c + a)\geq 8abc$, where $a>0, b>0, c>0$.
+\item $(a + b + c - d)(b + c + d - a)(c + d + a - b)(d + a + b - c)\leq (a + b)(b + c)(c + d)(d + a)$, where $a > 0, b > 0, c > 0,
+  d > 0$.
+\item (\textit{Schur's Inequality}) $a^3 + b^3 + c^3 + 3abc \geq a^2b + ab^2 + b^2c + bc^2 + ca^2 + c^2a$, where $a > 0, b > 0, c > 0$.
+\item $\left(1 + \frac{4a}{b + c}\right)\left(1 + \frac{4b}{c + a}\right)\left(1 + \frac{4c}{a + b}\right) > 25$, where $a > 0, b >
+  0, c > 0$.
+\item $\frac{\log(a - 1)}{\log a} < \frac{\log a}{\log(a + 1)}$, where $a > 1$.
+\item (\textit{Schur's Inequality}) $abc \geq (a + b - c)(c + a - b)(b + c - a)$, where $a>0, b>0, c>0$.
+\item $x^8 + y^8 \geq \frac{1}{128}$, if $x + y = 1$.
+\item $\left(a + \frac{1}{a}\right)^2 + \left(b + \frac{1}{b}\right)^2\geq 12.5$, if $a > 0, b > 0$ and $a + b = 1$.
+\item $\left(x_1 + \frac{1}{x_1}\right)^2 + \cdots + \left(x_n + \frac{1}{x_2}\right)^2\geq \frac{(n^2 + 1)^2}{n}$, if $n\geq 2,
+  x_1> 0, \ldots, x_n>0$ and $x_1 + \cdots + x_n = 1$.
+\item $a^4 + b^4 + c^4 \geq abc(a + b + c)$.
+\item $x^2 + y^2 \geq 2\sqrt{2}(x - y)$, if $xy = 1$.
+\item $\sqrt{6a_1 + 1} + \sqrt{6a_2 + 1} + \sqrt{6a_3 + 1} + \sqrt{6a_4 + 1} + \sqrt{6a_5 + 1}\leq \sqrt{55}$, if $a_1 > 0, \ldots,
+  a_5 > 0$ and $a_1 + \cdots + a_5 = 1$.
+\item $6a + 4b + 5c\geq 5\sqrt{ab} + 3\sqrt{bc + 7\sqrt{ca}}$, where $a\geq 0, b\geq 0, c\geq 0$.
+\item $2(a^4 + b^4) + 17 > 16 ab$.
+\item $\left(\frac{1 + nb}{n + 1}\right)^{n + 1}\geq b^n$, where $n\in\mathbb{N}, b > 0$.
+\item $\left(1 + \frac{1}{n}\right)^n < \left(1 + \frac{1}{n + 1}\right)^{n + 1}$, where $n\in\mathbb{N}$.
+\item $\left(1 + \frac{1}{n}\right)^{n + 1} < \left(1 + \frac{1}{n + 1}\right)^{n + 2}$, where $n\in\mathbb{N}$.
+\item $\left(1 + \frac{m}{n - 1}\right)^{(n - 1)/m} < \left(1 + \frac{m}{n}\right)^{n/m} < \left(1 + \frac{m - 1}{n}\right)^{n/(m
+  - 1)}$, where $m > 1, n > 1$ and $m,n \in\mathbb{N}$.
+\item $n!< \left(\frac{n + 1}{2}\right)^n$, where $n = 2, 3, 4, \ldots$.
+\item $n(n + 1)^{1/n} < n + S_n$, where $S_n = \frac{1}{1} + \frac{1}{2} + \cdots + \frac{1}{n}, n = 2, 3, 4, \ldots$.
+\item $n - S_n > (n - 1)^{1/(1 - n)}$, where $S_n = \frac{1}{1} + \frac{1}{2} + \cdots + \frac{1}{n}, n = 3, 4, \ldots$.
+\item $(q^n - 1)(q^{n + 1} + 1)\geq 2nq^n(q - 1)$, where $q > 1, n \in\mathbb{N}$.
+\item $a^2 + b^2 + c^2 + d^2 + ab + ac + ad + bc + bd + cd\geq 10$, where $a, b, c, d>0$, and $abcd = 1$.
+\item $\left(a - 1 + \frac{1}{b}\right)\left(b - 1 + \frac{1}{c}\right)\left(c - 1 + \frac{1}{a}\right)\leq \left(\frac{1 +
+  abc}{2\sqrt{abc}}\right)^3$, where $a, b, c> 0$.
+\item $\left(a + \frac{1}{b} - t\right)\left(b + \frac{1}{c} - t\right)\left(c + \frac{1}{a} - t\right)\leq (a + b +
+  c)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right)(1 - t)^2 + 4 - 3t$, where $a, b,c, t > 0$ and $abc = 1$.
+\item $n\sqrt[n]{a_1a_2\ldots a_n} - (n - 1)\sqrt[n - 1]{a_1a_2\ldots a_{n - 1}} \leq a_n$, where $a_i > 0, i = 1, 2,
+  \ldots, n, n = 3, 4, \ldots$.
+\item $\sqrt[n]{a_1a_2\ldots a_n} + \sqrt[n]{b_1b_2\ldots b_n} + \cdots + \sqrt[n]{k_1k_2\ldots k_n}$
+
+  $\leq\sqrt[n]{(a_1 + b_1 + \cdots + k_1)(a_2 + b_2 + \cdots + k_2)\cdots(a_n + b_n + \cdots + k_n)}$ where
+
+  $a_1, a_2,\ldots, a_n, b_1, b_2, \ldots, b_n, \ldots, k_1, k_2, \ldots, k_n > 0$.
+\item $a_1 + \sqrt{a_1a_2} + \cdots + \sqrt[n]{a_1a_2\ldots a_n}\leq e(a_1 + a_2 + \cdots + a_n)$, where $n\geq 2, a_1, a_2,
+  \ldots, a_n\geq 0$.
+\item $na^k - ka^n\leq n - 1$, where $n > k, n, k\in\mathbb{N}, a > 0$.
+\item $\frac{x_1^2}{x_2} + \frac{x_2^3}{x_3^2} + \cdots + \frac{x_n^{n + 1}}{x_1^n}\geq x_1 + x_2 + \cdots + x_n$, where $n\geq 2,
+  n\in\mathbb{N}, x_1 = {\rm min}(x_1, x_2, \ldots, x_n) > 0$.
+\item $\frac{a^{x_1 - x_2}}{x_1 + x_2} + \frac{a^{x_2 - x_3}}{x_2 + x_3} + \cdots + \frac{a^{x_n - x_1}}{x_n +
+  x_1}\geq \frac{n^2}{2\displaystyle\sum_{i=1}^nx_i}$, where $a > 0, x_i > 0, i = 1, 2, \ldots, n$.
+\item $\sqrt[p]{x_1 + 1} + \sqrt[p]{x_2 + 1} + \cdots + \sqrt[p]{x_n + 1}\leq n + 1$, where $n\geq 2, x_1, x_2, x_n > 0, x_1 + x_2
+  + \cdots + x_n = p, p\in\mathbb{N}, p\geq 2$.
+\item $x^k(1 - x^m)\leq \frac{k^{k/m}.m}{(k + m)^{1 + k/m}}$, where $0\leq x\leq 1, k, m\in\mathbb{N}$.
+\item $\frac{x}{1 - x^2} + \frac{y}{1 - y^2} + \frac{z}{1 - z^2}\geq \frac{3\sqrt{3}}{2}$, where $x, y, z > 0$ and $x^2 + y62 + z^2
+  = 1$.
+\item $\frac{1}{1 - x} + \frac{1}{1 - y} + \frac{1}{1 - z}\geq \frac{9 + 3\sqrt{3}}{2}$, where $x, y, z > 0$ and $x^2 + y62 + z^2
+  = 1$.
+\item Find the minimum value of the funciton $f(x) = \frac{1}{\sqrt[n]{1 + x}} + \frac{1}{\sqrt[n]{1 - x}}$ in $[0, 1)$, where
+  $n\in\mathbb{N}, n > 1$.
+\item Find the minimum value of the funciton $f(x) = ax^m + \frac{b}{x^n}$ in $(0, \infty)$, where $a, b > 0, m, n\in\mathbb{N}$.
+\item Find in $[a, b] (0 < a < b)$ a point $x_0$ such that the function $f(x) = (x - a)^2(b^2 - x^2)$ attains its maximum value in
+  $\lfloor a, b\rfloor$ at $x_0$.
+\item Find the greatest possible value of the product $xyz$ given $x, y, z > 0$, and $2x + \sqrt{3}y + \pi z = 1$.
+\item Find the maximum and minimum values of the function $y = \frac{x}{ax^2 + b}$, where $a, b > 0$.
+\item Find the maximum value of the function $y = \frac{5\sqrt{x^2 + 6x + 8} + 12}{x + 3}$.
+\item Find the maximum value of the function $y = \frac{\sqrt[3]{(x^2 + 1)^2(x^2 + 3)}}{3x^3 + 4}$.
+\item Solve the system of equations: $x + y = 2, xy - z^2 = 1$.
+\item Solve the system of equations: $x + y + z = 3, x^2 + y^2 + z^2 = 3$.
+\item Given $a + b + c + d + e = 8, a^2 + b^2 + c^2 + d^2 + e^2 = 16$, find the greatest possible value of $e$.
+\item Find the minimum value of the expression $\frac{x_1}{x_2} + \frac{x_3}{x_4} + \frac{x_5}{x_6}$ if $1\leq x_1\leq x_2\leq
+  x_3\leq x_4\leq x_5\leq x_6\leq 1000$.
+\item Solve the equation $x^4 + y^4 + 2 = 4xy$.
+\item Find all integer solutions of the equation $\frac{xy}{z} + \frac{zx}{y} + \frac{yz}{x} = 3$.
+\item Prove that $x_1^\alpha + \cdots + x_n^\alpha\geq x_1^\beta + \cdots + x_n^\beta$, where $n\geq 2, x_1 > 0, \ldots, x_n > 0,
+  \alpha >\beta\geq 0$, and $x_1\ldots x_n = 1$.
+\item Prove that $x_1^\alpha + \cdots + x_n^\alpha\geq x_1^\beta + \cdots + x_n^\beta$, where $n\geq 2, x_1 > 0, \ldots, x_n > 0,
+  \alpha >(n - 1)|\beta|$, and $x_1\ldots x_n = 1$.
+\item Prove that $2ST > \sqrt{3(S + T)[S(bd + df + fb) + T(ac + ce + ea)]}$, where $0 < a < b < c < d < e < f$ and $a + c + e = S,
+  b + d + f = T$.
+\item Prove that $\frac{a + \sqrt{ab} + \sqrt[3]{abc} + \sqrt[4]{abcd}}{4} \leq \sqrt[4]{a . \frac{a + b}{2} . \frac{a + b + c}{3}
+  . \frac{a + b + c + d}{4}}$, where $a > 0, b > 0, c > 0, d > 0$.
+\item Prove that $ab \leq \frac{a^p}{p} + \frac{b^q}{q}$, if $\frac{1}{p} + \frac{1}{q} = 1, a > 0, b > 0, p > 0, q > 0$ where $p$
+  and $q$ are rational numbers.
+\item Prove that $\left(1 + \frac{1}{n}\right)^n > 2$, where $n\in \mathbb{N}$.
+\item Prove that $(1 + a_1)\cdots(1 + a_n)\leq 1 + \frac{S}{1!} + \cdots + \frac{S^n}{n!}$, where $n\geq 2, S = a_1 + \cdots + a_n,
+  a_i > 0, i = 1, \ldots, n$.
+\item Prove that $\left(1 + \frac{1}{a}\right)\left(1 + \frac{1}{b}\right)\left(1 + \frac{1}{c}\right)\geq 64$, where $a > 0, b >
+  0, c > 0$ and $a + b + c = 1$.
+\item Prove that $\sqrt[n]{a^{2n - k}} + \sqrt[n]{a^{2n + k}}\geq 3a - 1$, where $n\geq 2, a > 0, n > k, n, k\in\mathbb{N}$.
+\item Prove that $\frac{a^n - 1}{a^n(a - 1)}\geq n + 1 - a^{\tfrac{n(n + 1)}{2}}$, where $a > 0, a \neq 1$.
+\item Prove that $na^{n + 1} + 1 \geq (n + 1)a^n$, where $a > 0$.
+\item Prove that $\left(\sqrt{k} + \sqrt{k + 1}\right)\left(\sqrt{k + 1} + \sqrt{k + 2}\right)\cdots\left(\sqrt{n} + \sqrt{n +
+  1}\right)\geq\left(\sqrt{n} - \sqrt{k}\right)\left(\sqrt{n} + \sqrt{k} - 1\right) + 2$, where $n > k, n, k\in\mathbb{N}$.
+\item Prove that $\frac{a_1}{a_2} + \cdots + \frac{a_{n - 1}}{a_n} + \frac{a_n}{a_1}\geq n$, where $a_i > 0, i = 1, 2, \ldots, n$.
+\item Prove that $a_{n + 1} + \frac{1}{a_1(a_2 - a_1)(a_3 - a_2)\ldots(a_{n + 1} - a_n)}\geq n + 2$, where $0 < a_k < a_{k + 1}, k
+  = 1, 2, \ldots, n$.
+\item Prove that $1 + \frac{x}{2}\leq\frac{1}{\sqrt{1 - x}}$, where $0\leq x < 1$.
+\item Prove that $\left(\frac{a}{b}\right)^4 + \left(\frac{b}{c}\right)^4 + \left(\frac{c}{d}\right)^4 + \left(\frac{d}{e}\right)^4
+  + \left(\frac{e}{a}\right)^4 \geq \frac{a}{b} + \frac{b}{c} + \frac{c}{d} + \frac{d}{e} + \frac{e}{a}$, where $abcde\neq 0$.
+\item Prove that $\left(\frac{a}{b}\right)^{1999} + \left(\frac{b}{c}\right)^{1999} + \left(\frac{c}{d}\right)^{1999} +
+  \left(\frac{d}{a}\right)^{1999}\geq \frac{a}{b} + \frac{b}{c} + \frac{c}{d} + \frac{d}{a}$, where $a > 0, b > 0, c > 0, d > 0$.
+\item Prove that
 \end{enumerate}
