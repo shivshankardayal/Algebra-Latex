@@ -524,4 +524,455 @@
   For logarithm to be defined $x > 0, 2\sqrt{2}x > 0,\log_2x > 0, \log_2(2\sqrt{2}x) > 0$.
 
   Thus, $x = 8$ is only acceptable solution.
+\item  Given $\log_{\tfrac{3}{4}}\log_8(x^2 + 7) + \log_{\tfrac{1}{2}}\log_{\tfrac{1}{4}}(x^2 + 7)^{-1} = -2$
+
+  $\Rightarrow \log_{\tfrac{3}{4}}\log_{2^3}(x^2 + 7) + \log_{\tfrac{1}{2}}\log_{2^{-2}}(x^2 + 7)^-1 = -2$
+
+  $\Rightarrow \log_{\tfrac{3}{4}}\left[\frac{1}{3}\log_2(x^2 + 7)\right] + \log_{\tfrac{1}{2}}\left[\frac{1}{2}\log_2(x^2 + 7)\right] = -2$
+
+  Let $y = \log_2(x^2 + 7)$,
+
+  $\Rightarrow \log_{\tfrac{3}{4}}\left(\frac{y}{3}\right) + \log_{\tfrac{1}{2}}\tfrac{1}{2} + \log_{\tfrac{1}{2}}y = -2$
+
+  $\Rightarrow -\log_{\tfrac{3}{4}}3 + \log_2y.\log_{\tfrac{3}{4}}2 - \log_2y = -3$
+
+  $\Rightarrow \log_2y\left(\log_{\tfrac{3}{4}}2 - 1\right) = -3 + \log_{\tfrac{3}{4}}3$
+
+  $\Rightarrow \log_2y\left(\log_{\tfrac{3}{4}}2 - \log_{\tfrac{3}{4}}\tfrac{3}{4}\right) = \log_{\tfrac{3}{4}}\left(\tfrac{3}{4}\right)^{-3} + \log_{\tfrac{3}{4}}3$
+
+  $\Rightarrow \log_2y.\log_{\tfrac{3}{4}}\tfrac{8}{3} = \log_{\tfrac{3}{4}}\tfrac{64}{9} = 2\log_{\tfrac{3}{4}}\tfrac{8}{3}$
+
+  $\Rightarrow \log_2y = 2 \Rightarrow y = 3 \Rightarrow x = \pm3$, both of which are valid for the given equation.
+\item Given, $\log_{10}x + \log_{10}x^{\tfrac{1}{2}} + \log_{10}x^{\tfrac{1}{4}} + \cdots$ to $\infty = y$
+
+  $\Rightarrow \left[1 + \frac{1}{2} + \frac{1}{4} + \cdots~{\rm to~}\infty\right]\log_{10}x = y$
+
+  $\Rightarrow \frac{1}{1 - \frac{1}{2}}\log_{10}x = y \Rightarrow \log_{10}x = \frac{y}{2}$
+
+  Also given that $\frac{1 + 3 + 5 + \cdots + (2y - 1)}{4 + 7 + 10 + \cdots + (3y + 1)} = \frac{20}{7\log_{10}x}$
+
+  $\Rightarrow \frac{\frac{y}{2}[2 + (y - 1)2]}{\frac{y}{2}[8 + (y - 1)3]} = \frac{20}{7\log_{10}x}$
+
+  $\Rightarrow \frac{2y}{3y + 5} = \frac{20}{7\log_{10}x} = \frac{20\times2}{7y} \Rightarrow 7y^2 - 60y - 100 = 0$
+
+  $y = 10, -\frac{10}{7}$. Since number of terms cannot be fraction, therefore $y = 10$ and $x = 10^5$.
+\item Given, $18^{4x - 3} = (54\sqrt{2})^{3x - 4}$
+
+  Taking $\log$ on both sides,
+
+  $\Rightarrow (4x - 3)\log18 = (3x - 4)\log(18\times3\sqrt{2}) = \frac{3}{2}(3x -4)\log18$
+
+  $\Rightarrow 4x - 3 = \frac{3}{2}(3x - 4) \Rightarrow x = 6$
+\item Given, $4^{\log_93} + 9^{\log_24} = 10^{\log_x83}$
+
+  $\Rightarrow 4^{\log_{3^2}3} + 9^{\log_22^2} = 10^{\log_x83}$
+
+  $\Rightarrow 4^{\tfrac{1}{2}\log_33} + 9^{2\log_22} = 10^{\log_x83}$
+
+  $\Rightarrow 4^{\tfrac{1}{2}} + 9^2 = 83 = 10^{\log_x83}\Rightarrow x = 10$
+\item Given, $3^{4\log_9(x + 1)} = 2^{2\log_2(x + 3)}$
+
+  $\Rightarrow 3^{2\log_3(x + 1)} = x^2 + 3 [\because a^{\log_aN} = N]$
+
+  $\Rightarrow 3^{\log_3(x + 1)^2} = x^2 + 2x + 1 = x^2 + 3 \Rightarrow x = 1$
+\item $\frac{6}{5}a^{\log_ax\log_{10}a\log_a5} - 3^{\log_{10}\tfrac{x}{10}} = 9^{\log_{100}x + \log_42}$
+
+  $\Rightarrow \frac{6}{5}a^{\log_{10}x\log_a5} - 3^{\log_{10}x - 1} = 9^{\tfrac{1}{2}\log_{10}x + \tfrac{1}{2}\log_22}$
+
+  $\Rightarrow \frac{6}{5}\left(5^{\log_a5}\right)^{\log_{10}x} - 3^{\log_{10}x - 1} = 3^{\log_{10}x + 1}$
+
+  $\Rightarrow \frac{6}{5}5^{\log_{10}x} = 6.5^{\log_{10}x - 1} = 3^{\log_{10}x - 1}(1 + 3^3)$
+
+  $\Rightarrow \left(\frac{5}{3}\right)^{\log_{10}x - 1} = \frac{10}{6}$
+
+  $\Rightarrow \log_{10}x - 1 = 1\Rightarrow x = 100$
+\item Given, $2^{3x + \tfrac{1}{2}} + 2^{x + \tfrac{1}{2}} = 2^{\log_26}$
+
+  $\Rightarrow 2^{3x}\sqrt{2} + 2^x\sqrt{2} = 6$
+
+  $\Rightarrow (2^x)^3 + 2^2 = 3\sqrt{2} \Rightarrow 2^x = \sqrt{2}, \frac{-\sqrt{2} \pm \sqrt{-10}}{2}$
+
+  Ignoring complex roots we have $x = \frac{1}{2}$.
+\item $(5 + 2\sqrt{6})^{x^2 - 3} + (5 - 2\sqrt{6})^{x^2 - 3} = 10$
+
+  $\Rightarrow (5 + 2\sqrt{6})^{x^2 - 3} + (5 + 2\sqrt{6})^{-(x^2 - 3)} = 10$
+
+  Let $z = (5 + 2\sqrt{6})^{x^2 - 3}$, then
+
+  $\Rightarrow z + \frac{1}{z} = 10 \Rightarrow z = 5\pm2\sqrt{6}$
+
+  $\therefore x = \pm2, \pm\sqrt{2}$
+\item $2\log_{10x}x - \log_x{.01}\geq 4$
+
+  $\Rightarrow 2\log_{10}x - \log_x10^{-2} \geq 4$
+
+  $\Rightarrow 2\log_{10}x + 2\log_x10 \Rightarrow 2\log_{10}x + \frac{2}{\log_{10}x}\geq 4$
+
+  $= 2\left(\log_{10}x + \frac{1}{\log_{10}x}\right)\geq 4$
+
+  Let $z = \log_{10}x$, then $2\left(z + \frac{1}{z}\right) \geq 4$
+
+  $\Rightarrow 2\left[\left(\sqrt{z} - \frac{1}{\sqrt{z}}\right)^2 + 2\right]\geq 4$
+
+  which is true.
+\item Let $E = \log_b a + \log_ab = \log_ba + \frac{1}{\log_ba}$
+
+  Let $z = \log_ba$, then $E = z + \frac{1}{z}$
+
+  Clearly, $z\neq 0$, or the problem will be undefined.
+
+  When $z > 0, E = z + \frac{1}{z} = \left(\sqrt{z} - \frac{1}{\sqrt{z}}\right)^2 + 2 > 2$
+
+  When $z < 0, z = -y$ (let), then
+
+  $E = \left|- y - \frac{1}{y}\right| = y + \frac{1}{y} > 2$.
+\item Given, $\log_{0.3}(x^2 + 8) > \log_{0.3}9x$
+
+  $\Rightarrow x^2 + 8 < 9x \Rightarrow 1 < x < 8$.
+\item $\log_{x - 2}(2x - 3) > \log_{x - 2}(24 - 6x)$
+
+  {\bf Case I}: When $0 < x - 2 < 1 \Rightarrow 2 < x < 3$
+
+  Given inequality becomes $2x - 3 < 24 - 6x \Rightarrow x < \frac{27}{8}$
+
+  But $x < 3$ so $3$ si still limiting value of $x$.
+
+  {\bf Case II}: When $x - 2 > 1 \Rightarrow x > 3$
+
+  Given inequality becomes $2x - 3 > 24 - 6x \Rightarrow x > \frac{27}{3}$
+
+  However, for logarithm to be defined $2x - 3 > 0$ and $24 - 6x > 0$ and also $x - 2 > 0$.
+
+  Combining all these we get $2 < x < 3$.
+\item Given, $\log_{0.3}(x - 1) < \log_{0.09}(x - 1)$
+
+  $\Rightarrow (x - 1)^2 > (x - 1)\Rightarrow x^2 - 3x + 2 > 0$
+
+  $\Rightarrow x < 1, x > 2$.
+  For logarithm function to be defined $x > 1$, thus the interval for $x$ will be $(2,\infty]$.
+\item Given, $\log_{\tfrac{1}{2}}x \geq \log_{\tfrac{1}{3}}x$
+
+  $\Rightarrow \log_{\tfrac{1}{2}}x \geq \log_{\tfrac{1}{2}}x\log_{\tfrac{1}{3}}\frac{1}{2}$
+
+  $\Rightarrow \log_{\tfrac{1}{2}}x\left[1 - \log_{\tfrac{1}{3}}\frac{1}{2}\right]\geq 0$
+
+  $\Rightarrow \log_{\tfrac{1}{2}}x[1 - \log_32]\geq 0$
+
+  $\log_{\tfrac{1}{2}}x \geq 0 \Rightarrow x\leq 1$
+
+  For logarithm function to be defined $x > 0$, thus range of $x$ will be $(0, 1]$.
+\item Given, $\log_{\tfrac{1}{3}}\log_4(x^2 - 5) > 0$
+
+  $\Rightarrow \log_4(x^2 - 5) < 1 \Rightarrow x^2 - 5 < 4 \Rightarrow -3 < x < 3$
+
+  For logarithm to be defined $x^2 - 5 > 0$ and $\log_4(x^2 - 5) > 0$
+
+  $\Rightarrow x < -\sqrt{5}, x > \sqrt{5}$ and $x^2 - 5 > 1 \Rightarrow x < -\sqrt{6}, x > \sqrt{6}$
+
+  Combining all these conditions we get two ranges for $x, (-3, -\sqrt{6})$ and $(\sqrt{6}, 3)$.
+\item Given, $\log(x^2 -2x -2)\leq 0 \Rightarrow x^2 - 2x - 2 \leq 1$
+
+  $\Rightarrow -1\leq x \leq 3$
+
+  For logarithm to be defined $x^2 - 2x - 2 > 0$
+
+  $\Rightarrow x < 1 - \sqrt{3}, x > 1 + \sqrt{3}$
+
+  Combining all these ranges gives us the range as $[-1, 1-\sqrt{3})\cup(1 + \sqrt{3}, 3]$.
+\item Given, $\log_2^2(x-1)^2 - \log_{0.5}(x - 1) > 5$
+
+  $\Rightarrow (2\log_2|x - 1|)^2 - \log_{0.5}(x - 1) > 5$
+
+  $\Rightarrow 4[\log_2(x - 1)]^2 + \log_2(x - 1) > 5$
+
+  Let $z = \log_2(x - 1)$, $\Rightarrow 4x^2 + z - 5 > 0$
+
+  $\Rightarrow 2 < -\frac{5}{4}, x > 1 \Rightarrow x < 1 + \frac{1}{2\sqrt[4]{2}}$
+
+  For $\log$ to be defined $x -1 > 0 \Rightarrow x > 1$
+
+  When $z > 1, x > 3$
+
+  Thus, the range of $x$ is $\left(1, 1 + \frac{1}{2\sqrt[4]{2}}\right)\cup (3, \infty)$.
+\item We have to prove that $\log_217\log_{\tfrac{1}{5}}2\log_3\tfrac{1}{5} > 2$
+
+  $\Rightarrow \log_217\log_32 > 2 \Rightarrow \log_317 > 2$
+
+  $\because 17 > 3^2 \therefore \log_3{17} > 2$
+\item We have to prove that $\frac{1}{3} < \log_{20}3 < \frac{1}{2}$
+
+  $\frac{1}{3} < \log_{20}3 \Rightarrow 1 < \log_{20}3^3 \Rightarrow 1 < \log_{20}27$
+
+  which is true as the base is greater than $1$ and the number is greater than the base.
+
+  $\log_{20}3 < \frac{1}{2} \Rightarrow \log_{20}3^2 < 1 \Rightarrow \log_{20}9 < 1$
+
+  which is true as the base is greater than $1$ and the number is less than the base.
+\item We have to prove that $\frac{1}{4} < \log_{10}2 < \frac{1}{2}$
+
+  $\frac{1}{4} < \log_{10}2 \Rightarrow 1 < \log_{10}2^4 = \log_{10}16$
+
+  which is true because base is greater than $1$ and the number is greater than the base.
+
+  $\log_{10}2 < \frac{1}{2} \Rightarrow \log_{10}2^2 < 1 \Rightarrow \log_{10}4 < 1$
+
+  which is true as the base is greater than $1$ and the number is less than the base.
+\item Given $\log_{0.1}(4x^2 - 1) > \log_{0.1}3x$
+
+  $\Rightarrow 4x^2 - 3x - 1 < 0 \Rightarrow (4x + 1)(x - 1) < 0$
+
+  Thus, $[-\infty, -\frac{1}{4})\cup(1, \infty]$ is the initial solution.
+
+  Now, $x > 0$ is another restriction from R.H.S.
+
+  From L.H.S> $4x^2 - 1 > 0 \Rightarrow x < -\frac{1}{2}, x > \frac{1}{2}$
+
+  Combining all these we get, $\frac{1}{2} < x < 1$.
+\item Given, $\log_2(x^2 - 24) > \log_25x$
+
+  $\Rightarrow x^2 - 24 > 5x \Rightarrow x < -3, x > 8$
+
+  But $x^2 - 24 > 0$ and also $x > 0$ for loarithm function to be defined.
+
+  $\therefore x > 8$.
+\item We have to prove that $\frac{1}{\log_3\pi} + \frac{1}{\log_4\pi} > 2$
+
+  $\Rightarrow \log_{\pi}3 + \log_{\pi}4 > 2$
+
+  $\Rightarrow \log_{\pi}12 > 2 \Rightarrow 12 > \pi^2$ which is true.
+\item Given $(0.01)^{\tfrac{1}{3}}$ and $(0.001)^{\tfrac{1}{5}}$
+
+  Taking $\log$ of both with base $10$,
+
+  $\frac{1}{3}\log_{01}0.01$ and $\frac{1}{5}\log_{10}0.001$
+
+  $-\frac{2}{3}$ and $-\frac{3}{5}$ out of which $-\frac{3}{5}$ is greater, therefore $(0.001)^{\tfrac{1}{5}}$ is greater.
+\item $\log_311 > \log_39 = \log_3(3^2) = 2$ and $\log_23 < \log_24 = 2$.
+
+  Thus, $\log_311$ is geater.
+\item Given, $\log_3(x^2 + 10) > \log_37x$
+
+  $\Rightarrow x^2 + 10 > 7x \Rightarrow x < 2, x > 5$
+
+  However, $x^2 + 10 > 0$ and $x > 0$ for logarithm to be defined.
+
+  Thus, intervals are $0 < x < 2$ and $x > 5$.
+\item We have, $x^{\log_{10}x} > 10$
+
+  $\Rightarrow \log_{10}x\log_{10}x > 1 \Rightarrow \log_{10}x > \pm 1$
+
+  Thus range of values of $x$ would be $(0, 0.1)\cup(10, \infty]$.
+\item We have, $\log_2x\log_{2x}2\log_24x > 1$
+
+  $\Rightarrow \frac{1}{\log_x2}\left[\frac{1}{\log_22x}\log_22^2x\right] > 1$
+
+  $\Rightarrow \frac{1}{\log_x2}\left[\frac{1}{1 + \log_2x}\right]\left[2 + \frac{1}{\log_x2}\right] > 1$
+
+  Let $z = \log_x2$, then
+
+  $\Rightarrow \frac{1}{z}\frac{z}{1 + z}\left[2 + \frac{1}{z}\right] > 1$
+
+  Solving this inequality and applying rules for definition of logarithm we have following range for $x$
+
+  $\left(2^{-\sqrt{2}}, \frac{1}{2}\right)\cup\left(1, 2^{\sqrt{2}}\right)$
+\item Given, $\log_2x\log_32x + \log_3x\log_24x > 0$
+
+  Exchanging base, we have $\log_3x\log_22x + \log_3x\log_24x > 0$
+
+  $\Rightarrow \log_3x(\log_22 + \log_2x + \log_24 + \log_2x) > 0$
+
+  $\Rightarrow \log_3x(3 + 2\log_2x) > 0$
+
+  For $log_3x > 0, x > 1$ and for, $3 + 2\log_2x^2 > 0 \Rightarrow \log_2x^2 > -3$.
+
+  Also for $\log_3x < 0, 0 <x < 1$ and for $3 + \log_2x^2 < 0 \Rightarrow \log_2x^2 < -3$
+\item $\log_{12}60 = \frac{\log_260}{\log_212} = \frac{\log_2(2^2\times3\times5)}{\log_2(2^2\times3)}$
+
+  $= \frac{2 + \log_23 + \log_25}{2 + \log_23}$
+
+  Let $\log_23 = x$ and $\log_25 = y$, then $\log_{12}60 = \frac{2 + x + y}{2 + x}$
+
+  Given $a = \log_630 = \frac{\log_230}{\log_26} = \frac{\log_2(2\times3\times5)}{\log_22\times 3}$
+
+  $= \frac{1 + \log_23 + \log_25}{1 + \log_23} = \frac{1 + x + y}{1 + x}$
+
+  Also given, $b = \log_{15}24$, proceeding similarly $b = \frac{3 + x}{x + y}$
+
+  From these two, we can write $x$ and $y$ in terms of $x$ and $y$,
+
+  $x = \frac{b + 3 - ab}{ab -3}, y = \frac{2a - b - 2 + ab}{ab - 1}$
+
+  Substituting these values for $\log_{12}60$, we get
+
+  $\log_{12}60 = \frac{2ab + 2a - 1}{ab + b + 1}$
+\item $\log_ax, \log_bx$ and $\log_cx$ are in A.P.
+
+  $\therefore 2\log_xb = \frac{1}{\log_xa} + \frac{1}{\log_xc}$
+
+  $\Rightarrow \frac{2}{\log_xb} = \frac{\log_xac}{\log_xa\log_xc}$
+
+  $\Rightarrow 2\log_xc = \log_xac\frac{\log_xb}{\log_xa} \Rightarrow \log_xc^2 = \log_xac\log_ab$
+
+  $\Rightarrow c^2 = ac^{\log_ab}$.
+\item $a = \log_{\tfrac{1}{2}}\sqrt{0.125} > 0$ because both base and number are less than $1$.
+
+  $b = \log_3\left(\frac{1}{\sqrt{24} - \sqrt{17}}\right) = \log_3\left(\frac{\sqrt{24} + \sqrt{17}}{3}\right) > 0$
+
+  because both base and number are greater than $1$.
+\item Given $e^{-\tfrac{\pi}{2}} < \theta < \frac{\pi}{2}$
+
+  Taking $\log$ natural of both sides
+
+  $\log_ee^{-\tfrac{\pi}{2}} < \log_e\theta < \log_e\frac{\pi}{2}$
+
+  $\Rightarrow -\frac{\pi}{2} < \log_e\theta < 1 < \frac{\pi}{2}\left[\because \log_e\tfrac{\pi}{2} < \log_ee\right]$
+
+  $\Rightarrow -\frac{\pi}{2} < \log_e\theta < \frac{\pi}{2}$
+
+  $\Rightarrow \cos(\log_e\theta) > 0$
+
+  Again, $e^{-\tfrac{\pi}{2}} < \theta < \frac{\pi}{2}$
+
+  $\Rightarrow 0 < \theta <\frac{\pi}{2} [\because e^{-\tfrac{\pi}{2}} > 0]$
+
+  $\Rightarrow 0 < \cos\theta < 1 \Rightarrow \log_e\cos\theta < 0$
+
+  $\Rightarrow \cos(\log_e\theta) > \log_e(\cos\theta)$
+\item Given, $\log_2x + \log_2y \geq 6\Rightarrow \log_2xy \geq 6 \Rightarrow xy \geq 64$
+
+  This means $x$ and $y$ are positive as negative values will not be valid for logarithm function.
+
+  A.M $\geq$ G.M $\Rightarrow \frac{x + y}{2} \geq xy \Rightarrow x + y \geq 16$.
+\item Given, $\log_ba\log_ca - \log_qaa + \log_ab\log_cb - \log_bb + \log_ac\log_bc - \log_cc = 0$
+
+  $\Rightarrow \frac{(\log a)^2}{\log b\log c} - 1 + \frac{(\log b)^2}{\log a\log c} - 1 + \frac{(\log c)^2}{\log a\log b} - 1 =0$
+
+  Let $x = \log a, y = \log b, z = \log c$, then
+
+  $\frac{x^2}{yz} + \frac{y^2}{zx} + \frac{z^2}{xy} - 3 = 0$
+
+  $\Rightarrow \frac{x^3 + y^3 + z^3 - 3xyz}{xyz} = 0$
+
+  $\Rightarrow (x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx) = 0$
+
+  $\Rightarrow \frac{1}{2}(x + y + z)[(x - y)^2 + (y - z)^2 + (z - x)^2] = 0$
+
+  $\because x, y, z$ are different the term inside brackets will be always positive. Thus.
+
+  $x + y + z = 0$, now substituting the original values,
+
+  $\log abc = 0 \Rightarrow abc = 1$.
+\item Since $n$ is a natural number and $p1_p2, \ldots, p_k$ are distinct primes, therefore $a_1, a_2, \ldots, a_k$ are also natural
+  numbers.
+
+  Now $n = p_1^{a_1}p_2^{a_2}\ldots p_k^{a_K}$
+
+  $\Rightarrow \log n = a_1\log p_1 + a_2\log p_2 + \cdots + a_k\log p_k$
+
+  $\log n\geq \log 2 + \log 2 + \cdots + \log 2$ [since bases are primes so minimum value is is $2$ and pwoers are natural
+    numbers so they are greater than $1$]
+
+  $\log n \geq k\log 2$
+\item Let $d$ be the common difference of the A.P., then
+
+  $3\log_yx = 3 + d \Rightarrow \log_yx^3 = 3 + d \Rightarrow x^3 = y^{(3 +d)}$
+
+  $3\log_zy = 3 + 2d \Rightarrow y^3 = z^{(3 + 2d)}$
+
+  $7\log_xz = 3 + 3d \Rightarrow z^7 = x^{(3 + 3d)}$
+
+  $y^3 = z^{(3 + 2d)}\Rightarrow y = z^{\tfrac{3 + 2d}{3}}$
+
+  $x^3 = y^{(3 + d)}\Rightarrow x = y^{\tfrac{3 + d}{3}} = z^{\tfrac{(3 + d)(3 + 2d)}{9}}$
+
+  $z^7 = x^{(3 + 3d)}\Rightarrow x = z^{\tfrac{7}{3 + 3d}}$
+
+  $\therefore \frac{(3 + d)(3 + 2d)}{9} = \frac{7}{3 + 3d}\Rightarrow d = \frac{1}{2}$
+
+  Thus, $x^{18} = y^{21} = z^{28}$.
+\item We have, $\log_418 = \log_{2^2}(2\times3^2) = \frac{1}{2} + \log_23$
+
+  Thus, it will be enough to prove tha $\log_23$ is an irrational number.
+
+  Let $\log_23 = \frac{p}{q}$, where $p, q\in\mathbb{I}$
+
+  $\Rightarrow 2^{\tfrac{p}{q}} = 3 \Rightarrow 2^p = 3^q$
+
+  However, $2^p$ is an even number and $3^q$ is an odd number, and hence the equality will never be achieved.
+  Therefore, $\log_23$ is an irrational number.
+\item Given, $x, y, z$ are in G.P. $\therefore \frac{y}{x} = \frac{z}{y}$
+
+  $\Rightarrow \ln\frac{y}{x} = \ln\frac{z}{y}\Rightarrow \ln y - \ln x = \ln z - \ln y$
+
+  $\Rightarrow \ln x, \ln y, \ln z$ are in A.P.
+
+  $\Rightarrow 1 + \ln x, 1 + \ln y, 1 + \ln z$ are in A.P.
+
+  $\Rightarrow \frac{1}{1 + \ln x}, \frac{1}{1 + \ln y}, \frac{1}{1 + \ln z}$ are in H.P.
+\item $\log_{30}8 = \log_{30}2^3 = 3\log_{30}2 = 3\log_{30}\frac{30}{15}$
+
+  $= 3 - 3(\log_{30}3 + \log_{30}5) = 3(1 - a - b)$.
+\item Given $\log_712 = a$ and $\log_{12}24 = b$
+
+  Multiplying $ab = \log_724$
+
+  Adding $1$ on both sides
+
+  $ab + 1 = \log_724 + \log_77 = \log_7168$
+
+  Similarly, $8a = \log_712^8$ and $5ab = \log_7168^5$
+
+  $\frac{ab + 1}{8a - 5ab} \frac{\log_7168}{\log_712^8 - \log_7168^5}$
+
+  Upon simplification we find that $\log_{54}168 = \frac{ab + 1}{8a - 5ab}$
+\item {\bf Case I}: When $x > 1, x > a^2 + 1$. Also, $a^2 + 1 < 1 \therefore x > 1$
+
+  {\bf Case II}: When $x < 1, x < a^2 + 1$. Also, $a^2 > 0 \therefore x < 1$.
+
+  In both the cases $x > 0$.
+\item Given, $\log_{12}18 = a$ and $\log_{24}54 = b$
+
+  $\therefore ab + 5(a - b) = \frac{\log 18\log 54}{\log 12\log 24} + 5\left(\frac{\log 18}{\log 12} - \frac{\log 54}{\log 24}\right)$
+
+  $= \frac{\log 18\log 54 + 5(\log 18\log 24 - \log 54\log 12)}{\log 12\log 24}$
+
+  $\log 18 = \log 2 + 2\log 3, \log 12 = 2\log 2 + \log 3$
+
+  $\log 24 = 3\log 2 + \log 3, \log 54 = \log 2 + 3\log 3$
+
+  Now it is only a matter of substitution and simplification.
+\item Given, $a, b, c$ are in G.P. so we can write $b^2 = ac$
+
+  Taking $log$ with base $x$,
+
+  $2\log_xb = \log_xa + \log_xc \Rightarrow \frac{2}{\log_bx} = \frac{1}{\log_ax} + \frac{1}{\log_bx}$
+
+  Thus, $\log_ax, \log_bx, \log_cx$ are in H.P.
+\item Let $r$ be the common ratio of the G.P. and $d$ be the common difference of the A.P.
+
+  $\log a_n - b_n = \log a + n\log r - (b + nd) = \log a - b$
+
+  $\Rightarrow n\log r - nd = 0 \Rightarrow \log r = d \Rightarrow b = r^{\tfrac{1}{d}}$.
+\item Given $\log_32, \log_3(2^x - 5)$ and $\log_3\left(2^x - \frac{7}{2}\right)$ are in A.P.
+
+  $\Rightarrow 2\log_3(2^x - 5) = \log_3\left(2^x - \frac{7}{2}\right) + \log_32$
+
+  $\Rightarrow (2^x - 5)^2 = 2\left(2^x - \frac{7}{2}\right)$
+
+  Let $z = 2^x$, then
+
+  $z^2 - 10x  + 25 = 2z - 7 \Rightarrow z^2 - 12z + 32 = \Rightarrow z = 4, 8$
+
+  $\Rightarrow x = 2, 3$, however, if $x = 2$ then $2^x - 5 < 0$ so only acceptable value of $x$ is $3$.
+\item Let $\log_27$ is a rational number i.e. $\log_27 = \frac{p}{q}$, where $p, q\in\mathbb{I}$
+
+  $\Rightarrow 7 = 2^{\tfrac{p}{q}} \Rightarrow 7^q = 2^q$
+
+  However, integral power of $7$ is an odd number while that of $2$ is an even number. Thus, by contradiction
+  $\log_27$ is irrational number.
+\item Given, $\log_{0.5}(x - 2) < \log_{0.25}(x - 2)$
+
+  $\Rightarrow (x- 2)^2 > x - 2 \Rightarrow (x - 2)(x - 3) > 0$
+
+  Thus, $x > 3$ for logarithm function to be defined.
 \end{enumerate}
