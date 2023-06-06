@@ -53,7 +53,7 @@
   Given, $5t_5 = 8t_8 \Rightarrow 5a + 20d = 8a + 56d \Rightarrow 3a = -36d \Rightarrow a = -12d$
 
   $\Rightarrow t_{13} = a + 12d = 0$.
-\item Let $n$-th term be the smallest positive number. From the sequence we obtain that $t_1 = 25$ and $d = -2\frac{1}{4} = -\frac{9}{4}$.
+\item Let $n$th term be the smallest positive number. From the sequence we obtain that $t_1 = 25$ and $d = -2\frac{1}{4} = -\frac{9}{4}$.
 
   Then $t_n > 0 \Rightarrow 25 - (n - 1)\frac{9}{4} > 0\Rightarrow n < \frac{25\times4}{9} + 1 \Rightarrow n = 12$.
 \item The given pay scale represents an A.P. with $t_1 = 700, d = 40$ and $t_n = 1500$.
@@ -66,12 +66,12 @@
   $t_7 = a + 6d = 34$ and $t_{13} = a + 12d = 64$
 
   Subtracting $6d = 30 \Rightarrow d = 5 \Rightarrow a = 4$. So the A.P. is $4, 9, 14, \ldots$.
-\item If $55$ is the $n$-th term then $n$ will have to be an integer. From the given sequence $a = 1, d = 3 - 1 = 5 - 3 = 2$.
+\item If $55$ is the $n$th term then $n$ will have to be an integer. From the given sequence $a = 1, d = 3 - 1 = 5 - 3 = 2$.
 
-  $55 = 1 + (n - 1)2 \Rightarrow n = 28$, which is an integer and hence, $55$ will be $28$-th term of the A.P.
+  $55 = 1 + (n - 1)2 \Rightarrow n = 28$, which is an integer and hence, $55$ will be $28$th term of the A.P.
 \item From the given sequence $a = 2000, d = 1995 - 2000 = 1990 - 1995 = -5$.
 
-  Let $n$-th term be first negative term, then, $a + (n - 1)d < 0 \Rightarrow 2000 -(n - 1)5 < 0$
+  Let $n$th term be first negative term, then, $a + (n - 1)d < 0 \Rightarrow 2000 -(n - 1)5 < 0$
 
   \Rightarrow $n > 401 \Rightarrow n = 402 \Rightarrow t_{402} = 2000 - (402 - 1)5 = -5$.
 \item Common different of the sequence $2, 4, 6, 8, \ldots$ is $2$ and common difference of the seqquence $3, 6, 9, \ldots$ is $3$.
@@ -89,7 +89,7 @@
   Clearly, $t_1 = 100, t_n = 995, d = 5$ and we have to find $n$.
 
   $t_n = 995 = 100 + (n - 1)5\Rightarrow n = 180$.
-\item Given sequence is $4, 9, 14, \ldots$. So $a = 4, d = 9 - 4 = 14 - 9 = 5$. Let $105$ be $n$-th term of this A.P. then $n$ has
+\item Given sequence is $4, 9, 14, \ldots$. So $a = 4, d = 9 - 4 = 14 - 9 = 5$. Let $105$ be $n$th term of this A.P. then $n$ has
   to be an integer for this assumption to be true.
 
   $105 = 4 + (n - 1)5 \Rightarrow n = \frac{106}{5}$ which is not an integer and therefore $105$ is not a term in the given A.P.
@@ -326,4 +326,328 @@
   $\therefore a_1 + a_5 + a_{10} + a_{15} + a_{24} = 3k = 225 \Rightarrow k = 75$
 
   Sum of first $24$ terms $S = a_1 + a_2 + \cdots + a_{24} = \frac{24}{2}[a_1 + a_{24}] = 12\times75 = 600$.
+\item Let $a$ be the first term and $d$ be the common difference. Also let $S_1$ denote the sum of first $3n$ terms and $S_2$
+  denote the sum of next $n$ terms.
+
+  $S_1 = \frac{3n}{2}[2a + (3n - 1)d], S_2 = \frac{n}{2}[2a + 6nd + (n - 1)d][\because t_{3n+1} = a + 3nd]$
+
+  Given, $S_1 = S_2 \Rightarrow \frac{3n}{2}[2a + (3n - 1)d] = \frac{n}{2}[2a + 6nd + (n - 1)d]$
+
+  $\Rightarrow 6a + (9n - 3)d = 2a + (7n - 1)d \Rightarrow 2a + (n - 2)d = 0$
+
+  Let $S_3$ be sum of first $2n$ terms and $S_4$ be sum of next $2n$ terms, then
+
+  $\frac{S_3}{S_4} = \frac{\tfrac{2n}{2}[2a + (2n - 1)d]}{\tfrac{2n}{2}[2a + 4nd + (2n - 1)]d}$
+
+  $\Rightarrow = \frac{nd}{5nd} = \frac{1}{5}[\because 2a + (n - 1)d = 0xs]$
+\item Given $S_n = 5n^2 + 3n \Rightarrow t_n = S_n - S_{n - 1} = 5n^2 + 3n - 5(n - 1)^2 - 3(n - 1)$
+
+  $= 10n - 5 + 3 = 10n - 2 \Rightarrow d = t_n - t_{n - 1} = 10n - 2 - 10(n - 1) + 2 = 10$,
+
+  Since common difference is a constant the series is in A.P.
+\item Common difference of the series $d = (a^2 + b^2) - (a + b)^2 = (a - b)^2 - (a^2 + b^2) = -2ab$
+
+  $S = \frac{n}{2}[2(a + b)^2 - (n - 1)2ab] = \frac{n}{2}[2a^2 + 2b^2 - 2(n + 1)ab]$
+
+  $= n[a^2 + b62 - (n + 1)ab]$.
+\item There will be two cases. First $n$ being odd and second $n$ being even.
+
+  {\bf Case I:} When $n$ is odd i.e. $n = 2m + 1$, where $m = 0, 1, 2, \ldots$
+
+  $S = 1 + 5 + 9 + \cdots$ up to $m + 1$ terms $- 3 - 7 - 11$ up to $m$ terms
+
+  $= \frac{m + 1}{2}[2 + 4m] - \frac{m}{2}[6 + 4m - 4] = (m + 1)(1 + 2m) - m(2m + 1)$
+
+  $= 2m^2 + 3m + 1 - 2m^2 - m = 2m + 1 = n$.
+
+  {\bf Case II:} When $n$ is even i.e. $n = 2m$, where $m =1, 2, 3, \ldots$
+
+  $S = 1 + 5 + 9 + \cdots$ up to $m$ terms $- 3 - 7 - 11$ up to $m$ terms
+
+  $= \frac{m}{2}[2 + 4m - 4] - \frac{m}{2}[6 + 4m - 4] = -2m = -n$.
+\item Let there be $n$ sides of the polygon. From geometry, we know that sum of angles of the polygon $= (n - 2)180^\circ$
+
+  From the formula for sum of an A.P. $S = \frac{n}{2}[2\times120^\circ + (n - 1)5^\circ] = (n - 2)180^\circ$
+
+  $\frac{n}[240^\circ + (n - 1)5^\circ] = (n - 2)360^\circ\Rightarrow n[48^\circ + (n - 1)] = (n - 2)72^circ$
+
+  $\Rightarrow n^2 - 25n + 144 = 0 \Rightarrow n = 9, 16$
+\item To water first tree the gardener will have to travel $10$ m. To water second tree he will
+  have tp travel back $10$ m to well and then $15$ m to the tree i.e. $25$ m. Similarly, for third tree he will
+  have to travel $15$ m to well and $20$ m i.e a total of $35$ m.
+
+  Thus, total distance travelled will be $10 + 25 + 35 + \cdots$
+
+  Clearly, $25$ will be the first term of the A.P. and there will be $24$ such terms because distance travelled
+  for first tree is noty part of the A.P. Note that common difference would be $10$.
+
+  Total distance travelled $= 10 + \frac{24}{2}[2\times25 + (24 - 1)10] = 10 + 3360 = 3370$ m.
+\item Let $d$ be the common difference. Given $S_p = 0 \Rightarrow \frac{p}{2}[2a + (p - 1)d] = 0$
+
+  $\Rightarrow 2a + (p - 1)d = 0 \Rightarrow d = \frac{2a}{1 - p}$
+
+  $p + 1$th term $t_{p + 1} = a + pd$, so the sum of next $q$ terms $S = \frac{q}{2}[2a + 2pd + (q - 1)d]$
+
+  $= \frac{q}{2}[2a + (2p + q - 1)d] = \frac{q}{2}\left[2a + (2p + q - 1).\frac{2a}{1 - p}\right]$
+
+  $= \frac{q}{2}\left[\frac{2a.(p + q)}{1 - p}\right] = -\frac{a(p + q)}{p - 1}q$.
+\item Sum of first $p$ terms, $S_p = \frac{p}{2}[2a + (p - 1)d]$; sum of first $q$ terms $S_q = \frac{q}{2}[2a + (q - 1)d]$
+
+  $2ap + (p^2 - p)d = 2aq + (q^2 - q)d \Rightarrow 2a(p - q) = (q^2 - p^2 + p - q)d$
+
+  $2a = (1 - p - q)d$
+
+  Sum of $(p + q)$ terms, $S_{p + q} = \frac{p + q}{2}[2a + (p + q - 1)d] = \frac{p + q}{2}[(1 - p - q)d + (p + q - 1)d] = 0$.
+\item Sum of latter half of $2n$ terms means $n + 1$th term to $2n$th term. $t_{n + 1} = a + nd$ and $t_{2n} = a + (2n - 1)d$
+  where $a$ and $d$ are the first term and common difference respectively.
+
+  Sum of latter half of terms, $S = \frac{n}{2}[t_{n + 1} + t_{2n}] = \frac{n}{2}[2a + (3n - 1)d]$
+
+  Sum of first $3n$ terms, $S_{3n} = \frac{3n}{2}[2a + (3n - 1)d]$
+
+  Clearly, $S/S_{3n} = 1:3$.
+\item Let $S_r$ be the $r$th A.P. whose first term is $r$ and common difference is also $r$.
+
+  $S_r = \frac{n}{2}[2r + (n - 1)r] = \frac{n}{2}[(n + 1)r] = \frac{n(n + 1)r}{2}$
+
+  $S_1 + S_2 + S_3 + \cdots + S_p = \displaystyle\sum_{r=1}^pS_r$
+
+  $= \frac{n(n + 1)}{2}\displaystyle\sum_{r = 1}^pr = \frac{np}{4}(n + 1)(p + 1)\left[\because\displaystyle\sum_{i=1}^ni =
+  \frac{n(n + 1)}{2}\right]$.
+\item Let $x$ be the first term and $y$ be the common difference of the A.P.
+
+  Then, according to the question $a = \frac{p}{2}[2x + (p - 1)y], b = \frac{q}{2}[2x + (q - 1)y], c = \frac{r}{2}[2x + (r - 1)y]$
+
+  We have to prove that $\frac{a}{p}(q - r) + \frac{b}{q}(r - p) + \frac{c}{r}(p - q) = 0$
+
+  L.H.S. $= x(q - r + r - p + p - q) + \frac{y}{2}[(p - 1)(q - r) + (q - 1)(r - p) + (r - 1)(p - q)]$
+
+  $= 0$.
+\item Let $a$ be the first term and $d$ be the common difference of the A.P.
+
+  Given, $S_m = \frac{1}{2}S_{m + n}\Rightarrow \frac{m}{2}[2a + (m - 1)d] = \frac{1}{2}.\frac{m + n}{2}[2a + (m + n - 1)d]$
+
+  Let $2a + (m - 1)d = x$, then the above equation can be written as
+
+  $mx = \frac{m + n}{2}[x + nd] \Rightarrow 2mx = (m + n)[x + nd]\Rightarrow mx = n(x + nd) + mnd$
+
+  $\Rightarrow (m - n)x = (m + n)nd$
+
+  Similarly, $(m - p)x = (m + p)pd$
+
+  Dividing, we get
+
+  $(m - n)(m + p)p = (m + n)(m - p)n$
+
+  Dividing both sides with $mnp$ we arrive at the desired result.
+\item Let $a$ be the first term and $d$ be the common difference of the A.P. For odd terms, the no. of terms will be $n + 1$, first
+  term will be $a$ and common difference will be $2d$.
+
+  $\therefore S_{odd} = \frac{n + 1}{2}[2a + 2nd]$
+
+  For even terms, the no. of terms will be $n$, first term will be $a + d$ and common difference will be $2d$.
+
+  $\therefore S_{even} = \frac{n}{2}[2a + 2d + 2(n - 1)d] = \frac{n}{2}[2a + 2nd]$
+
+  $\therefore \frac{S_{odd}}{S_{even}} = \frac{n + 1}{n}$.
+\item Let $a_1$ and $a_2$ be the first terms and $d_1$ and $d_2$ be the common differences of the two series in A.P.
+
+  Given, $\frac{\tfrac{n}{2}[2a_1 + (n - 1)d_1]}{\tfrac{n}{2}[2a_2 + (n - 1)d_2]} = \frac{3n - 12}{5n + 21}$
+
+  $\Rightarrow \frac{2a_1 + (n - 1)d_1}{2a_2 + (n - 1)d_2} = \frac{3n - 13}{5n + 21}$
+
+  We need to find ratio of the $24$th terms i.e. $\frac{a_1 + 23d_1}{a_2 + 23d_2} = \frac{2a_1 + 46d_1}{2a_2 + 46d_2}$
+
+  Putting $n = 47$ in the ratio of sums, we have
+
+  $\frac{2a_1 + 46d_1}{2a_2 + 46d_2} = \frac{3\times 47 - 13}{5\times47 + 21} = \frac{1}{2}$
+\item Let $a$ be the first term and $d$ be the common difference of the A.P.
+
+  Given, $t_m = a + (m - 1)d = \frac{1}{n},\,t_n = a + (n - 1)d = \frac{1}{m}$
+
+  Subtracting, we get $(m - n)d = \frac{m - n}{mn} \Rightarrow d = \frac{1}{mn} \Rightarrow a = \frac{1}{mn}$
+
+  $\therefore S_{mn} = \frac{mn}{2}\left[\frac{2}{mn} + \frac{mn - 1}{mn}\right] = \frac{mn + 1}{2}$.
+\item Let $a$ be the first term and $d$ be the common difference of the A.P.
+
+  Given, $S_m = n = \frac{m}{2}[2a + (m - 1)d] \Rightarrow 2a + (m - 1)d = \frac{2n}{m}$
+
+  and $S_n = m = \frac{n}{2}[2a + (n - 1)d] \Rightarrow 2a + (n - 1)d = \frac{2m}{n}$
+
+  $\Rightarrow d = -\frac{2(m + n)}{mn}\Rightarrow a = \frac{m^2 + n^2 + mn - m - n}{mn}$
+
+  $\Rightarrow S_{m + n} = \frac{m + n}{2}[2a + (m + n - 1)d] = -(m + n)$.
+\item Let $a$ be the first term and $d$ be the common difference of the A.P.
+
+  $\therefore S = \frac{2n + 1}{2}[2a + 2nd]$
+
+  For $S_1$ first term would be $a$, common difference would be $2d$ and no. of terms would be $n + 1$.
+
+  $\therefore S_1 = \frac{n + 1}{2}[2a + 2nd]$
+
+  $\therefore \frac{S}{S_1} = \frac{2n + 1}{n +1}$.
+\item Let $d$ be the common difference, then $b = a + 2d \Rightarrow d = \frac{b - a}{2}$
+
+  $c = a + (n - 1)d \Rightarrow n - 1 = \frac{c - a}{d} = \frac{2(c - a)}{b - a}$
+
+  $\Rightarrow n = \frac{2(c - a)}{b - a} + 1$
+
+  $\therefore S = \frac{n}{2}[2a + (n - 1)d] = \frac{1}{2}\left[\frac{2(c - a)}{b - a} + 1\right]\left[2a + \frac{2(c - a)}{b -
+    a}.\frac{b - a}{2}\right]$
+
+  $= \frac{c + a}{2} + \frac{c^2 - a^2}{b - a}$.
+\item Let $a_1, a_2$ be the first terms and $d_1, d_2$ be the common differences of the two series in A.P.
+
+  According to the question $\frac{2a_1 + (n - 1)a_1}{2a_2 + (n - 1)d_2} = \frac{3n + 8}{7n + 15}$.
+
+  We have to find ratio of $12$th terms i.e. $\frac{a_1 + 11d_1}{a_2 + 11d_2} = \frac{2a_1 + 22d_1}{2a_2 + 22d_2}$
+
+  Putting $n = 23$ in previous equation, we get
+
+  $\frac{2a_1 + 22d_1}{2a_2 + 22d_2} = \frac{77}{176} = \frac{7}{16}$.
+\item Let $a$ be the first term and $d$ be the common difference of the A.P.
+
+  Given, $\frac{S_m}{S_n} = \frac{\tfrac{m}{2}[2a + (m - 1)d]}{\tfrac{n}{2}[2a + (n - 1)d]} = \frac{m^2}{n^2}$
+
+  $\Rightarrow \frac{2a + (m - 1)d}{2a + (n - 1)d} = \frac{m}{n}$
+
+  $\Rightarrow 2a(n - m) + [(m - 1)n - (n - 1)m]d = 0 \Rightarrow a = \frac{d}{2}$
+
+  We have to find $\frac{t_m}{t_n} = \frac{a + (m - 1)d}{a + (n - 1)d} = \frac{2m - 1}{2n - 1}$
+\item Let $n$ be the no. of terms. Clearly, common ratio $r = \frac{20}{5} = \frac{80}{20} = 4$
+
+  Then $t_n = 5120 = 5.r^{n - 1} \Rightarrow 4^{n - 1} = 1024 = 4^5 \Rightarrow n = 6$.
+\item Let $n$ be the no. of terms. Clearly, common ratio $r = \frac{0.06}{0.03} = \frac{0.12}{0.06} = 2$
+
+  Then $t_n = 3.84 = 0.03r^{n - 1} \Rightarrow 2^{n - 1} = 128 \Rightarrow n = 8$.
+\item From the question we deduce that it is a G.P. with $a = 1, r = 2, n = 20$. We have to find $t_{20}$.
+
+  $t_{20} = 1.2^{20 - 1} = 524288$.
+\item This is a G.P. with $a = 20000, r = 1.02, n = 11$. We have to find $t_{11}$.
+
+  $t_{11} = 20000\times(1.02)^{11 - 1} = 24380$.
+\item Given, $S_n = 2^n - 1 \Rightarrow t_n = S_n - S_{n - 1} = 2^n - 1 - (2^{n - 1} - 1) = 2^{n - 1}$
+
+  $r = \frac{t_n}{t_{n - 1}} = \frac{2^{n - 1}}{2^{n - 2}} = 2$, which is a constant and hence the sequence is in G.P.
+\item Let the first term of the G.P. be $a$ and common ratio is $r$.
+
+  Then $t_2 = ar = 24$ and $t_5 = ar^4 = 81$, Dividing, we have $r^3 = \frac{81}{24} = \frac{27}{8}$
+
+  $\Rightarrow r = \frac{3}{2} \Rightarrow a = 16$.
+
+  Hence the G.P. is $16, 24, 36, 54, 81, \ldots$.
+\item Let the first term of the G.P. be $a$ and common ratio is $r$.
+
+  Given $t_7 = 8t_4 \Rightarrow ar^6 = 8ar^3 \Rightarrow r = 2$. Also given, $t_5 = 48 \Rightarrow ar^4 = 48$
+
+  $\Rightarrow a = 3$. Hence, the G.P. is $3, 6, 12, 24, \ldots$.
+\item Let the first term of the G.P. be $a$ and common ratio is $r$.
+
+  Given, $t_5 = ar^4 = 48$ and $t_8 = ar^7 = 384 \Rightarrow r^3 = 8 \Rightarrow r = 2$
+
+  $\Rightarrow a = 3$. Hence, the G.P. is $3, 6, 12, 24, \ldots$.
+\item Let the first term of the G.P. be $a$ and common ratio is $r$.
+
+  Given $t_6 = ar^5 = \frac{1}{16}$ and $t_{10} = ar^9 = \frac{1}{256} \Rightarrow r = \pm\frac{1}{2}$
+
+  $\Rightarrow a = \pm 2$. Hence the G.P. is $2, 1, \frac{1}{2}, \ldots$ or $-2, 1, -\frac{1}{2}, \ldots$.
+\item Let the first term of the G.P. be $x$ and common ratio is $y$. Then
+
+  $a = xy^{p - 1}, b = xy^{q - 1},  c = xy^{r - 1}$
+
+  Taking $\log$ of both sides for these three terms
+
+  $\log a = \log x + (p - 1)\log y, \log b = \log x + (q - 1)\log y, \log c = \log x + (r - 1)\log y$
+
+  Clearly, $(q - r)\log a + (r - p)\log b + (p - q)\log r = 0$.
+\item Let the first term of the G.P. be $x$ and common ratio is $r$.
+
+  Given, $t_{p + q} = a = xr^{p + q - 1}$ and $t_{p - q} = b = xr^{p - q - 1}$
+
+  Multiplying the two terms, we have
+
+  $x^2r^{2p - 2} = (xr^{p - 1})^2 = t_p^2 = ab \Rightarrow t_p = \sqrt{ab}$.
+\item Let $a$ be the first term and $b$ be the common ratio. Then,
+
+  $x = ab^{p - 1}, y = ab^{q - 1}, z = ab^{r -1}$
+
+  We have to prove that $x^{q - r}.y^{r - p}.z^{p - q} = 1$
+
+  L.H.S. $= (ab^{p - 1})^{q - r}.(ab^{q - 1})^{r - p}.(ab^{r - 1})^{p - q}$
+
+  $= a^{(q - r + r - p + p - q)}b^{[(p - 1)(q - r) + (q - 1)(r - p) + (r - 1)(p - q)]}$
+
+  $= a^0b^0 = 1 =$ R.H.S.
+\item Let $r$ be the common ratio and first term is given as $1$.
+
+  $t_3 + t_5 = 90 \Rightarrow r^4 + r^2 = 90 \Rightarrow r^2 = 9 \Rightarrow r = pm 3$.
+
+  $r^2$ cannot be $-10$ as that would mean that it is an imaginary number.
+\item Let $a$ be the first term and $r$ be the common ratio of the G.P.
+
+  Gibem $t_5 = ar^4 = 2$ and we have to find the product of the first nine terms. Let the required product be $S$.
+
+  $S = a.ar.ar^2.\ldots.ar^8 = a^9r^{1 + 2 + \cdots + 8} = a^9r^{\tfrac{8.9}{2}} = a^9r^{36} = (ar^4)^9 = 2^9 = 512$.
+\item Let $a$ be the first term, $r$ be the common ratio and $n$ be the number of terms.
+
+  Given, $t_4 = ar^3 = 10, t_7 = ar^6 = 80, t_n = ar^{n - 1} = 2560$
+
+  $\therefore \frac{t_7}{t_4} = r^3 = 8 \Rightarrow r = 2 \Rightarrow a = \frac{10}{8}$
+
+  $\Rightarrow \frac{10}{8}2^{n- 1} = 2560 \Rightarrow 2^{n - 1} = 2048 \Rightarrow n = 12$.
+\item Let the three numbers in G.P. be $a, ar, ar^2$. According to question, on doubling $ar$ the numbers form an A.P.
+
+  $\Rightarrow 2ar - a = ar^2 - 2ar \Rightarrow r^2 - 4r + 1 = 0 \Rightarrow r = \frac{4\pm\sqrt{12}}{2} = 2\pm\sqrt{3}$.
+\item Given, $p, q, r$ are in A.P. i.e. $q - p = r - q$.
+
+  Let $x$ be the first term and $y$ be the common ratio of the G.P. We have to prove that $t_p, t_q, t_r$ are in G.P.
+
+  $\Rightarrow \frac{t_q}{t_p} = \frac{t_r}{t_q} \Rightarrow \frac{xy^{q - 1}}{xy ^{p - 1}} = \frac{xy^{r - 1}}{xy^{q - 1}}$
+
+  $\Rightarrow y^{q - p} = y^{r - q}$ which is true from the condition for A.P.
+\item Let $r$ be the common ratio of the G.P. Then, $b = ar, c = ar^2, d = ar^3$
+
+  L.H.S. $= (a.ar + ar.ar^2 + ar^2.ar^3)^2 = a^4r^2(1 + r^2 + r^4)^2$
+
+  R.H.S. $= (a^2 + a^2r^2 + a^2r^4)(a^2r^2 + a^2r^4 + a^2r^6) = a^2(1 + r^2 + r^4).a^2r^2(1 + r^2 + r^4)$
+
+  $= a^2r^4(1 + r^2 + r^4)^2 =$ L.H.S.
+\item Given $a, b, c$ are in A.P. $\Rightarrow 2b = a + c$
+
+  If we increase $a$ by $1$ then they are in G.P. $\Rightarrow b^2 = (a + 1)c \Rightarrow b^2 = (a + 1)(2b - a)$
+
+  $\Rightarrow b^2 = 2ab - a^2 + 2b - a \Rightarrow (a - b)^2 = 2b - a$
+
+  If we increase $c$ by $2$ then again they are in G. P $\Rightarrow b^2 = a(c + 2) = a(2b - a + 2)$
+
+  $\Rightarrow b^2 = 2ab - a^2 + 2a \Rightarrow (a - b)^2 = 2a \Rightarrow 2b - a = 2a \Rightarrow 2b = 3a$
+
+  $\Rightarrow \left(a - \frac{3a}{2}\right)^2 = 2a \Rightarrow a = 8 \Rightarrow b = 12 \Rightarrow c = 16$.
+\item Let the three numbers in G.P. be $\frac{a}{r}, a, ar$. Then,
+
+  $\frac{a}{r} + a + ar = 70$ and $10a = \frac{4a}{r} + 4ar \Rightarrow \frac{10a}{4} = \frac{a}{r} + ar$
+
+  $\Rightarrow \frac{10a}{4} + a = 70 \Rightarrow a = 20$
+
+  $\Rightarrow \frac{20}{r} + 20r = 50 \Rightarrow r = 2, \frac{1}{2}$
+
+  So the numbers are $10, 20, 40$ or $40, 20, 10$.
+\item Let the three numbers in G.P. be $\frac{a}{r}, a, ar$. Given that product of these numbers is $216$.
+
+  $\Rightarrow \frac{a}{r}.a.ar = 216 \Rightarrow a^3 = 216 \Rightarrow a = 6$
+
+  Also, given that their sum is $19 \Rightarrow \frac{6}{r} + 6 + 6r = 19$
+
+  $\Rightarrow 6r^2 - 13r + 6 = 0 \Rightarrow r = \frac{2}{3}, \frac{3}{2}$.
+
+  So the numbers are $9, 6, 4$ or $4, 6, 9$.
+\item Let the number be $100a + 10ar + ar^2$.
+
+  According to question $a + ar^2 = 2ar + 1$ and $a + ar = \frac{2}{3}(ar + ar^2)$
+
+  $\Rightarrow a(r - 1)^2 = 1$ and $3 + 3r = 2r + 2r^2 \Rightarrow r = -1, \frac{3}{2}$
+
+  If $r = -1, a = \frac{1}{4}$, but $a$ cannot be a fraction.
+
+  If $r = \frac{3}{2} \Rightarrow a = 4$ and the number is $469$.
 \end{enumerate}
